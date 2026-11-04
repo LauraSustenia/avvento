@@ -5,6 +5,31 @@
   const viewport = calendar.querySelector('[data-map-viewport]');
   const stage = calendar.querySelector('[data-map-stage]');
   const markers = [...calendar.querySelectorAll('[data-map-day]')];
+  const popup = calendar.querySelector('[data-map-selection]');
+  let selectedMarker = null;
+  function positionPopup() {
+    if (!selectedMarker || popup.hidden) return;
+    popup.classList.remove('is-below');
+    const half = selectedMarker.offsetHeight / 2;
+    popup.style.left = `${selectedMarker.offsetLeft}px`;
+    popup.style.top = `${selectedMarker.offsetTop - half - 9}px`;
+    const view = viewport.getBoundingClientRect();
+    const left = Math.max(0,view.left)+8, right = Math.min(innerWidth,view.right)-8;
+    let rect = popup.getBoundingClientRect();
+    if (rect.left < left) popup.style.left = `${selectedMarker.offsetLeft+left-rect.left}px`;
+    else if (rect.right > right) popup.style.left = `${selectedMarker.offsetLeft+right-rect.right}px`;
+    const intro = calendar.querySelector('.map-poster__intro')?.getBoundingClientRect();
+    const overlapsIntro = intro && rect.left < intro.right && rect.right > intro.left && rect.top < intro.bottom+8 && rect.bottom > intro.top;
+    if (rect.top < Math.max(0,view.top)+8 || overlapsIntro) {
+      popup.classList.add('is-below');
+      popup.style.top = `${selectedMarker.offsetTop+half+9}px`;
+    }
+  }
+  function closePopup() {
+    popup.hidden = true;
+    markers.forEach(marker => {marker.classList.remove('is-selected');marker.setAttribute('aria-pressed','false');});
+    selectedMarker = null;
+  }
 
   // Distribute forms by geographic distance, independently of the fixed day numbers.
   const types = ['farnia', 'acero', 'pioppo', 'edera', 'agrifoglio'];
@@ -60,7 +85,8 @@
   };
 
   function select(marker, reveal = false) {
-    calendar.querySelector('[data-map-selection]')?.removeAttribute('hidden');
+    selectedMarker = marker;
+    popup.hidden = false;
     markers.forEach(item => {
       const selected = item === marker;
       item.classList.toggle('is-selected', selected);
@@ -75,6 +101,8 @@
       viewport.scrollIntoView({behavior: 'smooth', block: 'center'});
       marker.focus({preventScroll: true});
     }
+    positionPopup();
+    if (reveal) setTimeout(positionPopup,350);
   }
   function setWidth(width) {
     const previous = stage.getBoundingClientRect().width;
@@ -86,6 +114,11 @@
     viewport.scrollTop = centerY * stage.getBoundingClientRect().height - viewport.clientHeight / 2;
   }
   markers.forEach(marker => marker.addEventListener('click', () => select(marker)));
+  calendar.querySelector('[data-map-close]').addEventListener('click', closePopup);
+  calendar.addEventListener('click', event => {
+    if (!event.target.closest('[data-map-day], [data-map-find], [data-map-selection]')) closePopup();
+  });
+  document.addEventListener('keydown', event => { if(event.key==='Escape')closePopup(); });
   calendar.querySelectorAll('[data-map-style]').forEach(button => button.addEventListener('click', () => {
     calendar.dataset.markerStyle = button.dataset.mapStyle;
     calendar.querySelectorAll('[data-map-style]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
@@ -105,6 +138,7 @@
   window.addEventListener('resize', () => {
     stage.style.width = '';
     stage.style.minWidth = '';
+    closePopup();
   });
   calendar.querySelectorAll('[data-map-find]').forEach(button => button.addEventListener('click', () => {
     const marker = markers.find(item => item.dataset.mapDay === button.dataset.mapFind);

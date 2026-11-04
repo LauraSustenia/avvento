@@ -18,8 +18,12 @@ async function main() {
   // Keep exact geographic lines, with translucent colour so the painted ground remains continuous.
   for(let y=0;y<mapHeight;y++)for(let x=0;x<mapWidth;x++){
     const edge=Math.min(1,x/65,y/65,(mapWidth-1-x)/65,(mapHeight-1-y)/65);
+    const gx=x+config.map_x,gy=y+config.map_y;
+    const ellipse=(cx,cy,rx,ry)=>Math.max(0,Math.min(1,(1-Math.hypot((gx-cx)/rx,(gy-cy)/ry))/.16));
+    // Leave the painted heron in the foreground, including beak, neck, body and tail.
+    const bird=Math.max(ellipse(1645,2110,185,80),ellipse(1740,2210,175,255),ellipse(1900,2420,250,360));
     const i=(y*mapWidth+x)*4+3;
-    pixels[i]=Math.round(pixels[i]*.88*Math.max(0,edge));
+    pixels[i]=Math.round(pixels[i]*.88*Math.max(0,edge)*(1-bird));
   }
   const map=await sharp(pixels,{raw:{width:mapWidth,height:mapHeight,channels:4}}).png().toBuffer();
   layers.push({input:map,left:config.map_x,top:config.map_y});
@@ -30,7 +34,7 @@ async function main() {
   // Exclude the separate green "NATURA DI PIANURA!" line, then remove the white matte.
   const firstLine=await sharp(officialPng).extract({left:0,top:0,width:officialSize.width,height:Math.round(officialSize.height*.56)}).ensureAlpha().raw().toBuffer();
   for(let i=0;i<firstLine.length;i+=4){
-    const opacity=1-Math.min(firstLine[i],firstLine[i+1],firstLine[i+2])/255;
+    const opacity=Math.min(1,(255-Math.min(firstLine[i],firstLine[i+1],firstLine[i+2]))/35);
     if(opacity<.008){firstLine[i+3]=0;continue;}
     for(let c=0;c<3;c++)firstLine[i+c]=Math.round(Math.max(0,Math.min(255,(firstLine[i+c]-255*(1-opacity))/opacity)));
     firstLine[i+3]=Math.round(firstLine[i+3]*opacity);
@@ -39,7 +43,7 @@ async function main() {
   const officialLogo=await sharp(transparentLogo).trim().png().toBuffer();
   await fs.writeFile(path.join(source,'giapp-official.png'),officialLogo);
   const logo=await sharp(officialLogo).resize({width:1180}).png().toBuffer();
-  layers.push({input:logo,top:100,left:Math.round((W-1180)/2)});
+  layers.push({input:logo,top:150,left:Math.round((W-1180)/2)});
   const poster=await sharp(background).composite(layers).png().toBuffer();
   await sharp(poster).webp({quality:94,effort:6}).toFile(path.join(root,'images/mappa-avvento-poster.webp'));
   await sharp(poster).resize({width:1086}).png().toFile(path.join(source,'poster-preview.png'));

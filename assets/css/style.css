@@ -114,7 +114,7 @@ h1 { font-size: clamp(24px, 3.5vw, 45px); font-weight: 500; line-height: 1.12; m
 .map-calendar--poster { border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
 .map-calendar--poster .map-calendar__toolbar { padding: 0; }
 .map-calendar--poster .map-calendar__hint { margin: 10px 0 16px; text-align: center; }
-.map-calendar--poster .map-calendar__viewport { border-radius: 24px; }
+.map-calendar--poster .map-calendar__viewport { border-radius: 24px; overscroll-behavior: auto; }
 .map-calendar--poster .map-calendar__stage { min-width: 0; aspect-ratio: 2172 / 2800; }
 .map-poster__intro { position: absolute; top: 12.2%; left: 12%; width: 76%; text-align: center; }
 .map-poster__intro .calendar-intro__eyebrow { font-size: clamp(8px, 1cqw, 17px); margin: 0 0 .6cqw; }
@@ -124,10 +124,12 @@ h1 { font-size: clamp(24px, 3.5vw, 45px); font-weight: 500; line-height: 1.12; m
 .map-calendar--poster .map-day { width: var(--map-leaf-size, 9.5%); }
 .map-calendar--poster .map-day__number { font-size: clamp(11px, 2.8cqw, 34px); }
 .map-calendar--poster[data-marker-style="tiles"] .map-day { width: 7.3%; }
-.map-poster__selection { position: absolute; top: 82.7%; left: 23%; width: 54%; padding: 0; border: 0; background: none; gap: .5cqw 1cqw; }
+.map-poster__selection { position: absolute; z-index: 5; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: max-content; max-width: min(280px, 70cqw); padding: 11px 34px 12px 14px; border: 1px solid #a6b78c; border-radius: 12px; background: #fffdf2f5; gap: 3px; box-shadow: 0 4px 15px #304b3524; text-align: left; transform: translate(-50%,-100%); }
+.map-poster__selection.is-below { transform: translate(-50%,0); }
 .map-poster__selection[hidden] { display: none; }
-.map-poster__selection .map-calendar__selection-day { font-size: clamp(7px, 1cqw, 17px); }
-.map-poster__selection strong { font-size: clamp(11px, 1.7cqw, 30px); }
+.map-poster__selection .map-calendar__selection-day { font-size: 10px; }
+.map-poster__selection strong { font-size: clamp(13px, 1.7cqw, 22px); line-height: 1.2; }
+.map-calendar .map-poster__close { position: absolute; top: 2px; right: 3px; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 50%; background: transparent; font: 24px/1 system-ui,sans-serif; }
 @media (max-width: 700px) {
   :root {
     --card-gap: 12px;

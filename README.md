@@ -49,12 +49,14 @@ Generate con lo strumento integrato per le immagini, usando `reference-head-bran
 
 ## Seconda home: mappa
 
-La prova è in `index2.html`, disponibile su `/avvento/index2.html`. Usa il layout comune e una mappa SVG ricavata dalle geometrie del PDF GIAPP di giugno 2025. La home originale rimane in `index.html`.
+La prova è in `index2.html`, disponibile su `/avvento/index2.html`. Usa il layout dedicato `_layouts/map.html` e una sola immagine, `images/mappa-avvento-poster.webp` (2172 × 2800), che integra paesaggio, cartografia e logo trasparente. Non carica testata, coda o fasce ripetute. La home originale rimane in `index.html`.
 
 - `Foglie` e `Caselle` cambiano l'aspetto dei segnaposto; i numeri restano associati alle stesse aree e il 24 è sulla Bora.
 - I 24 abbinamenti sono in `_data/calendar_map.json`. Le coordinate `anchor_x` e `anchor_y` indicano il punto cartografico originale; `left` e `top` posizionano il segnaposto, leggermente distanziato dagli altri nei gruppi più densi.
 - Su telefono la mappa è scorrevole e ingrandibile. `Intera mappa` mostra la vista completa. L'elenco espandibile permette di trovare anche le aree fuori dalla porzione visibile.
-- I pulsanti mostrano il nome dell'area selezionata; le prove e le descrizioni giornaliere non sono ancora collegate.
+- Le foglie sono circa il 44% più grandi della prima prova. Le forme variano a ogni caricamento, usando la distanza geografica per separare le foglie uguali; numeri e aree rimangono fissi. La Bora non ha evidenziazioni iniziali.
+- I pulsanti mostrano il nome dell'area selezionata in un fumetto vicino alla foglia, chiudibile con ×, Esc o un clic all'esterno. Le prove e le descrizioni giornaliere non sono ancora collegate.
+- La composizione unica si rigenera con `node scripts/compose-map-poster.cjs`; dimensioni e posizione della cartografia sono in `_data/map_poster.json`. La decorazione nuova è descritta in `scripts/frame-source/poster/README.md`.
 - Per rigenerare base e abbinamenti: eseguire `scripts/build-map.py` con Python e `pdfplumber`, passando il percorso del PDF come argomento. La base mantiene comuni, corsi d'acqua e aree protette, omettendo le etichette e i riquadri della tavola tecnica.
 
 ## GitHub Pages

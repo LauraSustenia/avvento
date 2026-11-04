@@ -28,8 +28,10 @@ description: Ventiquattro giorni per esplorare le aree della rete GIAPP.
       <div class="map-poster__geography" style="left: {{ poster.map_x | times: 100.0 | divided_by: poster.width }}%; top: {{ poster.map_y | times: 100.0 | divided_by: poster.height }}%; width: {{ poster.map_width | times: 100.0 | divided_by: poster.width }}%; height: {{ poster.map_height | times: 100.0 | divided_by: poster.height }}%">
       <svg class="map-calendar__connections" viewBox="0 0 720 800" aria-hidden="true">
         {% for area in site.data.calendar_map %}
+        {% unless area.day == 7 %}
         <line x1="{{ area.anchor_x }}" y1="{{ area.anchor_y }}" x2="{{ area.line_x }}" y2="{{ area.line_y }}" />
         <circle cx="{{ area.anchor_x }}" cy="{{ area.anchor_y }}" r="2.3" />
+        {% endunless %}
         {% endfor %}
       </svg>
       {% for area in site.data.calendar_map %}
@@ -38,10 +40,11 @@ description: Ventiquattro giorni per esplorare le aree della rete GIAPP.
         <span class="map-day__number" aria-hidden="true">{{ area.day }}</span>
       </button>
       {% endfor %}
-      </div>
-      <div class="map-calendar__selection map-poster__selection" data-map-selection aria-live="polite" aria-atomic="true" hidden>
+      <div class="map-calendar__selection map-poster__selection" id="map-area-name" data-map-selection aria-live="polite" aria-atomic="true" hidden>
         <span class="map-calendar__selection-day" data-map-selected-day></span>
         <strong data-map-selected-name></strong>
+        <button type="button" class="map-poster__close" data-map-close aria-label="Chiudi il nome dell’area">×</button>
+      </div>
       </div>
     </div>
   </div>
