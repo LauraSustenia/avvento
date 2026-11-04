@@ -5,6 +5,54 @@
   const viewport = calendar.querySelector('[data-map-viewport]');
   const stage = calendar.querySelector('[data-map-stage]');
   const markers = [...calendar.querySelectorAll('[data-map-day]')];
+
+  // Distribute forms by geographic distance, independently of the fixed day numbers.
+  const types = ['farnia', 'acero', 'pioppo', 'edera', 'agrifoglio'];
+  const points = markers.map(marker => ({x: parseFloat(marker.style.left) * 7.2, y: parseFloat(marker.style.top) * 8}));
+  const shuffle = values => {
+    const result = [...values];
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  };
+  const distances = points.map(a => points.map(b => Math.hypot(a.x - b.x, a.y - b.y)));
+  const neighbors = distances.map((row, i) => row.map((d, j) => ({d,j})).filter(v => v.j !== i).sort((a,b) => a.d-b.d).slice(0,2).map(v => v.j));
+  const southern = points.map((p,i) => ({y:p.y,i})).sort((a,b) => b.y-a.y).slice(0,3).map(p => p.i);
+  const isGreen = type => type === 'edera' || type === 'agrifoglio';
+  function score(order) {
+    let result = 0;
+    order.forEach((type,i) => {
+      for (let j=i+1;j<order.length;j++) {
+        const distance = Math.max(25,distances[i][j]);
+        if (type === order[j]) result += (neighbors[i].includes(j) || neighbors[j].includes(i) ? 500 : 0) + (150/distance)**3;
+        if (isGreen(type) && isGreen(order[j])) result += .3*(110/distance)**2;
+      }
+    });
+    if (southern.length === 3 && southern.every(i => isGreen(order[i]))) result += 25;
+    return result;
+  }
+  const palette = shuffle(types);
+  const pool = markers.map((_,i) => palette[i%palette.length]);
+  let best = shuffle(pool), bestScore = score(best);
+  for (let restart=0;restart<8;restart++) {
+    let order = shuffle(pool), current = score(order);
+    for (let attempt=0;attempt<700;attempt++) {
+      const i=Math.floor(Math.random()*order.length),j=Math.floor(Math.random()*order.length);
+      if (i===j || order[i]===order[j]) continue;
+      [order[i],order[j]]=[order[j],order[i]];
+      const next=score(order);
+      if (next<current) current=next;
+      else [order[i],order[j]]=[order[j],order[i]];
+    }
+    if (current<bestScore) {best=order;bestScore=current;}
+  }
+  markers.forEach((marker,i) => {
+    types.forEach(type => marker.classList.remove(`calendar-leaf--${type}`));
+    marker.classList.add(`calendar-leaf--${best[i]}`);
+    marker.querySelector('img').src = `${calendar.dataset.leafBase}foglia-${best[i]}.png`;
+  });
   const markerCenter = marker => {
     const rect = marker.getBoundingClientRect();
     const poster = stage.getBoundingClientRect();

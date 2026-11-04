@@ -4,7 +4,7 @@ title: Il calendario sulla mappa — Natura di Pianura
 description: Ventiquattro giorni per esplorare le aree della rete GIAPP.
 ---
 {% assign poster = site.data.map_poster %}
-<section class="map-calendar map-calendar--poster" data-map-calendar data-marker-style="leaves" aria-label="I 24 giorni sulle aree GIAPP" style="--map-leaf-size: {{ poster.marker_size }}%">
+<section class="map-calendar map-calendar--poster" data-map-calendar data-marker-style="leaves" data-leaf-base="{{ '/images/' | relative_url }}" aria-label="I 24 giorni sulle aree GIAPP" style="--map-leaf-size: {{ poster.marker_size }}%">
   <div class="map-calendar__toolbar">
     <div class="map-calendar__styles" role="group" aria-label="Aspetto dei giorni">
       <button type="button" data-map-style="leaves" aria-pressed="true">Foglie</button>

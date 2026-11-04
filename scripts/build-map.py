@@ -129,6 +129,9 @@ for step in range(500):
         a['y']+=movement[i][1]+(a['anchor_y']-a['y'])*.012
         a['x']=max(272,min(934,a['x']));a['y']=max(49,min(788,a['y']))
 
+# Keep day 7 inside the Valli mirandolesi polygon, clear of the introduction above it.
+next(a for a in records if a['day']==7).update(x=487,y=117)
+
 for a in records:
     a['left']=round((a['x']-245)/720*100,3);a['top']=round((a['y']-20)/800*100,3)
     a['line_x']=round(a['x']-245,2);a['line_y']=round(a['y']-20,2)
