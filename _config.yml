@@ -1,0 +1,13 @@
+title: Natura di Pianura
+description: Il calendario dell’Avvento delle aree naturali della pianura.
+lang: it
+url: ""
+# Su GitHub Pages, per nomeaccount.github.io/avvento usa /avvento.
+# Con un dominio dedicato, lascia vuoto.
+baseurl: "/avvento"
+exclude:
+  - scripts
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

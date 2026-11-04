@@ -1,0 +1,64 @@
+---
+layout: map
+title: Il calendario sulla mappa — Natura di Pianura
+description: Ventiquattro giorni per esplorare le aree della rete GIAPP.
+---
+{% assign poster = site.data.map_poster %}
+<section class="map-calendar map-calendar--poster" data-map-calendar data-marker-style="leaves" aria-label="I 24 giorni sulle aree GIAPP" style="--map-leaf-size: {{ poster.marker_size }}%">
+  <div class="map-calendar__toolbar">
+    <div class="map-calendar__styles" role="group" aria-label="Aspetto dei giorni">
+      <button type="button" data-map-style="leaves" aria-pressed="true">Foglie</button>
+      <button type="button" data-map-style="tiles" aria-pressed="false">Caselle</button>
+    </div>
+    <div class="map-calendar__zoom" role="group" aria-label="Ingrandimento della mappa">
+      <button type="button" data-map-zoom="out" aria-label="Riduci la mappa">−</button>
+      <button type="button" data-map-zoom="fit">Intera mappa</button>
+      <button type="button" data-map-zoom="in" aria-label="Ingrandisci la mappa">+</button>
+    </div>
+  </div>
+  <p class="map-calendar__hint">Tocca un giorno per trovare il nome dell’area. Puoi ingrandire e scorrere la mappa.</p>
+  <div class="map-calendar__viewport" data-map-viewport tabindex="0" role="region" aria-label="Mappa scorrevole delle aree GIAPP">
+    <div class="map-calendar__stage" data-map-stage>
+      <img class="map-calendar__base" src="{{ '/images/mappa-avvento-poster.webp' | relative_url }}" width="{{ poster.width }}" height="{{ poster.height }}" alt="La mappa GIAPP in un’unica illustrazione: rami natalizi e logo in alto, comuni e corsi d’acqua al centro, paesaggio invernale e airone in basso." fetchpriority="high">
+      <section class="map-poster__intro" aria-labelledby="calendar-title">
+        <p class="calendar-intro__eyebrow">Natura di Pianura</p>
+        <h1 id="calendar-title">Una pianura, tante scoperte</h1>
+        <p>Il nostro calendario dell’Avvento, un luogo alla volta.<br>Cerca i giorni tra le aree della rete GIAPP.</p>
+      </section>
+      <div class="map-poster__geography" style="left: {{ poster.map_x | times: 100.0 | divided_by: poster.width }}%; top: {{ poster.map_y | times: 100.0 | divided_by: poster.height }}%; width: {{ poster.map_width | times: 100.0 | divided_by: poster.width }}%; height: {{ poster.map_height | times: 100.0 | divided_by: poster.height }}%">
+      <svg class="map-calendar__connections" viewBox="0 0 720 800" aria-hidden="true">
+        {% for area in site.data.calendar_map %}
+        <line x1="{{ area.anchor_x }}" y1="{{ area.anchor_y }}" x2="{{ area.line_x }}" y2="{{ area.line_y }}" />
+        <circle cx="{{ area.anchor_x }}" cy="{{ area.anchor_y }}" r="2.3" />
+        {% endfor %}
+      </svg>
+      {% for area in site.data.calendar_map %}
+      <button type="button" class="map-day calendar-leaf--{{ area.leaf }}" data-map-day="{{ area.day }}" data-area-name="{{ area.name | escape }}" style="left: {{ area.left }}%; top: {{ area.top }}%; --map-leaf-angle: {{ area.angle }}deg" aria-label="{{ area.day }} dicembre — {{ area.name | escape }}" aria-pressed="false" title="{{ area.day }} dicembre — {{ area.name | escape }}">
+        <img class="map-day__leaf" src="{{ '/images/foglia-' | append: area.leaf | append: '.png' | relative_url }}" width="1024" height="1024" alt="">
+        <span class="map-day__number" aria-hidden="true">{{ area.day }}</span>
+      </button>
+      {% endfor %}
+      </div>
+      <div class="map-calendar__selection map-poster__selection" data-map-selection aria-live="polite" aria-atomic="true" hidden>
+        <span class="map-calendar__selection-day" data-map-selected-day></span>
+        <strong data-map-selected-name></strong>
+      </div>
+    </div>
+  </div>
+  <div class="map-calendar__legend" aria-label="Legenda">
+    <span><i class="map-key map-key--area" aria-hidden="true"></i>Aree naturali</span>
+    <span><i class="map-key map-key--municipality" aria-hidden="true"></i>Comuni della rete</span>
+    <span><i class="map-key map-key--river" aria-hidden="true"></i>Corsi d’acqua</span>
+  </div>
+  <details class="map-calendar__index">
+    <summary>Tutti i giorni e le aree</summary>
+    <ol>
+      {% for area in site.data.calendar_map %}
+      <li><button type="button" data-map-find="{{ area.day }}"><span>{{ area.day }}</span>{{ area.name }}</button></li>
+      {% endfor %}
+    </ol>
+  </details>
+  <p class="map-calendar__credit">Cartografia GIAPP · giugno 2025</p>
+</section>
+
+<p class="map-calendar__compare"><a href="{{ '/' | relative_url }}">Confronta con il calendario a griglia →</a></p>

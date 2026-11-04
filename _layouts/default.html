@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <link rel="icon" type="image/png" sizes="270x270" href="{{ '/favicon.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="{{ '/assets/js/background.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/calendar.js' | relative_url }}" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    {% include header.html %}
+    <main class="illustrated-page {{ page.paper_class }}" id="contenuto">
+      <div class="illustrated-page__head" aria-hidden="true">
+        <img src="{{ '/images/cornice-corta/testa.png' | relative_url }}" width="2172" height="706" alt="" fetchpriority="high">
+      </div>
+      <div class="illustrated-page__body" data-illustrated-body>
+        <div class="illustrated-page__bands" data-bands aria-hidden="true">
+          <img src="{{ '/images/cornice-corta/fascia-1.png' | relative_url }}" width="2172" height="360" alt="">
+        </div>
+        <div class="illustrated-page__content" data-page-content>
+          {{ content }}
+        </div>
+      </div>
+      <div class="illustrated-page__tail" aria-hidden="true">
+        <img src="{{ '/images/cornice-corta/coda.png' | relative_url }}" width="2172" height="724" alt="" loading="lazy">
+      </div>
+    </main>
+    {% include footer.html %}
+    <div hidden data-band-library>
+      {% assign band_names = '1,2,3,4,5,6' | split: ',' %}
+      {% for name in band_names %}
+      <img src="{{ '/images/cornice-corta/fascia-' | append: name | append: '.png' | relative_url }}" width="2172" height="360" alt="" data-band="{{ name }}">
+      {% endfor %}
+    </div>
+  </body>
+</html>

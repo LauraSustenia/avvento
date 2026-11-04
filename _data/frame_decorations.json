@@ -1,0 +1,147 @@
+{
+  "1": [
+    {
+      "file": "foglia-pioppo.png",
+      "x": 21,
+      "y": 38,
+      "size": 23,
+      "angle": -55
+    },
+    {
+      "file": "fiocco-cornice.png",
+      "x": 86,
+      "y": 129,
+      "size": 26,
+      "angle": 0
+    },
+    {
+      "file": "foglia-farnia.png",
+      "x": 1148,
+      "y": 79,
+      "size": 29,
+      "angle": 42
+    }
+  ],
+  "2": [
+    {
+      "file": "foglia-edera.png",
+      "x": 52,
+      "y": 112,
+      "size": 29,
+      "angle": 34
+    },
+    {
+      "file": "fiocco-cornice.png",
+      "x": 1181,
+      "y": 33,
+      "size": 22,
+      "angle": 0
+    },
+    {
+      "file": "foglia-pioppo.png",
+      "x": 1106,
+      "y": 151,
+      "size": 24,
+      "angle": -62
+    }
+  ],
+  "3": [
+    {
+      "file": "fiocco-cornice.png",
+      "x": 93,
+      "y": 28,
+      "size": 25,
+      "angle": 0
+    },
+    {
+      "file": "foglia-farnia.png",
+      "x": 23,
+      "y": 146,
+      "size": 26,
+      "angle": -32
+    },
+    {
+      "file": "foglia-edera.png",
+      "x": 1121,
+      "y": 94,
+      "size": 31,
+      "angle": 24
+    }
+  ],
+  "4": [
+    {
+      "file": "foglia-pioppo.png",
+      "x": 77,
+      "y": 59,
+      "size": 29,
+      "angle": 62
+    },
+    {
+      "file": "fiocco-cornice.png",
+      "x": 1153,
+      "y": 137,
+      "size": 22,
+      "angle": 0
+    },
+    {
+      "file": "foglia-farnia.png",
+      "x": 1180,
+      "y": 37,
+      "size": 24,
+      "angle": -40
+    }
+  ],
+  "5": [
+    {
+      "file": "foglia-farnia.png",
+      "x": 49,
+      "y": 86,
+      "size": 28,
+      "angle": -25
+    },
+    {
+      "file": "foglia-pioppo.png",
+      "x": 1110,
+      "y": 27,
+      "size": 26,
+      "angle": 75
+    },
+    {
+      "file": "fiocco-cornice.png",
+      "x": 1179,
+      "y": 152,
+      "size": 23,
+      "angle": 0
+    }
+  ],
+  "6": [
+    {
+      "file": "fiocco-cornice.png",
+      "x": 20,
+      "y": 103,
+      "size": 23,
+      "angle": 0
+    },
+    {
+      "file": "foglia-edera.png",
+      "x": 91,
+      "y": 154,
+      "size": 29,
+      "angle": -26
+    },
+    {
+      "file": "foglia-pioppo.png",
+      "x": 1135,
+      "y": 58,
+      "size": 24,
+      "angle": 28
+    },
+    {
+      "file": "fiocco-cornice.png",
+      "x": 1148,
+      "y": 121,
+      "size": 20,
+      "angle": 0
+    }
+  ]
+}

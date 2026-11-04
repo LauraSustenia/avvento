@@ -1,0 +1,22 @@
+---
+layout: default
+title: Calendario dell’Avvento — Natura di Pianura
+description: Ventiquattro giorni per scoprire la natura della pianura.
+---
+<section class="calendar-intro" aria-labelledby="calendar-title">
+  <p class="calendar-intro__eyebrow">Natura di Pianura</p>
+  <h1 id="calendar-title">Un giorno, una scoperta</h1>
+  <p>Il calendario dell’Avvento delle nostre aree naturali.<br>Dal 1° al 24 dicembre, una sorpresa al giorno.</p>
+</section>
+{% assign leaf_types = 'farnia,acero,pioppo,edera,agrifoglio' | split: ',' %}
+{% assign leaf_order = '0,3,1,4,2,4,0,2,3,1,3,2,4,1,0,1,4,3,0,2,4,1,2,3' | split: ',' %}
+<ol class="calendar-grid" aria-label="I 24 giorni del calendario dell’Avvento" data-leaf-grid data-leaf-types="{{ leaf_types | join: ',' }}" data-leaf-base="{{ '/images/' | relative_url }}">
+  {% for day in (1..24) %}
+  {% assign leaf_index = leaf_order[forloop.index0] | plus: 0 %}
+  {% assign leaf = leaf_types[leaf_index] %}
+  <li class="calendar-card calendar-leaf--{{ leaf }}" aria-label="{{ day }} dicembre">
+    <img class="calendar-card__image" src="{{ '/images/foglia-' | append: leaf | append: '.png' | relative_url }}" alt="" width="1024" height="1024" decoding="async">
+    <span class="calendar-card__day" aria-hidden="true">{{ day }}</span>
+  </li>
+  {% endfor %}
+</ol>
