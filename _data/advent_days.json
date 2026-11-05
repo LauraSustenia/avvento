@@ -3,109 +3,286 @@
     "day": 1,
     "name": "Bosco di S. Lucia",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "placeholder": false,
+      "version": "six-games-v1",
+      "hint": "Il silenzio è utile, ma pensa anche a quanto sei vicino.",
+      "sources": [
+        {
+          "title": "Indicazioni di visita GIAPP",
+          "url": "https://naturadipianura.it/luoghi/"
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "type": "quiz",
+      "title": "Un incontro nel bosco: che cosa fai?",
+      "instructions": "Un uccello si allontana quando ti avvicini. Scegli il comportamento che lo disturba meno.",
+      "options": [
+        "Lo segui tra gli arbusti per riuscire a fotografarlo.",
+        "Prosegui lungo il sentiero, senza fermarti a osservarlo.",
+        "Ti fermi e fai silenzio, ma rimani vicino al punto da cui è fuggito.",
+        "Aumenti la distanza e, se torna tranquillo, lo osservi senza avvicinarti."
+      ],
+      "scores": [
+        -2,
+        2,
+        5,
+        10
+      ],
+      "option_feedback": [
+        "Seguire un animale che si allontana può prolungare il disturbo.",
+        "Non lo insegui: è una scelta prudente, anche se rinunci a osservarlo.",
+        "Fare silenzio aiuta, ma anche la distanza conta.",
+        "Hai dato spazio all’animale: osservare significa anche saper fare un passo indietro."
+      ],
+      "explanation": "La scelta migliore è aumentare la distanza. Se un animale cambia comportamento al nostro arrivo, possiamo ridurre il disturbo allontanandoci e rispettando i percorsi e le indicazioni dell’area."
     },
-    "area_description": "La scheda di Bosco di S. Lucia è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_description": "Il Bosco di Santa Lucia si trova a Sant’Agata Bolognese. È stato realizzato nel 1998–1999 con la messa a dimora di alberi e arbusti. Il bosco comprende specie diverse e spazi aperti, offrendo occasioni per osservare il paesaggio e conoscere la natura della pianura.",
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/bosco-di-santa-lucia/"
   },
   {
     "day": 2,
     "name": "Fascia boscata dell’Interporto",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "placeholder": false,
+      "version": "six-games-v1",
+      "hint": "Due uccelli scavano, ma uno nel legno e l’altro nella terra. La rondine usa il fango.",
+      "sources": [
+        {
+          "title": "RSPB: picchio rosso maggiore",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/great-spotted-woodpecker"
+        },
+        {
+          "title": "RSPB: rondine",
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/swallow"
+        },
+        {
+          "title": "Woodland Trust: martin pescatore",
+          "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/animals/birds/kingfisher/"
+        },
+        {
+          "title": "Kent Wildlife Trust: folaga",
+          "url": "https://www.kentwildlifetrust.org.uk/wildlife-explorer/birds/wading-birds/coot"
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "type": "matching",
+      "title": "A ogni uccello il suo nido",
+      "instructions": "Tocca un uccello, poi il suo nido. Puoi cambiare gli abbinamenti prima di confermare.",
+      "left": [
+        "Picchio rosso maggiore",
+        "Rondine",
+        "Martin pescatore",
+        "Folaga"
+      ],
+      "right": [
+        "Cavità nel tronco",
+        "Coppa di fango sotto una trave",
+        "Galleria in una sponda di terra",
+        "Nido di vegetazione sull’acqua"
+      ],
+      "solution": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bird_images": [
+        "images/giochi/uccello-0.webp",
+        "images/giochi/uccello-1.webp",
+        "images/giochi/uccello-2.webp",
+        "images/giochi/uccello-3.webp"
+      ],
+      "nest_images": [
+        "images/giochi/nido-0.webp",
+        "images/giochi/nido-1.webp",
+        "images/giochi/nido-2.webp",
+        "images/giochi/nido-3.webp"
+      ],
+      "explanation": "Il picchio rosso maggiore scava una cavità nel tronco; la rondine costruisce una coppa di fango riparata negli edifici; il martin pescatore scava una galleria nella sponda; la folaga costruisce un nido di vegetazione sull’acqua. Sono esempi di nidi tipici, non gli unici ripari possibili."
     },
-    "area_description": "La scheda di Fascia boscata dell’Interporto è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_description": "La Fascia boscata dell’Interporto è una delle aree elencate nella rete GIAPP. Il gioco di oggi invita a scoprire quanto possano essere diversi i luoghi scelti dagli uccelli per nidificare. La scheda di dettaglio dell’area sarà completata con i materiali dei gestori.",
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/"
   },
   {
     "day": 3,
     "name": "Cassa di espansione Ponte Alto",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "placeholder": false,
+      "version": "six-games-v1",
+      "hint": "Ha un carapace e piccole macchie gialle sulla pelle.",
+      "sources": [
+        {
+          "title": "Regione Emilia-Romagna: testuggine palustre europea",
+          "url": "https://ambiente.regione.emilia-romagna.it/it/parchi-natura2000/sistema-regionale/fauna/rettili-e-anfibi/schede/testuggine-palustre-europea"
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "type": "mystery",
+      "title": "Chi si nasconde nel dettaglio?",
+      "instructions": "Osserva il dettaglio dell’illustrazione e scegli l’animale. Al secondo tentativo vedrai una porzione più ampia.",
+      "image": "images/animali/emys-segnaposto.png",
+      "options": [
+        "Rana verde",
+        "Testuggine palustre europea",
+        "Riccio",
+        "Lucertola muraiola"
+      ],
+      "scores": [
+        -2,
+        10,
+        -2,
+        -2
+      ],
+      "explanation": "È la testuggine palustre europea, Emys orbicularis. Nell’illustrazione si riconoscono il carapace e le macchie gialle della testa e delle zampe. L’immagine è un disegno, non una fotografia scattata nell’area."
     },
-    "area_description": "La scheda di Cassa di espansione Ponte Alto è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_description": "La Cassa di espansione Ponte Alto è indicata nella mappa della rete GIAPP. In questa giornata abbiamo incontrato, attraverso un’illustrazione, un animale delle zone umide. La scheda con le caratteristiche specifiche dell’area sarà completata con i materiali dei gestori.",
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/"
   },
   {
     "day": 4,
     "name": "Madonna dei Prati",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "placeholder": false,
+      "version": "six-games-v1",
+      "hint": "È un canto melodioso: non è il tambureggiamento di un picchio.",
+      "sources": [
+        {
+          "title": "Registrazione e attribuzione",
+          "url": "https://commons.wikimedia.org/wiki/File:Turdus_merula_(06_02_16).ogg"
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "type": "audio",
+      "title": "Di chi è questa voce?",
+      "instructions": "Ascolta il canto, anche più volte, poi scegli. Se non puoi ascoltare, usa l’indizio visivo alternativo.",
+      "audio": "audio/canto-01.ogg",
+      "options": [
+        "Picchio rosso maggiore",
+        "Folaga",
+        "Merlo",
+        "Rondine"
+      ],
+      "scores": [
+        -2,
+        -2,
+        10,
+        -2
+      ],
+      "alternative": "Indizio alternativo: il maschio adulto di questo uccello ha piumaggio nero e becco giallo-arancio.",
+      "explanation": "È il canto del merlo, Turdus merula. La registrazione è stata realizzata a Utrecht il 16 febbraio 2006: serve a riconoscere la voce della specie e non proviene dall’area GIAPP.",
+      "credit": {
+        "text": "Registrazione: Taka (attribuzione riportata da Wikimedia Commons), Utrecht, 16 febbraio 2006. File originale, senza modifiche.",
+        "url": "https://commons.wikimedia.org/wiki/File:Turdus_merula_(06_02_16).ogg",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5/"
+      }
     },
-    "area_description": "La scheda di Madonna dei Prati è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_description": "L’ex-polveriera Madonna dei Prati è presentata tra le aree della rete GIAPP. La prova di oggi propone un modo diverso di osservare la natura: fermarsi ad ascoltare. La registrazione utilizzata è un esempio del canto del merlo e non è stata effettuata in questa area.",
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/ex-polveriera-madonna-dei-prati/"
   },
   {
     "day": 5,
     "name": "Ex Zuccherificio di Argelato",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "placeholder": false,
+      "version": "six-games-v1",
+      "hint": "Prima viene l’uovo. Il bruco cresce prima di trasformarsi in crisalide.",
+      "sources": [
+        {
+          "title": "American Museum of Natural History: il ciclo della farfalla",
+          "url": "https://www.amnh.org/explore/news-blogs/life-cycle-butterfly"
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "type": "sequence",
+      "title": "Da uovo a farfalla",
+      "instructions": "Metti in ordine le quattro fasi, iniziando dall’uovo. Usa le frecce per spostare le carte.",
+      "items": [
+        "Uovo",
+        "Bruco",
+        "Crisalide",
+        "Farfalla adulta"
+      ],
+      "images": [
+        "images/giochi/ciclo-0.webp",
+        "images/giochi/ciclo-1.webp",
+        "images/giochi/ciclo-2.webp",
+        "images/giochi/ciclo-3.webp"
+      ],
+      "solution": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "La sequenza è uovo → bruco (larva) → crisalide (pupa) → farfalla adulta. È una metamorfosi completa. Le illustrazioni mostrano uno schema generale del ciclo, non una specie censita nell’area."
     },
-    "area_description": "La scheda di Ex Zuccherificio di Argelato è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_description": "I bacini dell’ex-zuccherificio di Argelato e la golena del Reno sono presentati nel sito GIAPP come un sito della rete Natura 2000, tra i territori di Argelato e Castello d’Argile. La scheda di dettaglio sarà completata con i materiali dei gestori.",
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/bacini-ex-zuccherificio-di-argelato-e-golena-del-fiume-reno/"
   },
   {
     "day": 6,
     "name": "Cassa di espansione del Fiume Panaro",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "placeholder": false,
+      "version": "six-games-v1",
+      "hint": "Cerca un animale sul ramo, uno sul tronco, uno nell’acqua e uno su una foglia.",
+      "sources": [],
+      "type": "find",
+      "title": "Quattro incontri sullo stagno",
+      "instructions": "Cerca quattro animali nella scena e toccali. Puoi ingrandire l’immagine. Per giocare senza cercare i punti nell’immagine, apri la modalità con elenco.",
+      "image": "images/giochi/scena-stagno.webp",
+      "targets": [
+        {
+          "label": "Pettirosso",
+          "x": 14.5,
+          "y": 17,
+          "w": 15,
+          "h": 22
+        },
+        {
+          "label": "Testuggine palustre",
+          "x": 19,
+          "y": 70,
+          "w": 25,
+          "h": 19
+        },
+        {
+          "label": "Airone cenerino",
+          "x": 80,
+          "y": 53,
+          "w": 22,
+          "h": 31
+        },
+        {
+          "label": "Coccinella",
+          "x": 86.5,
+          "y": 18,
+          "w": 8,
+          "h": 9
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "choices": [
+        "Pettirosso",
+        "Testuggine palustre",
+        "Airone cenerino",
+        "Coccinella",
+        "Volpe",
+        "Rana",
+        "Gufo",
+        "Farfalla"
+      ],
+      "solution": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Nella scena ci sono un pettirosso sul ramo, una testuggine sul tronco, un airone nell’acqua e una coccinella sulla foglia. La scena è illustrata e non documenta la presenza contemporanea di queste specie nell’area."
     },
-    "area_description": "La scheda di Cassa di espansione del Fiume Panaro è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_description": "La Cassa di espansione del Fiume Panaro, nel territorio di San Cesario sul Panaro, comprende ambienti acquatici e boschi di salici e pioppi. Il sito GIAPP segnala numerosi uccelli, oltre a rettili e anfibi. La scena del gioco è illustrata: la scheda ufficiale racconta gli ambienti e le specie dell’area.",
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/cassa-di-espansione-del-fiume-panaro/"
   },
   {
     "day": 7,

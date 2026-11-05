@@ -5,8 +5,11 @@ paper_class: day-page
 {% assign number = page.day | plus: 0 %}
 {% assign day = site.data.advent_days | where: 'day', number | first %}
 <link rel="stylesheet" href="{{ '/assets/css/day.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/games.css' | relative_url }}">
+<script src="{{ '/assets/js/games-core.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/games-ui.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/day.js' | relative_url }}" defer></script>
-<article class="advent-day" data-day="{{ number }}" data-config-url="{{ '/assets/registration-config.json' | relative_url }}" data-days-url="{{ '/assets/data/advent.json' | relative_url }}" data-profile-url="{{ '/registrazione.html' | relative_url }}">
+<article class="advent-day" data-day="{{ number }}" data-asset-base="{{ '/' | relative_url }}" data-config-url="{{ '/assets/registration-config.json' | relative_url }}" data-days-url="{{ '/assets/data/advent.json' | relative_url }}" data-profile-url="{{ '/registrazione.html' | relative_url }}">
   <a class="day-back" href="{{ '/' | relative_url }}">← Torna al calendario</a>
   <p class="calendar-intro__eyebrow">{{ number }} dicembre · Natura di Pianura</p>
   <h1>La scoperta del giorno {{ number }}</h1>
@@ -25,12 +28,16 @@ paper_class: day-page
   <section class="day-panel day-result" data-result hidden aria-labelledby="result-title" tabindex="-1">
     <p class="day-kicker">Il risultato</p><h2 id="result-title" data-result-title></h2><p class="day-points" data-result-points></p>
     <p data-explanation></p>
+    <p class="game-result-summary" data-score-summary></p>
+    <img class="game-reveal" data-result-reveal hidden alt="Illustrazione completa dell’animale della prova">
+    <div class="game-sources" data-game-sources></div>
     <button type="button" class="day-button day-button--light" data-retry hidden>Tenta il recupero</button>
+    <button type="button" class="day-button day-button--light" data-finish hidden>Concludi e leggi la spiegazione</button>
     <button type="button" class="day-button" data-discover aria-expanded="false" aria-controls="day-area">Scopri l’area</button>
   </section>
   <section id="day-area" class="day-panel day-area" data-area hidden aria-labelledby="area-title" tabindex="-1">
     <p class="day-kicker">L’area di oggi</p><h2 id="area-title" data-area-name>{{ day.name }}</h2><img data-area-image hidden alt="" loading="lazy"><p data-area-description></p>
-    <a href="https://naturadipianura.it/luoghi/" target="_blank" rel="noopener">Le aree della rete GIAPP ↗</a>
+    <a data-area-link href="https://naturadipianura.it/luoghi/" target="_blank" rel="noopener">Approfondisci sul sito Natura di Pianura ↗</a>
     <p><a class="day-button" href="{{ '/' | relative_url }}">Torna al calendario</a></p>
   </section>
   {{ content }}

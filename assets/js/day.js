@@ -1,107 +1,77 @@
 (() => {
   'use strict';
-  const root=document.querySelector('[data-day]');
-  if(!root)return;
-  const $=selector=>root.querySelector(selector), day=Number(root.dataset.day);
-  let config, catalogue, entry, state, busy=false, practice=false, practiceProgress=null, practiceScore=0, pending=null;
+  const root=document.querySelector('[data-day]');if(!root)return;
+  const $=s=>root.querySelector(s),day=Number(root.dataset.day),core=window.GiappGames;
   const read=(key,fallback=null)=>JSON.parse(localStorage.getItem(key)||'null')??fallback;
   const save=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
-  function todayRome(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
-  function message(text){$('[data-day-message]').textContent=text;}
-  function localProfile(){return read('giapp-demo-profiles-v1',[]).find(row=>row.id===read('giapp-demo-current-v1'));}
-  function localState(answer=null){
-    const settings=catalogue.settings, profile=practice?{score:practiceScore}:localProfile();
-    if(!settings.preview && todayRome()<`${settings.year}-12-${String(day).padStart(2,'0')}`)return{locked:true,opens_on:`${day} dicembre ${settings.year}`};
-    const key=profile?`${profile.id}:${settings.year}:${day}`:null;
-    const all=practice?{}:read('giapp-demo-days-v1',{});
+  const asset=source=>new URL(source,location.origin+root.dataset.assetBase).href;
+  let config,catalogue,entry,state,ui,busy=false,practice=false,practiceProgress=null,practiceScore=0,pending=null;
+  const message=text=>$('[data-day-message]').textContent=text;
+  function localState(submission=null,finish=false){
+    const settings=catalogue.settings,profiles=read('giapp-demo-profiles-v1',[]),profile=practice?{score:practiceScore}:profiles.find(p=>p.id===read('giapp-demo-current-v1'));
+    const parts=new Intl.DateTimeFormat('en',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+    const date=Object.fromEntries(parts.map(p=>[p.type,p.value]));
+    if(!settings.preview&&`${date.year}-${date.month}-${date.day}`<`${settings.year}-12-${String(day).padStart(2,'0')}`)return{locked:true,opens_on:`${day} dicembre ${settings.year}`};
+    const all=practice?{}:read('giapp-demo-games-v2',{}),key=`${profile?.id}:${settings.year}:${day}:${entry.challenge.version||'prototype-v1'}`;
     let progress=practice?practiceProgress:all[key]||null;
-    if(answer!==null && profile && (!progress || progress.status==='retry')){
-      const attempts=(progress?.attempts||0)+1, correct=answer===entry.challenge.correct_index;
-      const delta=correct?(attempts===1?settings.correct_points:settings.recovery_points):settings.wrong_points;
-      const before=profile.score||0, after=Math.max(0,before+delta);
-      progress={attempts,status:correct?(attempts===1?'correct':'recovered'):(attempts===1?'retry':'failed'),last_answer:answer,last_delta:after-before,day_points:(progress?.day_points||0)+after-before};
-      profile.score=after;
-      if(practice){practiceProgress=progress;practiceScore=after;}
-      else{const rows=read('giapp-demo-profiles-v1',[]);const target=rows.find(row=>row.id===profile.id);target.score=after;save('giapp-demo-profiles-v1',rows);all[key]=progress;save('giapp-demo-days-v1',all);}
-    }
-    return{preview:settings.preview,year:settings.year,rules:settings,challenge:entry.challenge,name:entry.name,profile:profile||null,login_required:!profile,progress,explanation:progress?entry.challenge.explanation:null,area:progress?{name:entry.name,description:entry.area_description,image:entry.area_image}:null};
+    if(submission && profile){const next=core.reduce(progress,core.evaluate(entry.challenge,submission),profile.score||0);progress=next.progress;profile.score=next.total;}
+    if(finish&&progress)progress={...progress,closed:true};
+    if((submission||finish)&&profile){if(practice){practiceProgress=progress;practiceScore=profile.score;}else{all[key]=progress;save('giapp-demo-games-v2',all);save('giapp-demo-profiles-v1',profiles);}}
+    return{preview:settings.preview,year:settings.year,name:entry.name,challenge:entry.challenge,login_required:!profile,profile:profile||null,progress,
+      explanation:progress?.closed?entry.challenge.explanation:entry.challenge.hint||'Osserva gli indizi e riprova.',sources:progress?.closed?entry.challenge.sources:null,
+      area:progress?.closed?{name:entry.name,description:entry.area_description,image:entry.area_image,url:entry.area_url}:null};
   }
-  async function cloud(answer=null){
-    const key=`giapp-auth:${config.url}`;
-    let session=read(key);
-    if(session && session.expires_at*1000<Date.now()+60000){
-      const response=await fetch(`${config.url}/auth/v1/token?grant_type=refresh_token`,{method:'POST',headers:{apikey:config.key,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:session.refresh_token})});
-      if(!response.ok)throw new Error('Accedi di nuovo dal tuo account.');
-      session=await response.json();session.expires_at||=Math.floor(Date.now()/1000)+(session.expires_in||3600);save(key,session);
-    }
-    const body={p_day:day};
-    if(answer!==null){pending ||= {answer,request:crypto.randomUUID()};if(pending.answer!==answer)pending={answer,request:crypto.randomUUID()};body.p_answer=answer;body.p_request=pending.request;}
-    const response=await fetch(`${config.url}/rest/v1/rpc/calendar_day`,{method:'POST',headers:{apikey:config.key,'Content-Type':'application/json',...(session?{Authorization:`Bearer ${session.access_token}`}:{})},body:JSON.stringify(body)});
-    const data=await response.json();
-    if(!response.ok){const error=new Error(data.code==='PGRST202'?'Il salvataggio delle giornate non è ancora attivo. Puoi provare il gioco senza salvare punti.':'Non riesco a caricare o salvare la giornata. Riprova tra poco.');error.notReady=data.code==='PGRST202';throw error;}
-    if(data.error)throw new Error(data.error);
-    pending=null;return data;
+  async function cloud(submission=null,finish=false){
+    const key=`giapp-auth:${config.url}`;let session=read(key);
+    if(session&&session.expires_at*1000<Date.now()+60000){const response=await fetch(`${config.url}/auth/v1/token?grant_type=refresh_token`,{method:'POST',headers:{apikey:config.key,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:session.refresh_token})});if(!response.ok)throw new Error('Accedi di nuovo dal tuo account.');session=await response.json();session.expires_at||=Math.floor(Date.now()/1000)+(session.expires_in||3600);save(key,session);}
+    const body={p_day:day,p_finish:finish};
+    if(submission){const fingerprint=JSON.stringify(submission);if(!pending||pending.fingerprint!==fingerprint)pending={fingerprint,id:crypto.randomUUID()};body.p_submission=submission;body.p_request=pending.id;}
+    const response=await fetch(`${config.url}/rest/v1/rpc/calendar_game`,{method:'POST',headers:{apikey:config.key,'Content-Type':'application/json',...(session?{Authorization:`Bearer ${session.access_token}`}:{})},body:JSON.stringify(body)});
+    const data=await response.json();if(!response.ok)throw new Error(data.code==='PGRST202'?'Il salvataggio dei nuovi giochi non è ancora attivo. Puoi provarli senza salvare punti.':'Non riesco a caricare o salvare la prova. Riprova tra poco.');
+    if(data.error)throw new Error(data.error);pending=null;return data;
   }
+  function mountGame(){ui=window.GiappGameUI.render($('[data-answers]'),state.challenge,{asset,attempt:state.progress?.attempts||0,onMessage:message});}
   function render(){
-    $('[data-preview]').hidden=!state.preview;
-    $('[data-practice-notice]').hidden=!practice;
+    $('[data-preview]').hidden=!state.preview;$('[data-practice-notice]').hidden=!practice;
     if(state.locked){message(`La giornata si aprirà il ${state.opens_on}.`);$('[data-challenge]').hidden=true;$('[data-practice-offer]').hidden=true;return;}
-    message('');
-    $('[data-login]').hidden=practice||!state.login_required;
-    $('[data-practice-offer]').hidden=practice||!state.login_required;
-    const progress=state.progress;
-    $('[data-challenge]').hidden=!!progress||state.login_required;
-    $('[data-result]').hidden=!progress;
-    $('[data-area]').hidden=true;
-    $('[data-discover]').setAttribute('aria-expanded','false');
-    $('[data-challenge-title]').textContent=state.challenge.title;
-    $('[data-placeholder]').hidden=!state.challenge.placeholder;
-    const rules=state.rules;
-    $('[data-points-rule]').textContent=`Risposta corretta: +${rules.correct_points} punti. Risposta errata: ${rules.wrong_points} punti. Recupero al secondo tentativo: +${rules.recovery_points} punti. Il totale non scende sotto zero.`;
-    const answers=$('[data-answers]');answers.replaceChildren();
-    state.challenge.options.forEach((text,index)=>{const label=document.createElement('label'),radio=document.createElement('input'),span=document.createElement('span');radio.type='radio';radio.name='answer';radio.value=String(index);radio.required=true;span.textContent=text;label.append(radio,span);answers.append(label);});
-    if(progress){
-      const titles={correct:'Risposta corretta!',recovered:'Hai recuperato!',retry:'Questa risposta non è corretta.',failed:'La prova è conclusa.'};
-      $('[data-result-title]').textContent=titles[progress.status];
-      $('[data-result]').dataset.outcome=['retry','failed'].includes(progress.status)?'wrong':progress.status;
-      const delta=progress.last_delta;
-      $('[data-result-points]').textContent=`${delta>0?'+':''}${delta} punti · Totale della giornata: ${progress.day_points} · ${practice?'Totale di prova': 'Il tuo totale'}: ${state.profile.score||0}`;
+    message('');const p=state.progress,c=state.challenge;
+    $('[data-login]').hidden=practice||!state.login_required;$('[data-practice-offer]').hidden=practice;
+    $('[data-challenge]').hidden=!!p||state.login_required;$('[data-result]').hidden=!p;$('[data-area]').hidden=true;
+    $('[data-discover]').setAttribute('aria-expanded','false');$('[data-challenge-title]').textContent=c.title;$('[data-placeholder]').hidden=!c.placeholder;
+    $('[data-points-rule]').textContent=c.type==='quiz'&&c.options.length===4?'Risposte da −2, 2, 5 o 10 punti. Due tentativi: conta il risultato migliore, senza sommarli.': ['quiz','mystery','audio'].includes(c.type)?'Risposta corretta: 10 punti; errata: −2. Due tentativi: conta il migliore.':'2 punti per elemento corretto e 2 punti extra se completi tutto. Massimo 10 punti, due tentativi: conta il migliore.'+(c.type==='find'?' Nell’elenco, una scelta errata annulla un elemento corretto.':'');
+    mountGame();
+    if(p){
+      $('[data-result-title]').textContent=p.best_score===10?(p.attempts===1?'Prova superata!':'Hai recuperato!'):(p.closed?'La prova è conclusa.':'Puoi migliorare il risultato!');
+      $('[data-result]').dataset.outcome=p.best_score===10?'correct':'wrong';
+      $('[data-result-points]').textContent=`${p.best_score} punti per la giornata`;
+      $('[data-score-summary]').textContent=`Ultimo tentativo: ${p.last_score} · Variazione totale: ${p.last_delta>0?'+':''}${p.last_delta} · ${practice?'Totale di prova':'Il tuo totale'}: ${state.profile.score||0}. Il totale non scende sotto zero.`;
       $('[data-explanation]').textContent=state.explanation;
-      $('[data-retry]').hidden=progress.status!=='retry';
+      $('[data-retry]').hidden=p.closed;$('[data-finish]').hidden=p.closed;$('[data-discover]').hidden=!p.closed;
       $('[data-discover]').textContent=`Scopri l’area: ${state.name}`;
+      const reveal=$('[data-result-reveal]');reveal.hidden=!(p.closed&&c.type==='mystery');if(!reveal.hidden)reveal.src=asset(c.image);
+      const sources=$('[data-game-sources]');sources.replaceChildren();if(p.closed&&state.sources?.length){sources.append(document.createTextNode('Per approfondire:'));state.sources.forEach(source=>{if(!/^https:\/\//.test(source.url))return;const a=document.createElement('a');a.href=source.url;a.textContent=source.title;a.target='_blank';a.rel='noopener';sources.append(a);});}
     }
     if(!practice)window.dispatchEvent(new CustomEvent('giapp:profile',{detail:state.profile}));
   }
-  $('[data-answer-form]').addEventListener('submit',async event=>{
-    event.preventDefault();if(busy)return;
-    const answer=Number(new FormData(event.currentTarget).get('answer'));
-    if(!Number.isInteger(answer)||answer<0||answer>=state.challenge.options.length)return;
-    busy=true;root.querySelectorAll('button').forEach(button=>button.disabled=true);message('Verifica della risposta…');
-    try{state=practice||config.mode==='demo'?localState(answer):await cloud(answer);render();$('[data-result]').focus();}
+  async function commit(submission=null,finish=false){
+    if(busy)return;busy=true;const enabled=[...root.querySelectorAll('button')].filter(b=>!b.disabled);enabled.forEach(b=>b.disabled=true);message('Verifica della prova…');
+    try{state=practice||config.mode==='demo'?localState(submission,finish):await cloud(submission,finish);render();$('[data-result]').focus();}
     catch(error){message(error.message);}
-    finally{busy=false;root.querySelectorAll('button').forEach(button=>button.disabled=false);}
+    finally{busy=false;enabled.filter(b=>b.isConnected).forEach(b=>b.disabled=false);}
+  }
+  $('[data-answer-form]').addEventListener('submit',event=>{event.preventDefault();const submission=ui.get();
+    const c=state.challenge;if(['quiz','mystery','audio'].includes(c.type)&&!Number.isInteger(submission.choice)){message('Scegli una risposta.');return;}
+    if(c.type==='matching'&&(submission.pairs.includes(-1)||new Set(submission.pairs).size!==4)){message('Abbina ogni uccello a un nido diverso.');return;}
+    commit(submission);
   });
-  $('[data-retry]').addEventListener('click',()=>{$('[data-result]').hidden=true;$('[data-area]').hidden=true;$('[data-challenge]').hidden=false;$('[data-answers] input').focus();});
-  $('[data-discover]').addEventListener('click',()=>{
-    if(!state.area)return;
-    $('[data-area-name]').textContent=state.area.name;
-    $('[data-area-description]').textContent=state.area.description;
-    const image=$('[data-area-image]');
-    // Consente immagini del progetto o HTTPS; nessun HTML editoriale viene eseguito.
-    const source=state.area.image;
-    const safeSource=typeof source==='string' && (/^https:\/\//.test(source)||/^\/(?!\/)/.test(source));
-    image.hidden=!safeSource;if(safeSource)image.src=source;
-    $('[data-area]').hidden=false;$('[data-discover]').setAttribute('aria-expanded','true');$('[data-area]').focus();
-  });
-  $('[data-practice-start]').addEventListener('click',()=>{practice=true;state=localState();render();});
-  (async()=>{
-    try{
-      const responses=await Promise.all([fetch(root.dataset.configUrl,{cache:'no-store'}),fetch(root.dataset.daysUrl,{cache:'no-store'})]);
-      if(responses.some(response=>!response.ok))throw new Error('Giornata non disponibile.');
-      [config,catalogue]=await Promise.all(responses.map(response=>response.json()));
-      entry=catalogue.days.find(item=>item.day===day);if(!entry)throw new Error('Giornata non disponibile.');
-      if(!['demo','supabase'].includes(config.mode))throw new Error('Configurazione non disponibile.');
-      state=config.mode==='demo'?localState():await cloud();render();
-    }catch(error){message(error.message);if(entry){$('[data-practice-offer]').hidden=false;}}
-  })();
+  $('[data-retry]').addEventListener('click',()=>{$('[data-result]').hidden=true;$('[data-area]').hidden=true;$('[data-challenge]').hidden=false;mountGame();ui.focus();});
+  $('[data-finish]').addEventListener('click',()=>commit(null,true));
+  $('[data-practice-start]').addEventListener('click',()=>{practice=true;practiceProgress=null;practiceScore=0;state=localState();render();});
+  $('[data-discover]').addEventListener('click',()=>{if(!state.area)return;const a=state.area;$('[data-area-name]').textContent=a.name;$('[data-area-description]').textContent=a.description;
+    const image=$('[data-area-image]'),safe=typeof a.image==='string'&&(/^https:\/\//.test(a.image)||/^\/(?!\/)/.test(a.image));image.hidden=!safe;if(safe)image.src=a.image;
+    $('[data-area-link]').href=/^https:\/\//.test(a.url||'')?a.url:'https://naturadipianura.it/luoghi/';$('[data-area]').hidden=false;$('[data-discover]').setAttribute('aria-expanded','true');$('[data-area]').focus();});
+  (async()=>{try{
+    const responses=await Promise.all([fetch(root.dataset.configUrl,{cache:'no-store'}),fetch(root.dataset.daysUrl,{cache:'no-store'})]);if(responses.some(r=>!r.ok))throw new Error('Giornata non disponibile.');[config,catalogue]=await Promise.all(responses.map(r=>r.json()));
+    entry=catalogue.days.find(d=>d.day===day);if(!entry||!['demo','supabase'].includes(config.mode))throw new Error('Giornata non disponibile.');state=config.mode==='demo'?localState():await cloud();render();
+  }catch(error){message(error.message);if(entry)$('[data-practice-offer]').hidden=false;}})();
 })();
