@@ -1,0 +1,42 @@
+.calendario-avvento{padding-block:8px 28px;color:var(--text)}
+.calendario-intestazione{text-align:center;margin-bottom:28px}
+.calendario-sopratitolo{font-size:.85em;letter-spacing:.04em;margin:0 0 10px}
+.calendario-intestazione h1{font:clamp(24px,3.5vw,38px)/1.4 var(--serif);color:var(--accent);margin:0 0 12px}
+.calendario-sottotitolo{font-size:1.3em;margin:0 0 10px}.calendario-intestazione>p:last-child{margin:0}
+.calendario-ripresa{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;margin-bottom:18px;border-block:1px solid #92603380;background:#f4ead555}
+.calendario-ripresa[hidden],.calendario-accesso[hidden]{display:none}.calendario-ripresa p{margin:0}
+.calendario-continua,.calendario-accesso button,.calendario-riprova{font:inherit;background:var(--accent);color:#f4ead5;border:1px solid #631810;border-radius:4px;padding:10px 16px;text-align:center;text-decoration:none;cursor:pointer}
+.calendario-stato{margin:0 0 16px;min-height:1.5em;text-align:center;font-size:.9em}.calendario-riprova{display:block;margin:0 auto 16px}.calendario-riprova[hidden]{display:none}
+.calendario-griglia{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;list-style:none;margin:0;padding:0}.calendario-griglia li{min-width:0}
+.casella-calendario{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;min-height:158px;padding:14px 6px;border:1px solid #926033;border-radius:5px;color:#5e4630;background:linear-gradient(110deg,#f8e9c980,#eacb9455);box-shadow:inset 0 0 0 4px #f8e9c950,0 2px 4px #4c2c1b16;font:inherit;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.casella-calendario::before{content:"";position:absolute;inset:7px;border:1px solid #92603360;border-radius:2px;z-index:-1;pointer-events:none}
+.casella-giorno{font-size:12px;letter-spacing:.08em;text-transform:uppercase}.casella-numero{font:40px/1.2 var(--serif);margin-block:2px 5px}.casella-stato{font-size:15px;line-height:1.25}.casella-data{font-size:12px;opacity:.8;margin-top:3px}
+.casella-calendario[data-stato="disponibile"]{color:var(--accent);border-color:var(--accent);background:linear-gradient(110deg,#f9e9c8cc,#e8bf7d88);box-shadow:inset 0 0 0 4px #f8e9c980,0 3px 8px #4c2c1b24}
+.casella-calendario[data-stato="in_corso"]{color:#f4ead5;background:linear-gradient(120deg,#a43a27,#7c241b);border-color:#631810}.casella-calendario[data-stato="in_corso"]::before{border-color:#eacb9480}
+.casella-calendario[data-stato="conclusa"]{color:#475034;background:linear-gradient(110deg,#e6dfbd99,#d2ceaa66);border-color:#6f7650}
+.casella-calendario[aria-disabled="true"]{cursor:default;box-shadow:inset 0 0 0 4px #f8e9c930;color:#77634d;background:#dfc79e30}.casella-calendario[aria-disabled="true"] .casella-numero{opacity:.65}
+.casella-calendario:not([aria-disabled="true"]):hover{transform:translateY(-3px);box-shadow:0 5px 12px #4c2c1b30;filter:none}.casella-calendario:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.calendario-legenda{display:flex;justify-content:center;gap:12px 22px;flex-wrap:wrap;list-style:none;padding:0;margin:22px 0 12px;font-size:.85em}.calendario-legenda li::before{content:"";display:inline-block;width:9px;height:9px;border:1px solid #926033;margin-right:7px;background:#dfc79e50}.calendario-legenda [data-stato="disponibile"]::before{background:#e8bf7d;border-color:var(--accent)}.calendario-legenda [data-stato="in_corso"]::before{background:var(--accent);border-color:#631810}.calendario-legenda [data-stato="conclusa"]::before{background:#9b9f78;border-color:#6f7650}
+.calendario-nota{font-size:.85em;line-height:1.5;text-align:center;margin:12px 0}.calendario-accesso{border-top:1px solid #92603370;margin-top:26px;padding-top:20px}.calendario-accesso h2{font:22px/1.4 var(--serif);color:var(--accent);margin:0 0 12px}.calendario-accesso form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}.calendario-accesso label{grid-column:1/-1}.calendario-accesso input{width:100%;min-width:0;padding:10px 12px;background:#f4ead540}.calendario-accesso p{margin-block:10px}
+@media(max-width:800px){.calendario-griglia{gap:10px}.casella-calendario{min-height:140px}.casella-numero{font-size:34px}.casella-stato{font-size:14px}}
+@media(max-width:600px){.calendario-griglia{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.casella-calendario{min-height:136px;padding:12px 4px}.calendario-ripresa{flex-direction:column;text-align:center}.calendario-continua{width:100%}.calendario-accesso form{grid-template-columns:1fr}.calendario-intestazione{margin-bottom:20px}}
+@media(max-width:380px){.calendario-griglia{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.casella-calendario{transition:none}}
+
+/* Foglie sempre visibili; il numero compare soltanto nelle giornate accessibili. */
+.casella-calendario[data-stato]{
+ min-height:158px;border:0;border-radius:0;padding:16px 8px;
+ background:transparent url('../images/foglie-calendario.svg') center/contain no-repeat;
+ box-shadow:none;color:#285335;opacity:1;filter:none;
+}
+.casella-calendario[data-stato]::before{content:none}
+.casella-calendario .casella-giorno,.casella-calendario .casella-stato,.casella-calendario .casella-data{display:none}
+.casella-calendario .casella-numero{font:clamp(32px,4vw,46px)/1.2 var(--serif);margin:0;color:#285335;opacity:1}
+.casella-calendario[data-stato="conclusa"] .casella-numero{color:#191611}
+.casella-calendario[aria-disabled="true"] .casella-numero{display:none}
+.casella-calendario[data-stato]:not([aria-disabled="true"]):hover{box-shadow:none;filter:none;transform:translateY(-3px)}
+.calendario-legenda [data-stato="disponibile"]::before{background:#285335;border-color:#285335}
+.calendario-legenda [data-stato="conclusa"]::before{background:#191611;border-color:#191611}
+.calendario-legenda [data-stato="chiusa"]::before{width:17px;height:17px;border:0;background:transparent url('../images/foglie-calendario.svg') center/contain no-repeat;vertical-align:middle}
+@media(max-width:800px){.casella-calendario[data-stato]{min-height:140px}}
+@media(max-width:600px){.casella-calendario[data-stato]{min-height:124px;padding:12px 4px}}

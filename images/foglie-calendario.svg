@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" fill="none">
+ <defs>
+  <path id="foglia" d="M0 0C-17-3-24-14-22-29C-7-24 1-14 0 0Z" fill="#75845b" fill-opacity=".28" stroke="#596747" stroke-width="1.1"/>
+  <g id="ramo">
+   <path d="M93 163C49 145 28 108 34 61C36 42 46 24 61 13" stroke="#6f6547" stroke-width="1.6" stroke-linecap="round"/>
+   <use href="#foglia" transform="translate(78 156) rotate(-29)"/>
+   <use href="#foglia" transform="translate(62 143) rotate(-59)"/>
+   <use href="#foglia" transform="translate(49 127) rotate(-71)"/>
+   <use href="#foglia" transform="translate(40 108) rotate(-88)"/>
+   <use href="#foglia" transform="translate(35 87) rotate(-104)"/>
+   <use href="#foglia" transform="translate(35 66) rotate(-122)"/>
+   <use href="#foglia" transform="translate(41 46) rotate(-143)"/>
+   <use href="#foglia" transform="translate(51 27) rotate(-167)"/>
+   <use href="#foglia" transform="translate(67 149) rotate(31) scale(.8)"/>
+   <use href="#foglia" transform="translate(52 132) rotate(12) scale(.8)"/>
+   <use href="#foglia" transform="translate(43 114) rotate(-6) scale(.8)"/>
+   <use href="#foglia" transform="translate(36 94) rotate(-24) scale(.8)"/>
+   <use href="#foglia" transform="translate(34 73) rotate(-44) scale(.8)"/>
+   <use href="#foglia" transform="translate(38 53) rotate(-60) scale(.75)"/>
+  </g>
+ </defs>
+ <use href="#ramo"/>
+ <use href="#ramo" transform="translate(200 0) scale(-1 1)"/>
+</svg>
