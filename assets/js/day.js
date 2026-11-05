@@ -67,8 +67,18 @@
   $('[data-retry]').addEventListener('click',()=>{$('[data-result]').hidden=true;$('[data-area]').hidden=true;$('[data-challenge]').hidden=false;mountGame();ui.focus();});
   $('[data-finish]').addEventListener('click',()=>commit(null,true));
   $('[data-practice-start]').addEventListener('click',()=>{practice=true;practiceProgress=null;practiceScore=0;state=localState();render();});
-  $('[data-discover]').addEventListener('click',()=>{if(!state.area)return;const a=state.area;$('[data-area-name]').textContent=a.name;$('[data-area-description]').textContent=a.description;
-    const image=$('[data-area-image]'),safe=typeof a.image==='string'&&(/^https:\/\//.test(a.image)||/^\/(?!\/)/.test(a.image));image.hidden=!safe;if(safe)image.src=a.image;
+  $('[data-discover]').addEventListener('click',()=>{if(!state.area)return;const a=state.area;$('[data-area-name]').textContent=a.name;
+    const text=$('[data-area-description]');text.replaceChildren();
+    String(entry.area_description??a.description??'').split(/\n\s*\n/).filter(paragraph=>paragraph.trim()).forEach(paragraph=>{const p=document.createElement('p');p.textContent=paragraph.trim();text.append(p);});
+    const image=$('[data-area-image]'),placeholder=$('[data-area-placeholder]'),caption=$('[data-area-caption]');
+    const source=entry.area_image||a.image;
+    const safe=typeof source==='string'&&(/^https:\/\//.test(source)||/^\/(?!\/)/.test(source)||/^images\/[a-zA-Z0-9_./%-]+$/.test(source));
+    image.hidden=true;placeholder.hidden=false;caption.hidden=true;
+    $('[data-area-photo-status]').textContent='La foto sarà inserita qui.';
+    image.onload=()=>{image.hidden=false;placeholder.hidden=true;caption.textContent=entry.area_image_caption||a.image_caption||'';caption.hidden=!caption.textContent;};
+    image.onerror=()=>{image.hidden=true;placeholder.hidden=false;caption.hidden=true;$('[data-area-photo-status]').textContent='Foto al momento non disponibile.';};
+    if(safe){image.alt=entry.area_image_alt||a.image_alt||`Veduta di ${a.name}`;image.loading='eager';image.src=asset(source);if(image.complete&&image.naturalWidth>0)image.onload();}
+    else image.removeAttribute('src');
     const target=entry.area_url||a.url||'https://naturadipianura.it/luoghi/'; const link=$('[data-area-link]');link.href=/^https:\/\//.test(target)?target:'https://naturadipianura.it/luoghi/';link.textContent=link.href==='https://naturadipianura.it/luoghi/'?'Consulta l’elenco delle aree GIAPP ↗':'Visita la scheda di '+a.name+' ↗';$('[data-area]').hidden=false;$('[data-discover]').setAttribute('aria-expanded','true');$('[data-area]').focus();});
   (async()=>{try{
     const responses=await Promise.all([fetch(root.dataset.configUrl,{cache:'no-store'}),fetch(root.dataset.daysUrl,{cache:'no-store'})]);if(responses.some(r=>!r.ok))throw new Error('Giornata non disponibile.');[config,catalogue]=await Promise.all(responses.map(r=>r.json()));

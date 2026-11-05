@@ -1,0 +1,21 @@
+/* Fotografia sopra e testo sotto in tutte le giornate. */
+.day-area__photo { margin: 22px 0 28px; }
+.day-area__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #e7eddd; }
+.day-area .day-area__media img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+.day-area__placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 18px; text-align: center; color: #64795b; border: 1px dashed #9fb190; border-radius: 12px; background: linear-gradient(140deg, #eaf0e1, #dde8d0); }
+.day-area__placeholder strong { font: 500 16px system-ui, sans-serif; }
+.day-area__placeholder span { font: 13px/1.5 system-ui, sans-serif; }
+.day-area__photo figcaption { margin-top: 10px; font: 13px/1.5 system-ui, sans-serif; color: #61715a; }
+.day-area__text { line-height: 1.75; }
+.day-area__text p { margin: 0 0 1.1em; }
+.day-area__actions { margin-top: 24px; }
+.day-area__actions > p { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .day-area__photo { margin: 18px 0 22px; }
+  .day-area__media { border-radius: 9px; }
+  .day-area__placeholder { border-radius: 9px; padding: 12px; gap: 4px; }
+  .day-area__placeholder svg { width: 30px; height: 27px; }
+  .day-area__placeholder strong { font-size: 14px; }
+  .day-area__placeholder span { font-size: 12px; }
+  .day-area__actions { margin-top: 20px; }
+}

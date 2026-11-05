@@ -6,6 +6,7 @@ paper_class: day-page
 {% assign day = site.data.advent_days | where: 'day', number | first %}
 <link rel="stylesheet" href="{{ '/assets/css/day.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/games.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/area-card.css' | relative_url }}">
 <script src="{{ '/assets/js/games-core.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/games-ui.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/day.js' | relative_url }}" defer></script>
@@ -36,9 +37,24 @@ paper_class: day-page
     <button type="button" class="day-button" data-discover aria-expanded="false" aria-controls="day-area">Scopri l’area</button>
   </section>
   <section id="day-area" class="day-panel day-area" data-area hidden aria-labelledby="area-title" tabindex="-1">
-    <p class="day-kicker">L’area di oggi</p><h2 id="area-title" data-area-name>{{ day.name }}</h2><img data-area-image hidden alt="" loading="lazy"><p data-area-description></p>
+    <p class="day-kicker">L’area di oggi</p>
+    <h2 id="area-title" data-area-name>{{ day.name }}</h2>
+    <figure class="day-area__photo">
+      <div class="day-area__media">
+        <img data-area-image hidden alt="" loading="lazy" decoding="async">
+        <div class="day-area__placeholder" data-area-placeholder>
+          <svg width="44" height="38" viewBox="0 0 44 38" fill="none" aria-hidden="true"><path d="M5 10h9l3-5h10l3 5h9v23H5V10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="22" cy="21" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M33 14h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <strong>Foto dell’area</strong>
+          <span data-area-photo-status>La foto sarà inserita qui.</span>
+        </div>
+      </div>
+      <figcaption data-area-caption hidden></figcaption>
+    </figure>
+    <div class="day-area__text" data-area-description></div>
+    <div class="day-area__actions">
     <a data-area-link href="https://naturadipianura.it/luoghi/" target="_blank" rel="noopener">Approfondisci sul sito Natura di Pianura ↗</a>
     <p><a class="day-button" href="{{ '/' | relative_url }}">Torna al calendario</a></p>
+    </div>
   </section>
   {{ content }}
   <noscript>Per svolgere la prova devi attivare JavaScript.</noscript>
