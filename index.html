@@ -1,52 +1,68 @@
 ---
-layout: default
-title: Il calendario — L'Ombra sui Portici
-calendario: true
+layout: map
+title: Calendario dell'Avvento — Natura di Pianura
+description: Ventiquattro giorni per esplorare le aree della rete GIAPP.
 ---
-<section id="calendario-avvento" class="calendario-avvento" data-gioco="{{ '/gioca/' | relative_url }}" aria-labelledby="titolo-calendario">
-  <header class="calendario-intestazione">
-    <p class="calendario-sopratitolo">Un'avventura nella Bologna medievale</p>
-    <h1 id="titolo-calendario">L'Ombra sui Portici</h1>
-    <p class="calendario-sottotitolo">Il tuo calendario dell'Avvento</p>
-    <p>Apri una casella e continua la tua storia, un giorno alla volta.</p>
-  </header>
-
-  <div id="calendario-ripresa" class="calendario-ripresa" hidden>
-    <p id="calendario-benvenuto"></p>
-    <a id="calendario-continua" class="calendario-continua" href="{{ '/gioca/' | relative_url }}">Riprendi l'avventura</a>
+{% include explorer-link.html %}
+{% assign poster = site.data.map_poster %}
+<section class="map-calendar map-calendar--poster" data-map-calendar data-day-base="{{ '/giornate/' | relative_url }}" data-marker-style="leaves" data-leaf-base="{{ '/images/' | relative_url }}" aria-label="I 24 giorni sulle aree GIAPP" style="--map-leaf-size: {{ poster.marker_size }}%">
+  <div class="map-calendar__toolbar">
+    <div class="map-calendar__styles" role="group" aria-label="Aspetto dei giorni">
+      <button type="button" data-map-style="leaves" aria-pressed="true">Foglie</button>
+      <button type="button" data-map-style="tiles" aria-pressed="false">Caselle</button>
+    </div>
+    <div class="map-calendar__zoom" role="group" aria-label="Ingrandimento della mappa">
+      <button type="button" data-map-zoom="out" aria-label="Riduci la mappa">−</button>
+      <button type="button" data-map-zoom="fit">Intera mappa</button>
+      <button type="button" data-map-zoom="in" aria-label="Ingrandisci la mappa">+</button>
+    </div>
   </div>
-  <p id="calendario-stato" class="calendario-stato" role="status" aria-live="polite">Sto preparando le caselle…</p>
-  <button id="calendario-riprova" type="button" class="calendario-riprova" hidden>Riprova a caricare il calendario</button>
-
-  <ol class="calendario-griglia" aria-label="Le 25 giornate dell'avventura">
-    {% for numero in (1..25) %}
-    <li>
-      <button id="casella-{{ numero }}" type="button" class="casella-calendario" data-giorno="{{ numero }}" data-stato="caricamento" data-disabilitato aria-disabled="true" disabled>
-        <span class="casella-giorno">Giorno</span>
-        <span class="casella-numero">{{ numero }}</span>
-        <span id="stato-casella-{{ numero }}" class="casella-stato">Da aprire</span>
-        <time id="data-casella-{{ numero }}" class="casella-data">{{ numero }} dicembre</time>
+  <p class="map-calendar__hint">Tocca una foglia e scegli Apri la giornata per iniziare la prova. Puoi ingrandire e scorrere la mappa.</p>
+  <div class="map-calendar__viewport" data-map-viewport tabindex="0" role="region" aria-label="Mappa scorrevole delle aree GIAPP">
+    <div class="map-calendar__stage" data-map-stage>
+      <img class="map-calendar__base" src="{{ '/images/mappa-avvento-poster.webp' | relative_url }}" width="{{ poster.width }}" height="{{ poster.height }}" alt="La mappa GIAPP in un’unica illustrazione: rami natalizi e logo in alto, comuni e corsi d’acqua al centro, paesaggio invernale e airone in basso." fetchpriority="high">
+      <section class="map-poster__intro" aria-labelledby="calendar-title">
+        <p class="calendar-intro__eyebrow">Natura di Pianura</p>
+        <h1 id="calendar-title">Una pianura, tante scoperte</h1>
+        <p>Il nostro calendario dell’Avvento, un luogo alla volta.<br>Cerca i giorni tra le aree della rete GIAPP.</p>
+      </section>
+      <div class="map-poster__geography" style="left: {{ poster.map_x | times: 100.0 | divided_by: poster.width }}%; top: {{ poster.map_y | times: 100.0 | divided_by: poster.height }}%; width: {{ poster.map_width | times: 100.0 | divided_by: poster.width }}%; height: {{ poster.map_height | times: 100.0 | divided_by: poster.height }}%">
+      <svg class="map-calendar__connections" viewBox="0 0 720 800" aria-hidden="true">
+        {% for area in site.data.calendar_map %}
+        {% unless area.day == 7 %}
+        <line x1="{{ area.anchor_x }}" y1="{{ area.anchor_y }}" x2="{{ area.line_x }}" y2="{{ area.line_y }}" />
+        <circle cx="{{ area.anchor_x }}" cy="{{ area.anchor_y }}" r="2.3" />
+        {% endunless %}
+        {% endfor %}
+      </svg>
+      {% for area in site.data.calendar_map %}
+      <button type="button" class="map-day calendar-leaf--{{ area.leaf }}" data-map-day="{{ area.day }}" data-area-name="{{ area.name | escape }}" style="left: {{ area.left }}%; top: {{ area.top }}%; --map-leaf-angle: {{ area.angle }}deg" aria-label="{{ area.day }} dicembre — {{ area.name | escape }}" aria-pressed="false" title="{{ area.day }} dicembre — {{ area.name | escape }}">
+        <img class="map-day__leaf" src="{{ '/images/foglia-' | append: area.leaf | append: '.png' | relative_url }}" width="1024" height="1024" alt="">
+        <span class="map-day__number" aria-hidden="true">{{ area.day }}</span>
       </button>
-    </li>
-    {% endfor %}
-  </ol>
-
-  <ul class="calendario-legenda" aria-label="Stati delle caselle">
-    <li data-stato="disponibile">Verde: da giocare</li>
-    <li data-stato="conclusa">Nero: già conclusa</li>
-    <li data-stato="chiusa">Solo foglie: non disponibile</li>
-  </ul>
-  <p class="calendario-nota">Puoi recuperare le giornate già aperte, seguendo l'ordine della storia. Le scelte di una giornata confermata restano definitive.</p>
-
-  <section id="calendario-accesso" class="calendario-accesso" aria-labelledby="titolo-riprendi-calendario">
-    <h2 id="titolo-riprendi-calendario">Hai già una partita?</h2>
-    <p>Inserisci il codice segreto per ritrovare il tuo calendario e il salvataggio.</p>
-    <form id="form-riprendi-calendario">
-      <label for="codice-calendario">Codice segreto della partita</label>
-      <input id="codice-calendario" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="128" required>
-      <button type="submit">Riprendi la partita</button>
-    </form>
-    <p id="errore-calendario" role="status" aria-live="polite"></p>
-    <p class="calendario-nota">Se è la tua prima visita, comincia dalla casella 1.</p>
-  </section>
+      {% endfor %}
+      <div class="map-calendar__selection map-poster__selection" id="map-area-name" data-map-selection aria-live="polite" aria-atomic="true" hidden>
+        <span class="map-calendar__selection-day" data-map-selected-day></span>
+        <strong data-map-selected-name></strong><a data-map-day-link href="{{ '/giornate/1.html' | relative_url }}">Apri la giornata →</a>
+        <button type="button" class="map-poster__close" data-map-close aria-label="Chiudi il nome dell’area">×</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="map-calendar__legend" aria-label="Legenda">
+    <span><i class="map-key map-key--area" aria-hidden="true"></i>Aree naturali</span>
+    <span><i class="map-key map-key--municipality" aria-hidden="true"></i>Comuni della rete</span>
+    <span><i class="map-key map-key--river" aria-hidden="true"></i>Corsi d’acqua</span>
+  </div>
+  <details class="map-calendar__index">
+    <summary>Tutti i giorni e le aree</summary>
+    <ol>
+      {% for area in site.data.calendar_map %}
+      <li><button type="button" data-map-find="{{ area.day }}"><span>{{ area.day }}</span>{{ area.name }}</button></li>
+      {% endfor %}
+    </ol>
+  </details>
+  <p class="map-calendar__credit">Cartografia GIAPP · giugno 2025</p>
 </section>
+
+<p class="map-calendar__compare"><a href="{{ '/index2.html' | relative_url }}">Confronta con il calendario a griglia →</a></p>
