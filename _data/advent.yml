@@ -1,0 +1,6 @@
+# Apertura sul sito. La stessa scelta va impostata in Supabase (calendar_settings).
+year: 2026
+preview: true
+correct_points: 10
+wrong_points: -2
+recovery_points: 5

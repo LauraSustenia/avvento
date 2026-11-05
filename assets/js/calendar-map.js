@@ -86,6 +86,7 @@
 
   function select(marker, reveal = false) {
     selectedMarker = marker;
+    const dayLink = calendar.querySelector('[data-map-day-link]'); if(dayLink) dayLink.href = `${calendar.dataset.dayBase}${marker.dataset.mapDay}.html`;
     popup.hidden = false;
     markers.forEach(item => {
       const selected = item === marker;

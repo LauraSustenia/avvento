@@ -1,0 +1,4 @@
+# Collegamento al progetto Supabase GIAPP. Qui si usa solo la chiave pubblica.
+mode: supabase
+supabase_url: "https://fyefksyqsmwnckrqlcbh.supabase.co"
+supabase_publishable_key: "sb_publishable_LlX4_cpzC2YN8dnHxNb84Q_L79hITzy"

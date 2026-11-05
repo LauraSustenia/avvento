@@ -1,0 +1,434 @@
+[
+  {
+    "day": 1,
+    "name": "Bosco di S. Lucia",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Bosco di S. Lucia è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 2,
+    "name": "Fascia boscata dell’Interporto",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Fascia boscata dell’Interporto è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 3,
+    "name": "Cassa di espansione Ponte Alto",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Cassa di espansione Ponte Alto è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 4,
+    "name": "Madonna dei Prati",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Madonna dei Prati è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 5,
+    "name": "Ex Zuccherificio di Argelato",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Ex Zuccherificio di Argelato è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 6,
+    "name": "Cassa di espansione del Fiume Panaro",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Cassa di espansione del Fiume Panaro è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 7,
+    "name": "Valli mirandolesi",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Valli mirandolesi è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 8,
+    "name": "Cassa di espansione Dosolo",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Cassa di espansione Dosolo è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 9,
+    "name": "Ex Risaia di Bentivoglio",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Ex Risaia di Bentivoglio è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 10,
+    "name": "Golena San Vitale",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Golena San Vitale è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 11,
+    "name": "Nodo ecologico di Via dei Tigli",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Nodo ecologico di Via dei Tigli è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 12,
+    "name": "Bisana",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Bisana è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 13,
+    "name": "Vasche Ex Zuccherificio",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Vasche Ex Zuccherificio è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 14,
+    "name": "Manzolino Tivoli",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Manzolino Tivoli è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 15,
+    "name": "Torrazzuolo",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Torrazzuolo è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 16,
+    "name": "Collegio di Spagna",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Collegio di Spagna è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 17,
+    "name": "Cassa di espansione del Torrente Samoggia",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Cassa di espansione del Torrente Samoggia è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 18,
+    "name": "Le Meleghine",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Le Meleghine è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 19,
+    "name": "Boscovivo",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Boscovivo è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 20,
+    "name": "Parco Lamborghini",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Parco Lamborghini è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 21,
+    "name": "Casone del Partigiano",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Casone del Partigiano è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 22,
+    "name": "Torrente Idice",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Torrente Idice è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 23,
+    "name": "Canale Collettore delle Acque Alte",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di Canale Collettore delle Acque Alte è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  },
+  {
+    "day": 24,
+    "name": "La Bora",
+    "challenge": {
+      "type": "quiz",
+      "placeholder": true,
+      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "options": [
+        "Raccogliere fiori per portarli a casa.",
+        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
+        "Avvicinarsi agli animali per dar loro da mangiare."
+      ],
+      "correct_index": 1,
+      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+    },
+    "area_description": "La scheda di La Bora è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_image": null
+  }
+]

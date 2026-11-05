@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{"settings": {{ site.data.advent | jsonify }}, "days": {{ site.data.advent_days | jsonify }}}

@@ -1,0 +1,38 @@
+---
+layout: default
+paper_class: day-page
+---
+{% assign number = page.day | plus: 0 %}
+{% assign day = site.data.advent_days | where: 'day', number | first %}
+<link rel="stylesheet" href="{{ '/assets/css/day.css' | relative_url }}">
+<script src="{{ '/assets/js/day.js' | relative_url }}" defer></script>
+<article class="advent-day" data-day="{{ number }}" data-config-url="{{ '/assets/registration-config.json' | relative_url }}" data-days-url="{{ '/assets/data/advent.json' | relative_url }}" data-profile-url="{{ '/registrazione.html' | relative_url }}">
+  <a class="day-back" href="{{ '/' | relative_url }}">← Torna al calendario</a>
+  <p class="calendar-intro__eyebrow">{{ number }} dicembre · Natura di Pianura</p>
+  <h1>La scoperta del giorno {{ number }}</h1>
+  <p class="day-preview" data-preview hidden>Anteprima: tutte le giornate sono aperte per le prove.</p>
+  <ol class="day-steps" aria-label="Il percorso della giornata"><li>La prova</li><li>Risultato e spiegazione</li><li>Scopri l’area</li></ol>
+  <p role="status" data-day-message>Caricamento della giornata…</p>
+  <div class="day-login" data-login hidden><p>Per salvare il risultato e guadagnare punti, entra con il tuo codice o crea il tuo esploratore.</p><a class="day-button" href="{{ '/registrazione.html' | relative_url }}">Vai al mio account</a></div>
+  <div class="day-practice" data-practice-offer hidden><p>Puoi anche provare il gioco senza salvare punti o progressi.</p><button type="button" class="day-button day-button--light" data-practice-start>Prova senza salvare</button></div>
+  <p class="day-preview" data-practice-notice hidden>Prova senza salvataggio: i risultati di questa sessione non cambiano il tuo punteggio.</p>
+  <section class="day-panel" data-challenge hidden aria-labelledby="challenge-title">
+    <p class="day-kicker">La prova</p><h2 id="challenge-title" data-challenge-title></h2>
+    <p class="day-placeholder" data-placeholder hidden>Domanda dimostrativa: la prova specifica dell’area è ancora da preparare.</p>
+    <p data-points-rule></p>
+    <form data-answer-form><fieldset><legend class="day-sr-only">Scegli una risposta</legend><div class="day-answers" data-answers></div></fieldset><button type="submit" class="day-button">Conferma la risposta</button></form>
+  </section>
+  <section class="day-panel day-result" data-result hidden aria-labelledby="result-title" tabindex="-1">
+    <p class="day-kicker">Il risultato</p><h2 id="result-title" data-result-title></h2><p class="day-points" data-result-points></p>
+    <p data-explanation></p>
+    <button type="button" class="day-button day-button--light" data-retry hidden>Tenta il recupero</button>
+    <button type="button" class="day-button" data-discover aria-expanded="false" aria-controls="day-area">Scopri l’area</button>
+  </section>
+  <section id="day-area" class="day-panel day-area" data-area hidden aria-labelledby="area-title" tabindex="-1">
+    <p class="day-kicker">L’area di oggi</p><h2 id="area-title" data-area-name>{{ day.name }}</h2><img data-area-image hidden alt="" loading="lazy"><p data-area-description></p>
+    <a href="https://naturadipianura.it/luoghi/" target="_blank" rel="noopener">Le aree della rete GIAPP ↗</a>
+    <p><a class="day-button" href="{{ '/' | relative_url }}">Torna al calendario</a></p>
+  </section>
+  {{ content }}
+  <noscript>Per svolgere la prova devi attivare JavaScript.</noscript>
+</article>

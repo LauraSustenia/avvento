@@ -23,7 +23,7 @@ Aprire `http://localhost:4000/avvento/`. Live Server non elabora gli include e i
 - Non tagliare le estremità delle PNG finali: occorre conservare gli agganci comuni. Per cambiare altezza si interviene sulle immagini sorgenti e sulla composizione, non su una compressione CSS.
 - Per aggiungere o escludere una fascia, modificare la lista `1,2,3,4,5,6` nel layout.
 - L’ordine è casuale a ogni caricamento; tutte le fasce vengono usate prima di ripetere un gruppo. Durante il ridimensionamento l’ordine resta stabile.
-- Il numero di fasce segue l’altezza del contenuto. Aggiungere testo a `index.html` per provarlo. L’ultima fascia resta intera prima della coda.
+- Il numero di fasce segue l’altezza del contenuto. Aggiungere testo a `index2.html` per provarlo. L’ultima fascia resta intera prima della coda.
 
 In `assets/css/style.css`:
 
@@ -49,7 +49,7 @@ Generate con lo strumento integrato per le immagini, usando `reference-head-bran
 
 ## Seconda home: mappa
 
-La prova è in `index2.html`, disponibile su `/avvento/index2.html`. Usa il layout dedicato `_layouts/map.html` e una sola immagine, `images/mappa-avvento-poster.webp` (2172 × 2800), che integra paesaggio, cartografia e logo trasparente. Non carica testata, coda o fasce ripetute. La home originale rimane in `index.html`.
+La mappa è la home in `index.html`, disponibile su `/avvento/`. Usa il layout dedicato `_layouts/map.html` e una sola immagine, `images/mappa-avvento-poster.webp` (2172 × 2800), che integra paesaggio, cartografia e logo trasparente. Non carica testata, coda o fasce ripetute. La versione alternativa a griglia è in `index2.html` (`/avvento/index2.html`).
 
 - `Foglie` e `Caselle` cambiano l'aspetto dei segnaposto; i numeri restano associati alle stesse aree e il 24 è sulla Bora.
 - I 24 abbinamenti sono in `_data/calendar_map.json`. Le coordinate `anchor_x` e `anchor_y` indicano il punto cartografico originale; `left` e `top` posizionano il segnaposto, leggermente distanziato dagli altri nei gruppi più densi.

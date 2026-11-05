@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{"mode": {{ site.data.registration.mode | jsonify }}, "url": {{ site.data.registration.supabase_url | jsonify }}, "key": {{ site.data.registration.supabase_publishable_key | jsonify }}}
