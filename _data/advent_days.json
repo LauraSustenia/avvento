@@ -101,7 +101,7 @@
     },
     "area_description": "La Fascia boscata dell’Interporto è una delle aree elencate nella rete GIAPP. Il gioco di oggi invita a scoprire quanto possano essere diversi i luoghi scelti dagli uccelli per nidificare. La scheda di dettaglio dell’area sarà completata con i materiali dei gestori.",
     "area_image": null,
-    "area_url": "https://naturadipianura.it/luoghi/"
+    "area_url": null
   },
   {
     "day": 3,
@@ -136,7 +136,7 @@
     },
     "area_description": "La Cassa di espansione Ponte Alto è indicata nella mappa della rete GIAPP. In questa giornata abbiamo incontrato, attraverso un’illustrazione, un animale delle zone umide. La scheda con le caratteristiche specifiche dell’area sarà completata con i materiali dei gestori.",
     "area_image": null,
-    "area_url": "https://naturadipianura.it/luoghi/"
+    "area_url": null
   },
   {
     "day": 4,
@@ -300,7 +300,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Valli mirandolesi è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": null
   },
   {
     "day": 8,
@@ -318,7 +319,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Cassa di espansione Dosolo è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/cassa-di-espansione-dosolo-ecomuseo-dellacqua/"
   },
   {
     "day": 9,
@@ -336,7 +338,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Ex Risaia di Bentivoglio è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/ex-risaia-di-bentivoglio-la-rizza/"
   },
   {
     "day": 10,
@@ -354,7 +357,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Golena San Vitale è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/golena-san-vitale/"
   },
   {
     "day": 11,
@@ -372,7 +376,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Nodo ecologico di Via dei Tigli è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/nodo-della-rete-ecologica-di-via-dei-tigli/"
   },
   {
     "day": 12,
@@ -390,7 +395,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Bisana è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/bisana/"
   },
   {
     "day": 13,
@@ -408,7 +414,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Vasche Ex Zuccherificio è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/vasche-ex-zuccherificio/"
   },
   {
     "day": 14,
@@ -426,7 +433,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Manzolino Tivoli è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/manzolino-tivoli/"
   },
   {
     "day": 15,
@@ -444,7 +452,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Torrazzuolo è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/torrazzuolo/"
   },
   {
     "day": 16,
@@ -462,7 +471,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Collegio di Spagna è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/area-di-riequilibrio-ambientale-di-baricella/"
   },
   {
     "day": 17,
@@ -480,7 +490,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Cassa di espansione del Torrente Samoggia è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/cassa-di-espansione-del-torrente-samoggia/"
   },
   {
     "day": 18,
@@ -498,7 +509,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Le Meleghine è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": null
   },
   {
     "day": 19,
@@ -516,7 +528,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Boscovivo è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/boscovivo/"
   },
   {
     "day": 20,
@@ -534,7 +547,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Parco Lamborghini è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/parco-lamborghini/"
   },
   {
     "day": 21,
@@ -552,7 +566,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Casone del Partigiano è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/casone-del-partigiano/"
   },
   {
     "day": 22,
@@ -570,7 +585,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Torrente Idice è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/torrente-idice/"
   },
   {
     "day": 23,
@@ -588,7 +604,8 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di Canale Collettore delle Acque Alte è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/canale-collettore-delle-acque-alte/"
   },
   {
     "day": 24,
@@ -606,6 +623,7 @@
       "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
     },
     "area_description": "La scheda di La Bora è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
-    "area_image": null
+    "area_image": null,
+    "area_url": "https://naturadipianura.it/luoghi/la-bora-casa-della-natura/"
   }
 ]

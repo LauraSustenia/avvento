@@ -69,7 +69,7 @@
   $('[data-practice-start]').addEventListener('click',()=>{practice=true;practiceProgress=null;practiceScore=0;state=localState();render();});
   $('[data-discover]').addEventListener('click',()=>{if(!state.area)return;const a=state.area;$('[data-area-name]').textContent=a.name;$('[data-area-description]').textContent=a.description;
     const image=$('[data-area-image]'),safe=typeof a.image==='string'&&(/^https:\/\//.test(a.image)||/^\/(?!\/)/.test(a.image));image.hidden=!safe;if(safe)image.src=a.image;
-    $('[data-area-link]').href=/^https:\/\//.test(a.url||'')?a.url:'https://naturadipianura.it/luoghi/';$('[data-area]').hidden=false;$('[data-discover]').setAttribute('aria-expanded','true');$('[data-area]').focus();});
+    const target=entry.area_url||a.url||'https://naturadipianura.it/luoghi/'; const link=$('[data-area-link]');link.href=/^https:\/\//.test(target)?target:'https://naturadipianura.it/luoghi/';link.textContent=link.href==='https://naturadipianura.it/luoghi/'?'Consulta l’elenco delle aree GIAPP ↗':'Visita la scheda di '+a.name+' ↗';$('[data-area]').hidden=false;$('[data-discover]').setAttribute('aria-expanded','true');$('[data-area]').focus();});
   (async()=>{try{
     const responses=await Promise.all([fetch(root.dataset.configUrl,{cache:'no-store'}),fetch(root.dataset.daysUrl,{cache:'no-store'})]);if(responses.some(r=>!r.ok))throw new Error('Giornata non disponibile.');[config,catalogue]=await Promise.all(responses.map(r=>r.json()));
     entry=catalogue.days.find(d=>d.day===day);if(!entry||!['demo','supabase'].includes(config.mode))throw new Error('Giornata non disponibile.');state=config.mode==='demo'?localState():await cloud();render();

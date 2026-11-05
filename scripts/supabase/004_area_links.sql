@@ -1,0 +1,28 @@
+-- Solo collegamenti alle aree: non modifica giochi, profili o punteggi.
+begin;
+alter table calendar_private.calendar_days add column if not exists area_url text;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/bosco-di-santa-lucia/' where day=1;
+update calendar_private.calendar_days set area_url=null where day=2;
+update calendar_private.calendar_days set area_url=null where day=3;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/ex-polveriera-madonna-dei-prati/' where day=4;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/bacini-ex-zuccherificio-di-argelato-e-golena-del-fiume-reno/' where day=5;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-del-fiume-panaro/' where day=6;
+update calendar_private.calendar_days set area_url=null where day=7;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-dosolo-ecomuseo-dellacqua/' where day=8;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/ex-risaia-di-bentivoglio-la-rizza/' where day=9;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/golena-san-vitale/' where day=10;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/nodo-della-rete-ecologica-di-via-dei-tigli/' where day=11;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/bisana/' where day=12;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/vasche-ex-zuccherificio/' where day=13;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/manzolino-tivoli/' where day=14;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/torrazzuolo/' where day=15;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/area-di-riequilibrio-ambientale-di-baricella/' where day=16;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-del-torrente-samoggia/' where day=17;
+update calendar_private.calendar_days set area_url=null where day=18;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/boscovivo/' where day=19;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/parco-lamborghini/' where day=20;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/casone-del-partigiano/' where day=21;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/torrente-idice/' where day=22;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/canale-collettore-delle-acque-alte/' where day=23;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/la-bora-casa-della-natura/' where day=24;
+commit;

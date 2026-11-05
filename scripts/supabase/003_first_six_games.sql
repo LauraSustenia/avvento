@@ -236,4 +236,29 @@ update calendar_private.calendar_days set challenge='{"placeholder":false,"versi
 update calendar_private.calendar_days set challenge='{"placeholder":false,"version":"six-games-v1","hint":"Prima viene l’uovo. Il bruco cresce prima di trasformarsi in crisalide.","sources":[{"title":"American Museum of Natural History: il ciclo della farfalla","url":"https://www.amnh.org/explore/news-blogs/life-cycle-butterfly"}],"type":"sequence","title":"Da uovo a farfalla","instructions":"Metti in ordine le quattro fasi, iniziando dall’uovo. Usa le frecce per spostare le carte.","items":["Uovo","Bruco","Crisalide","Farfalla adulta"],"images":["images/giochi/ciclo-0.webp","images/giochi/ciclo-1.webp","images/giochi/ciclo-2.webp","images/giochi/ciclo-3.webp"],"solution":[0,1,2,3],"explanation":"La sequenza è uovo → bruco (larva) → crisalide (pupa) → farfalla adulta. È una metamorfosi completa. Le illustrazioni mostrano uno schema generale del ciclo, non una specie censita nell’area."}'::jsonb,area_description='I bacini dell’ex-zuccherificio di Argelato e la golena del Reno sono presentati nel sito GIAPP come un sito della rete Natura 2000, tra i territori di Argelato e Castello d’Argile. La scheda di dettaglio sarà completata con i materiali dei gestori.',area_url='https://naturadipianura.it/luoghi/bacini-ex-zuccherificio-di-argelato-e-golena-del-fiume-reno/' where day=5;
 update calendar_private.calendar_days set challenge='{"placeholder":false,"version":"six-games-v1","hint":"Cerca un animale sul ramo, uno sul tronco, uno nell’acqua e uno su una foglia.","sources":[],"type":"find","title":"Quattro incontri sullo stagno","instructions":"Cerca quattro animali nella scena e toccali. Puoi ingrandire l’immagine. Per giocare senza cercare i punti nell’immagine, apri la modalità con elenco.","image":"images/giochi/scena-stagno.webp","targets":[{"label":"Pettirosso","x":14.5,"y":17,"w":15,"h":22},{"label":"Testuggine palustre","x":19,"y":70,"w":25,"h":19},{"label":"Airone cenerino","x":80,"y":53,"w":22,"h":31},{"label":"Coccinella","x":86.5,"y":18,"w":8,"h":9}],"choices":["Pettirosso","Testuggine palustre","Airone cenerino","Coccinella","Volpe","Rana","Gufo","Farfalla"],"solution":[0,1,2,3],"explanation":"Nella scena ci sono un pettirosso sul ramo, una testuggine sul tronco, un airone nell’acqua e una coccinella sulla foglia. La scena è illustrata e non documenta la presenza contemporanea di queste specie nell’area."}'::jsonb,area_description='La Cassa di espansione del Fiume Panaro, nel territorio di San Cesario sul Panaro, comprende ambienti acquatici e boschi di salici e pioppi. Il sito GIAPP segnala numerosi uccelli, oltre a rettili e anfibi. La scena del gioco è illustrata: la scheda ufficiale racconta gli ambienti e le specie dell’area.',area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-del-fiume-panaro/' where day=6;
 
+-- Collegamenti aggiornati delle aree.
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/bosco-di-santa-lucia/' where day=1;
+update calendar_private.calendar_days set area_url=null where day=2;
+update calendar_private.calendar_days set area_url=null where day=3;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/ex-polveriera-madonna-dei-prati/' where day=4;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/bacini-ex-zuccherificio-di-argelato-e-golena-del-fiume-reno/' where day=5;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-del-fiume-panaro/' where day=6;
+update calendar_private.calendar_days set area_url=null where day=7;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-dosolo-ecomuseo-dellacqua/' where day=8;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/ex-risaia-di-bentivoglio-la-rizza/' where day=9;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/golena-san-vitale/' where day=10;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/nodo-della-rete-ecologica-di-via-dei-tigli/' where day=11;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/bisana/' where day=12;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/vasche-ex-zuccherificio/' where day=13;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/manzolino-tivoli/' where day=14;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/torrazzuolo/' where day=15;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/area-di-riequilibrio-ambientale-di-baricella/' where day=16;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-del-torrente-samoggia/' where day=17;
+update calendar_private.calendar_days set area_url=null where day=18;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/boscovivo/' where day=19;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/parco-lamborghini/' where day=20;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/casone-del-partigiano/' where day=21;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/torrente-idice/' where day=22;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/canale-collettore-delle-acque-alte/' where day=23;
+update calendar_private.calendar_days set area_url='https://naturadipianura.it/luoghi/la-bora-casa-della-natura/' where day=24;
 commit;
