@@ -1,1 +1,17 @@
 .picture-match-panels{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}.picture-match-panel{margin:0;min-width:0;scroll-margin-top:24px}.picture-match-heading{font:600 17px/1.4 system-ui,sans-serif;margin:0 0 12px}.picture-match-scene{position:relative;line-height:0}.picture-match-image{display:block;width:100%;height:auto;background:transparent;border:0;border-radius:12px}.picture-match-hotspot{position:absolute;min-width:44px;min-height:44px;padding:0;border:2px solid transparent;border-radius:12px;background:transparent;color:#304e38;cursor:pointer;touch-action:manipulation}.picture-match-hotspot:hover{background:#bfa76a19;border-color:#9e884b}.picture-match-hotspot[aria-pressed=true]{border:3px solid #a86a25;background:#e9c17326;box-shadow:0 0 0 2px #fff8}.picture-match-hotspot.is-assigned{border-color:#68849a}.picture-match-hotspot.is-assigned[aria-pressed=true]{border-color:#a86a25}.picture-match-hotspot:focus-visible{outline:3px solid #9b591e;outline-offset:3px}.picture-match-badge{position:absolute;top:2px;left:2px;display:grid;place-items:center;min-width:24px;height:24px;border:1px solid #8d9c78;border-radius:50%;background:#fffdf2ed;font:600 13px/1 system-ui,sans-serif;box-shadow:0 1px 3px #263b2526}.picture-match-hotspot.is-assigned .picture-match-badge{background:#dde8ed}.picture-match-status,.picture-match-selected,.picture-match-note,.picture-match-count{font:14px/1.5 system-ui,sans-serif}.picture-match-status{padding:10px 12px;border-left:3px solid #8eaa78;background:#edf2e4}.picture-match-selected{min-height:42px;margin:0 0 10px}.picture-match-back{margin-top:12px;font-size:14px}.picture-match-summary{margin-top:28px}.picture-match-summary h3,.picture-match-solution h3{font-size:22px;margin-bottom:8px}.picture-match-list{padding:0;list-style:none;display:grid;gap:8px}.picture-match-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-bottom:1px solid #c8d1b9;font:14px/1.5 system-ui,sans-serif}.picture-match-remove{min-height:44px;padding:6px 10px;border:1px solid #9ba988;border-radius:8px;background:transparent;color:var(--ink);font:13px system-ui,sans-serif;cursor:pointer}.picture-match-solution{margin:20px 0}.picture-match-solution li{margin:8px 0;font-size:16px}.picture-match-note{margin-bottom:20px}[data-picture-match-solution]:empty{display:none}@media(max-width:700px){.picture-match-panels{grid-template-columns:minmax(0,1fr);gap:26px}.picture-match-panel{width:100%;max-width:480px;margin:0 auto}.picture-match-row{flex-wrap:wrap}.picture-match-selected{min-height:0}.picture-match-hotspot{border-radius:8px}.picture-match-badge{min-width:22px;height:22px;font-size:12px}.picture-match-back{width:100%}}
+
+/* Keep animal numbers in the transparent space beside each illustration. */
+.picture-match-hotspot[data-animal="1"] .picture-match-badge {
+  left: auto;
+  right: 2px;
+}
+.picture-match-hotspot[data-animal="2"] .picture-match-badge {
+  top: auto;
+  bottom: 2px;
+}
+.picture-match-hotspot[data-animal="3"] .picture-match-badge {
+  top: auto;
+  left: auto;
+  right: 2px;
+  bottom: 2px;
+}
