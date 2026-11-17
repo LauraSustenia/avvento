@@ -1,6 +1,6 @@
 /* Fotografia sopra e testo sotto in tutte le giornate. */
 .day-area__photo { margin: 22px 0 28px; }
-.day-area__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #e7eddd; }
+.day-area__media { position: relative; aspect-ratio: 12 / 5; overflow: hidden; border-radius: 12px; background: #e7eddd; }
 .day-area .day-area__media img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
 .day-area__placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 18px; text-align: center; color: #64795b; border: 1px dashed #9fb190; border-radius: 12px; background: linear-gradient(140deg, #eaf0e1, #dde8d0); }
 .day-area__placeholder strong { font: 500 16px system-ui, sans-serif; }
@@ -19,3 +19,4 @@
   .day-area__placeholder span { font-size: 12px; }
   .day-area__actions { margin-top: 20px; }
 }
+

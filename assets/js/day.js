@@ -30,7 +30,8 @@
     const data=await response.json();if(!response.ok)throw new Error(data.code==='PGRST202'?'Il salvataggio dei nuovi giochi non è ancora attivo. Puoi provarli senza salvare punti.':'Non riesco a caricare o salvare la prova. Riprova tra poco.');
     if(data.error)throw new Error(data.error);pending=null;return data;
   }
-  function mountGame(){ui=window.GiappGameUI.render($('[data-answers]'),state.challenge,{asset,attempt:state.progress?.attempts||0,onMessage:message,storageKey:`giapp-puzzle:${practice?'practice':state.profile?.id||'guest'}:${state.year||catalogue.settings.year}:${day}:${state.challenge.version||'prototype-v1'}`});}
+  function gameStorageKey(){return `giapp-puzzle:${practice?'practice':state.profile?.id||'guest'}:${state.year||catalogue.settings.year}:${day}:${state.challenge.version||'prototype-v1'}`;}
+  function mountGame(){ui?.destroy?.();const challenge=state.challenge.visual==='audio-matching'&&entry.challenge.version===state.challenge.version?{...state.challenge,recordings:entry.challenge.recordings}:state.challenge;ui=window.GiappGameUI.render($('[data-answers]'),challenge,{asset,attempt:state.progress?.attempts||0,onMessage:message,storageKey:gameStorageKey()});}
   function render(){
     $('[data-preview]').hidden=!state.preview;$('[data-practice-notice]').hidden=!practice;
     if(state.locked){message(`La giornata si aprirà il ${state.opens_on}.`);$('[data-challenge]').hidden=true;$('[data-practice-offer]').hidden=true;return;}
@@ -41,8 +42,22 @@
     $('[data-points-rule]').textContent=c.type==='quiz'&&c.options.length===4?'Risposte da −2, 2, 5 o 10 punti. Due tentativi: conta il risultato migliore, senza sommarli.': ['quiz','mystery','audio'].includes(c.type)?'Risposta corretta: 10 punti; errata: −2. Due tentativi: conta il migliore.':'2 punti per elemento corretto e 2 punti extra se completi tutto. Massimo 10 punti, due tentativi: conta il migliore.'+(c.type==='find'?' Nell’elenco, una scelta errata annulla un elemento corretto.':'');
     if(c.type==='puzzle')$('[data-points-rule]').textContent='Il punteggio è proporzionale alle 12 tessere al posto giusto, fino a 10 punti a puzzle completo. Hai due tentativi; conserviamo il migliore. Gli scambi sono liberi fino alla conferma.';
     if(c.type==='wordsearch')$('[data-points-rule]').textContent='Fino a 8 punti per le parole trovate, più 2 se le trovi tutte e risolvi la parola nascosta. Due tentativi: conserviamo il migliore. Le selezioni non contano come tentativi finché non confermi.';
+    if(c.visual==='frog-search')$('[data-points-rule]').textContent='Trova 6 dalmatine: fino a 8 punti per le selezioni corrette, più 2 se le trovi tutte senza errori. Ogni animale di un’altra specie selezionato annulla una scelta corretta. Due tentativi: conta il migliore.';
+    if(c.visual==='wildlife-search')$('[data-points-rule]').textContent='Trova tutti i 20 animali. Il punteggio cresce con quelli trovati, fino a 10 punti. Due tentativi: conserviamo il migliore.';
+    const wildlifeResult=$('[data-wildlife-result]');wildlifeResult.replaceChildren();
+    if(p&&c.visual==='wildlife-search'&&entry.challenge.version===c.version)wildlifeResult.append(window.GiappWildlifeSearch.result(entry.challenge,{asset,storageKey:gameStorageKey(),closed:p.closed}));
+    if(c.type==='memory')$('[data-points-rule]').textContent='Parti da 10 punti: ogni abbinamento errato toglie 1 punto, fino a 0. Due partite: conserviamo il risultato migliore. Nessun limite di tempo.';
+    const memorySolution=$('[data-memory-solution]');memorySolution.replaceChildren();
+    if(p?.closed&&c.type==='memory'&&entry.challenge.version===c.version)memorySolution.append(window.GiappMemory.solution(entry.challenge,{asset}));
+    if(c.visual==='audio-matching')$('[data-points-rule]').textContent='3 punti per ogni abbinamento corretto, più 1 se li trovi tutti. Massimo 10 punti. Due tentativi: conserviamo il migliore.';
+    const audioSolution=$('[data-audio-match-solution]');audioSolution.replaceChildren();
+    if(p?.closed&&c.visual==='audio-matching'&&entry.challenge.version===c.version)audioSolution.append(window.GiappAudioMatch.solution(entry.challenge,{asset}));
+    const frogResult=$('[data-frog-result]');frogResult.replaceChildren();
+    if(p&&c.visual==='frog-search'&&entry.challenge.version===c.version)frogResult.append(window.GiappFrogSearch.result(entry.challenge,{asset,storageKey:gameStorageKey(),closed:p.closed}));
     const riverSolution=$('[data-river-solution]');riverSolution.replaceChildren();
     if(p?.closed&&c.visual==='river-path'&&entry.challenge.version===c.version)riverSolution.append(window.GiappRiverPath.create({asset,image:c.image,reveal:true}));
+    const beakSolution=$('[data-beak-solution]');beakSolution.replaceChildren();
+    if(p?.closed&&c.visual==='beak-matching'&&entry.challenge.version===c.version)beakSolution.append(window.GiappBeakMatch.solution(entry.challenge,{asset}));
     const pictureSolution=$('[data-picture-match-solution]');pictureSolution.replaceChildren();
     if(p?.closed&&c.visual==='picture-matching'&&entry.challenge.version===c.version)pictureSolution.append(window.GiappPictureMatch.solution(entry.challenge));
     mountGame();
@@ -55,6 +70,29 @@
       const explanation=p.closed&&sameContent?(entry.challenge.explanation??state.explanation):state.explanation;
       const explanationBox=$('[data-explanation]');explanationBox.replaceChildren();
       String(explanation||'').split(/\n\s*\n/).filter(text=>text.trim()).forEach(text=>{const paragraph=document.createElement('p');paragraph.textContent=text.trim();explanationBox.append(paragraph);});
+      if(p.closed&&sameContent){
+        const details=entry.challenge;
+        if(details.explanation_image){
+          const image=document.createElement('img');image.className='day-explanation-bird';
+          image.src=asset(details.explanation_image);image.alt=details.explanation_image_alt||'';
+          image.loading='lazy';
+          if(details.explanation_image_caption){
+            const figure=document.createElement('figure'),caption=document.createElement('figcaption');
+            figure.className='day-explanation-species';caption.textContent=details.explanation_image_caption;
+            figure.append(image,caption);explanationBox.append(figure);
+          }else explanationBox.prepend(image);
+        }
+        if(details.type==='sequence'&&details.images?.length&&Array.isArray(details.solution)){
+          const heading=document.createElement('h3');heading.textContent='Le fasi nell’ordine giusto';
+          const phases=document.createElement('ol');phases.className='day-explanation-phases';phases.setAttribute('aria-label',details.cycle_label||'Ciclo della farfalla in ordine');
+          details.solution.forEach((index,position)=>{
+            const item=document.createElement('li'),image=document.createElement('img'),label=document.createElement('span');
+            image.src=asset(details.images[index]);image.alt=details.items[index];image.loading='lazy';
+            label.textContent=(position+1)+'. '+details.items[index];item.append(image,label);phases.append(item);
+          });
+          explanationBox.prepend(heading,phases);
+        }
+      }
       $('[data-retry]').hidden=p.closed;$('[data-finish]').hidden=p.closed;$('[data-discover]').hidden=!p.closed;
       $('[data-discover]').textContent=`Scopri l’area: ${state.name}`;
       const reveal=$('[data-result-reveal]');reveal.hidden=!(p.closed&&['mystery','puzzle'].includes(c.type));if(!reveal.hidden){reveal.src=asset(c.image);reveal.alt=c.image_alt||'Illustrazione completa dell’animale della prova';}
@@ -65,13 +103,15 @@
   }
   async function commit(submission=null,finish=false){
     if(busy)return;busy=true;const enabled=[...root.querySelectorAll('button')].filter(b=>!b.disabled);enabled.forEach(b=>b.disabled=true);message('Verifica della prova…');
-    try{state=practice||config.mode==='demo'?localState(submission,finish):await cloud(submission,finish);render();$('[data-result]').focus();}
+    try{const nextState=practice||config.mode==='demo'?localState(submission,finish):await cloud(submission,finish);if(submission)ui?.rememberSubmission?.(submission);state=nextState;render();$('[data-result]').focus();}
     catch(error){message(error.message);}
     finally{busy=false;enabled.filter(b=>b.isConnected).forEach(b=>b.disabled=false);}
   }
   $('[data-answer-form]').addEventListener('submit',event=>{event.preventDefault();const submission=ui.get();
     const c=state.challenge;if(['quiz','mystery','audio'].includes(c.type)&&!Number.isInteger(submission.choice)){message('Scegli una risposta.');return;}
-    if(c.type==='matching'&&(submission.pairs.includes(-1)||new Set(submission.pairs).size!==4)){message('Abbina ogni animale a un rifugio diverso.');return;}
+    if(['frog-search','wildlife-search'].includes(c.visual)&&!submission.targets.length){message('Seleziona almeno un animale prima di confermare.');return;}
+    if(c.type==='matching'&&(submission.pairs.includes(-1)||new Set(submission.pairs).size!==(c.visual==='audio-matching'?3:4))){message('Completa tutti gli abbinamenti, senza usare due volte lo stesso elemento.');return;}
+    if(c.type==='memory'){try{core.memoryScore(submission);}catch(error){message(error.message);return;}}
     commit(submission);
   });
   $('[data-retry]').addEventListener('click',()=>{$('[data-result]').hidden=true;$('[data-area]').hidden=true;$('[data-challenge]').hidden=false;mountGame();ui.focus();});
@@ -93,7 +133,7 @@
   (async()=>{try{
     const responses=await Promise.all([fetch(root.dataset.configUrl,{cache:'no-store'}),fetch(root.dataset.daysUrl,{cache:'no-store'})]);if(responses.some(r=>!r.ok))throw new Error('Giornata non disponibile.');[config,catalogue]=await Promise.all(responses.map(r=>r.json()));
     entry=catalogue.days.find(d=>d.day===day);if(!entry||!['demo','supabase'].includes(config.mode))throw new Error('Giornata non disponibile.');state=config.mode==='demo'?localState():await cloud();
-    if(!state.locked&&(['puzzle','wordsearch'].includes(entry.challenge.type)||['river-path','picture-matching'].includes(entry.challenge.visual))&&state.challenge?.version!==entry.challenge.version){$('[data-preview]').hidden=!state.preview;$('[data-practice-offer]').hidden=false;window.dispatchEvent(new CustomEvent('giapp:profile',{detail:state.profile}));message('Il nuovo gioco non è ancora attivo per il salvataggio. Puoi provarlo senza salvare punti.');return;}
+    if(!state.locked&&(['puzzle','wordsearch','memory','sequence'].includes(entry.challenge.type)||['river-path','picture-matching','frog-search','beak-matching','wildlife-search','audio-matching'].includes(entry.challenge.visual))&&state.challenge?.version!==entry.challenge.version){$('[data-preview]').hidden=!state.preview;$('[data-practice-offer]').hidden=false;window.dispatchEvent(new CustomEvent('giapp:profile',{detail:state.profile}));message('Il nuovo gioco non è ancora attivo per il salvataggio. Puoi provarlo senza salvare punti.');return;}
     render();
   }catch(error){message(error.message);if(entry)$('[data-practice-offer]').hidden=false;}})();
 })();

@@ -6,6 +6,8 @@
     if(c.instructions)container.append(element('p','game-instructions',c.instructions));
     const image=(source,alt,cls='game-card-image')=>{const img=element('img',cls);img.src=asset(source);img.alt=alt;img.loading='lazy';return img;};
     const radioOptions=()=>{const box=element('div','day-answers');c.options.forEach((text,index)=>{const label=element('label'),input=element('input');input.type='radio';input.name='choice';input.value=index;input.required=true;label.append(input,element('span','',text));box.append(label);});container.append(box);return()=>({choice:Number(box.querySelector('input:checked')?.value??NaN)});};
+    if(c.type==='matching'&&c.visual==='audio-matching')return window.GiappAudioMatch.render(container,c,{asset,storageKey,onMessage});
+    if(c.type==='memory')return window.GiappMemory.render(container,c,{asset,storageKey,attempt,onMessage});
     if(['quiz','mystery','audio'].includes(c.type)){
       if(c.type==='mystery'){const frame=element('div',`mystery-picture ${attempt?'is-wider':''}`);frame.append(image(c.image,'Dettaglio dell’illustrazione da riconoscere',''));container.append(frame);}
       if(c.type==='audio'){
@@ -59,6 +61,8 @@
       remix.addEventListener('click',()=>{order=mix();moves=0;active=null;persist();paint(0);});
       if(c.credit?.text)container.append(element('p','game-credit',c.credit.text));
       paint();persist();get=()=>({tiles:[...order]});
+    }else if(c.type==='matching'&&c.visual==='beak-matching'){
+      return window.GiappBeakMatch.render(container,c,{asset,storageKey});
     }else if(c.type==='matching'&&c.visual==='picture-matching'){
       return window.GiappPictureMatch.render(container,c,{asset,storageKey});
     }else if(c.type==='matching'){
@@ -73,6 +77,10 @@
       const list=element('ol','sequence-list');container.append(list);
       function paint(focusIndex=null,direction=null){list.replaceChildren();order.forEach((item,index)=>{const li=element('li','sequence-card');li.dataset.sequenceItem=item;li.append(image(c.images[item],''),element('strong','',c.items[item]));const controls=element('div','sequence-controls');for(const [label,delta,dir]of[['↑',-1,'up'],['↓',1,'down']]){const button=element('button','',label);button.type='button';button.dataset.move=dir;button.disabled=index+delta<0||index+delta>=4;button.setAttribute('aria-label',`Sposta ${c.items[item]} ${delta<0?'prima':'dopo'}`);button.addEventListener('click',()=>{const next=index+delta;[order[index],order[next]]=[order[next],order[index]];paint(next,dir);});controls.append(button);}li.append(controls);list.append(li);});if(focusIndex!==null){const target=list.children[focusIndex].querySelector(`[data-move="${direction}"]:not(:disabled)`)||list.children[focusIndex].querySelector('button:not(:disabled)');target?.focus();}}
       paint();get=()=>({order:[...order]});
+    }else if(c.type==='find'&&c.visual==='wildlife-search'){
+      return window.GiappWildlifeSearch.render(container,c,{asset,storageKey});
+    }else if(c.type==='find'&&c.visual==='frog-search'){
+      return window.GiappFrogSearch.render(container,c,{asset,storageKey});
     }else if(c.type==='find'){
       const selected=new Set(),view=element('div','scene-viewport'),scene=element('div','scene-picture');scene.append(image(c.image,'Scena illustrata con vegetazione, stagno e animali da cercare','scene-image'));view.append(scene);container.append(view);
       const counter=element('p','game-counter','0 animali selezionati');counter.setAttribute('aria-live','polite');
