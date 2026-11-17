@@ -426,18 +426,34 @@
     "day": 13,
     "name": "Vasche Ex Zuccherificio",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
-      ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "type": "puzzle",
+      "placeholder": false,
+      "version": "cicogna-puzzle-v1",
+      "title": "Ricomponi la cicogna",
+      "instructions": "La foto è divisa in dodici tessere. Tocca una tessera e poi un’altra per scambiarle. Puoi fare tutti gli scambi che vuoi prima di confermare. Se ti serve, apri la foto guida.",
+      "image": "images/giochi/cicogna-giorno-13.webp",
+      "image_width": 824,
+      "image_height": 1233,
+      "columns": 3,
+      "rows": 4,
+      "image_alt": "Fotografia verticale di una cicogna, con becco rosso e piumaggio bianco e nero.",
+      "hint": "Parti dalla testa e dal becco. Poi segui la continuità del collo, delle ali e della zampa. Puoi aprire la foto guida e riprovare: la disposizione delle tessere viene conservata in questa scheda del browser.",
+      "explanation": "La protagonista del puzzle è la cicogna bianca (Ciconia ciconia). La riconosci dal piumaggio bianco, dalle grandi penne nere delle ali e dal lungo becco rossastro. È un grande trampoliere: quando apre le ali può avvicinarsi ai due metri di apertura.\n\nCerca il cibo in ambienti aperti, come prati, campi e zone umide poco profonde. Il suo lungo becco le permette di catturare prede diverse: grandi insetti, anfibi, piccoli mammiferi e altri piccoli animali.\n\nUn indizio per distinguerla dagli aironi? In volo la cicogna tiene il collo disteso, mentre gli aironi lo ripiegano. Per il nido sceglie punti elevati, come alberi, edifici e piattaforme.\n\nAlle Vasche Ex Zuccherificio di Crevalcore è documentata la nidificazione spontanea delle cicogne. Il puzzle ci porta così dal ritratto di un animale a un luogo dove conoscere il suo ambiente.",
+      "credit": {
+        "text": "Fotografia fornita per il calendario GIAPP."
+      },
+      "sources": [
+        {
+          "title": "Lipu — Cicogna bianca",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/cicogna-bianca"
+        },
+        {
+          "title": "GIAPP — Vasche Ex Zuccherificio",
+          "url": "https://naturadipianura.it/luoghi/vasche-ex-zuccherificio/"
+        }
+      ]
     },
-    "area_description": "La scheda di Vasche Ex Zuccherificio è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_description": "A Crevalcore, le vasche di decantazione di un vecchio zuccherificio hanno trovato una nuova vita. Dopo la chiusura dell’impianto nel 1985, questi bacini sono diventati ambienti umidi che offrono rifugio alla fauna della pianura.\n\nL’area si estende per circa 22 ettari. L’acqua ha profondità diverse: accanto agli specchi aperti si incontrano bassi fondali, superfici fangose, prati umidi e canneti. Salici e sambuchi crescono sugli argini; nelle vicinanze si trovano anche rimboschimenti. Questo mosaico offre spazi per alimentarsi, sostare e nidificare.\n\nGli uccelli cambiano con le stagioni. Durante le migrazioni arrivano numerosi ospiti; in inverno si possono osservare anatre, cormorani e aironi. Tra le presenze documentate ci sono anche le cicogne, protagoniste della nostra giornata. Le acque ospitano inoltre anfibi e testuggini palustri.\n\nLe Vasche sono un’Area di Riequilibrio Ecologico e fanno parte del sito Natura 2000 “Biotopi e ripristini ambientali di Crevalcore”. Sono gestite da Sustenia per conto del Comune. Per osservare senza disturbare, resta sul percorso segnalato e rispetta le indicazioni presenti sul posto.",
     "area_image": null,
     "area_image_alt": "",
     "area_image_caption": "",
@@ -489,18 +505,55 @@
     "day": 16,
     "name": "Collegio di Spagna",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "wordsearch",
+      "placeholder": false,
+      "version": "baricella-wordsearch-v2",
+      "title": "Una parola nascosta tra gli habitat",
+      "instructions": "Trova nella griglia le quattordici parole dell’elenco. Le parole si incrociano in orizzontale, verticale e diagonale, anche al contrario. Tocca la prima e l’ultima lettera per selezionarle. Le dodici lettere rimaste, lette da sinistra a destra e dall’alto in basso, formano la parola nascosta.",
+      "grid": [
+        "EFERTSULAP",
+        "NOHMUAATEL",
+        "IEGOCSUOTE",
+        "GLARCSQITG",
+        "GOLEEACLEN",
+        "UVOTLIARZA",
+        "TAFTLAMURI",
+        "SZTAIARIAA",
+        "ELSANPPHGO",
+        "TATIBAHCLA"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "words": [
+        "SALICI",
+        "MORETTA",
+        "SASSAIA",
+        "UCCELLI",
+        "CHIURLI",
+        "GERMANI",
+        "GARZETTE",
+        "LEGNAIA",
+        "PALUSTRE",
+        "HABITAT",
+        "FOLAGHE",
+        "ALZAVOLE",
+        "TESTUGGINE",
+        "ACQUA"
+      ],
+      "solution": "FOTOTRAPPOLA",
+      "word_note": "Le parole riprendono gli ambienti, le piante e gli animali descritti nella scheda dell’area.",
+      "hint": "Controlla anche le parole scritte al contrario. Quando le hai trovate tutte, leggi in ordine le lettere gialle: il nome indica uno strumento usato per osservare gli animali.",
+      "explanation": "La parola nascosta è FOTOTRAPPOLA. È una macchina fotografica che può attivarsi automaticamente al passaggio di un animale e registrare foto o video. Consente di raccogliere informazioni anche quando nessuno è presente vicino al dispositivo.\n\nLe immagini aiutano i ricercatori a riconoscere le specie e a studiarne la presenza e gli orari di attività. Ma uno strumento non vede tutto: distanza, velocità di passaggio, vegetazione e condizioni di luce possono influenzare il rilevamento. Non trovare un animale nelle immagini non significa quindi, da solo, che sia assente.\n\nLe parole del gioco richiamano ambienti e presenze descritti nella scheda del Collegio di Spagna. Non indicano che in questa area sia in corso uno specifico progetto di fototrappolaggio.",
+      "sources": [
+        {
+          "title": "GIAPP — Area di Baricella, Collegio di Spagna",
+          "url": "https://naturadipianura.it/luoghi/area-di-riequilibrio-ambientale-di-baricella/"
+        },
+        {
+          "title": "WIKIPEDIA — Fototrappolaggio",
+          "url": "https://it.wikipedia.org/wiki/Fototrappolaggio"
+        }
+      ]
     },
-    "area_description": "La scheda di Collegio di Spagna è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_description": "L’Area di Riequilibrio Ambientale di Baricella è stata realizzata dal Comune su terreni del Reale Collegio di Spagna. Il recupero, iniziato nel 1998, ha ricreato zone umide, siepi, boschetti e radure su circa 38 ettari.\n\nDue bacini con acqua bassa costituiscono il cuore dell’area. Attorno si trovano salici, pioppi bianchi, prati e rimboschimenti: ambienti diversi che offrono spazi per alimentarsi, sostare e nidificare. La scheda GIAPP segnala, tra gli altri, folaghe, rospi, raganelle, testuggini palustri e orbettini.\n\nUn percorso ad anello consente di conoscere l’area e raggiungere due piccoli capanni di osservazione. Sono presenti anche esempi di rifugi per la fauna, come nidi artificiali, una legnaia e un muretto a secco.\n\nL’area fa parte della rete Natura 2000 ed è gestita da Sustenia per conto del Comune, in coordinamento con il Reale Collegio di Spagna. Durante la visita segui il percorso e le indicazioni sul posto.",
     "area_image": null,
     "area_image_alt": "",
     "area_image_caption": "",
@@ -511,17 +564,36 @@
     "name": "Cassa di espansione del Torrente Samoggia",
     "challenge": {
       "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "visual": "river-path",
+      "placeholder": false,
+      "version": "samoggia-river-v2",
+      "title": "Dove arriva il Samoggia?",
+      "instructions": "Parti dal punto verde del Fiume Samoggia, in basso a sinistra, e segui il corso d’acqua fino a uno dei tre arrivi a destra. Agli incroci continua sulla stessa linea, senza cambiare ramo. Scegli la destinazione e poi conferma.",
       "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+        "Fiume Reno",
+        "Laghetti di Calderara",
+        "Modena"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "correct_index": 0,
+      "hint": "Riparti dal punto verde in basso a sinistra. Segui con calma tutte le anse: il percorso può anche tornare indietro. Agli incroci prosegui sulla stessa linea, senza svoltare sull’altra.",
+      "explanation": "Il percorso conduce al fiume Reno, dove confluiscono le acque del torrente Samoggia.\n\nMa quando arriva molta acqua, per esempio dopo piogge intense, cosa succede? Lungo il torrente si trova una cassa di espansione: un’area predisposta per accogliere temporaneamente parte dell’acqua durante le piene e ridurre la quantità che prosegue verso valle.\n\nQui lo spazio lasciato all’acqua è diventato anche spazio per la natura: zone umide, prati, arbusti e boschi offrono ambienti diversi agli animali della pianura.",
+      "sources": [
+        {
+          "title": "GIAPP — Cassa di espansione del Torrente Samoggia",
+          "url": "https://naturadipianura.it/luoghi/cassa-di-espansione-del-torrente-samoggia/"
+        },
+        {
+          "title": "Turismo in Pianura — La cassa del Samoggia",
+          "url": "https://turismoinpianura.cittametropolitana.bo.it/it/luoghi/parchi-e-giardini/cassa-di-espansione-del-torrente-samoggia"
+        },
+        {
+          "title": "Regione Emilia-Romagna — Il bacino del Samoggia",
+          "url": "https://servizissiir.regione.emilia-romagna.it/deliberegiunta/servlet/AdapterHTTP?ENTE=1&action_name=ACTIONRICERCADELIBERE&codProtocollo=GPG%2F2025%2F1793&operation=downloadTesto"
+        }
+      ],
+      "image": "images/giochi/samoggia-percorsi.png"
     },
-    "area_description": "La scheda di Cassa di espansione del Torrente Samoggia è in preparazione. Qui inseriremo la descrizione, le immagini e le informazioni utili per conoscere l’area.",
+    "area_description": "La Cassa di espansione del Torrente Samoggia si trova alle Budrie, nel comune di San Giovanni in Persiceto, e occupa circa 105 ettari. È stata progettata per contribuire alla gestione delle piene, affiancando alla funzione idraulica il recupero degli ambienti naturali.\n\nSu terreni prima coltivati si sono formati bacini, prati con arbusti e boschi. Accanto alle zone umide permanenti si trovano raccolte d’acqua temporanee; salici e pioppi bianchi accompagnano l’evoluzione della vegetazione.\n\nLa scheda GIAPP segnala, tra gli animali presenti, il martin pescatore, il cavaliere d’Italia, lo svasso maggiore e la testuggine palustre europea. L’area fa parte della rete Natura 2000.\n\nPer conoscere le possibilità di visita e gli eventi organizzati, consulta la scheda GIAPP e le indicazioni degli enti gestori.",
     "area_image": null,
     "area_image_alt": "",
     "area_image_caption": "",

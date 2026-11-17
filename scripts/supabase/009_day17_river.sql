@@ -1,0 +1,15 @@
+-- Giorno 17: percorsi intrecciati. Richiede 003_first_six_games.sql.
+-- Usa il punteggio quiz esistente; non modifica altre giornate o profili.
+begin;
+do $$ begin
+  if to_regprocedure('public.calendar_game(integer,jsonb,uuid,boolean)') is null then raise exception 'Eseguire prima 003_first_six_games.sql.'; end if;
+end $$;
+update calendar_private.calendar_days set challenge='{"type":"quiz","visual":"river-path","placeholder":false,"version":"samoggia-river-v2","title":"Dove arriva il Samoggia?","instructions":"Parti dal punto verde del Fiume Samoggia, in basso a sinistra, e segui il corso d’acqua fino a uno dei tre arrivi a destra. Agli incroci continua sulla stessa linea, senza cambiare ramo. Scegli la destinazione e poi conferma.","options":["Fiume Reno","Laghetti di Calderara","Modena"],"correct_index":0,"hint":"Riparti dal punto verde in basso a sinistra. Segui con calma tutte le anse: il percorso può anche tornare indietro. Agli incroci prosegui sulla stessa linea, senza svoltare sull’altra.","explanation":"Il percorso conduce al fiume Reno, dove confluiscono le acque del torrente Samoggia.\n\nMa quando arriva molta acqua, per esempio dopo piogge intense, cosa succede? Lungo il torrente si trova una cassa di espansione: un’area predisposta per accogliere temporaneamente parte dell’acqua durante le piene e ridurre la quantità che prosegue verso valle.\n\nQui lo spazio lasciato all’acqua è diventato anche spazio per la natura: zone umide, prati, arbusti e boschi offrono ambienti diversi agli animali della pianura.","sources":[{"title":"GIAPP — Cassa di espansione del Torrente Samoggia","url":"https://naturadipianura.it/luoghi/cassa-di-espansione-del-torrente-samoggia/"},{"title":"Turismo in Pianura — La cassa del Samoggia","url":"https://turismoinpianura.cittametropolitana.bo.it/it/luoghi/parchi-e-giardini/cassa-di-espansione-del-torrente-samoggia"},{"title":"Regione Emilia-Romagna — Il bacino del Samoggia","url":"https://servizissiir.regione.emilia-romagna.it/deliberegiunta/servlet/AdapterHTTP?ENTE=1&action_name=ACTIONRICERCADELIBERE&codProtocollo=GPG%2F2025%2F1793&operation=downloadTesto"}],"image":"images/giochi/samoggia-percorsi.png"}'::jsonb,
+area_description='La Cassa di espansione del Torrente Samoggia si trova alle Budrie, nel comune di San Giovanni in Persiceto, e occupa circa 105 ettari. È stata progettata per contribuire alla gestione delle piene, affiancando alla funzione idraulica il recupero degli ambienti naturali.
+
+Su terreni prima coltivati si sono formati bacini, prati con arbusti e boschi. Accanto alle zone umide permanenti si trovano raccolte d’acqua temporanee; salici e pioppi bianchi accompagnano l’evoluzione della vegetazione.
+
+La scheda GIAPP segnala, tra gli animali presenti, il martin pescatore, il cavaliere d’Italia, lo svasso maggiore e la testuggine palustre europea. L’area fa parte della rete Natura 2000.
+
+Per conoscere le possibilità di visita e gli eventi organizzati, consulta la scheda GIAPP e le indicazioni degli enti gestori.',area_url='https://naturadipianura.it/luoghi/cassa-di-espansione-del-torrente-samoggia/' where day=17;
+commit;

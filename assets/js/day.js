@@ -30,7 +30,7 @@
     const data=await response.json();if(!response.ok)throw new Error(data.code==='PGRST202'?'Il salvataggio dei nuovi giochi non è ancora attivo. Puoi provarli senza salvare punti.':'Non riesco a caricare o salvare la prova. Riprova tra poco.');
     if(data.error)throw new Error(data.error);pending=null;return data;
   }
-  function mountGame(){ui=window.GiappGameUI.render($('[data-answers]'),state.challenge,{asset,attempt:state.progress?.attempts||0,onMessage:message});}
+  function mountGame(){ui=window.GiappGameUI.render($('[data-answers]'),state.challenge,{asset,attempt:state.progress?.attempts||0,onMessage:message,storageKey:`giapp-puzzle:${practice?'practice':state.profile?.id||'guest'}:${state.year||catalogue.settings.year}:${day}:${state.challenge.version||'prototype-v1'}`});}
   function render(){
     $('[data-preview]').hidden=!state.preview;$('[data-practice-notice]').hidden=!practice;
     if(state.locked){message(`La giornata si aprirà il ${state.opens_on}.`);$('[data-challenge]').hidden=true;$('[data-practice-offer]').hidden=true;return;}
@@ -39,17 +39,25 @@
     $('[data-challenge]').hidden=!!p||state.login_required;$('[data-result]').hidden=!p;$('[data-area]').hidden=true;
     $('[data-discover]').setAttribute('aria-expanded','false');$('[data-challenge-title]').textContent=c.title;$('[data-placeholder]').hidden=!c.placeholder;
     $('[data-points-rule]').textContent=c.type==='quiz'&&c.options.length===4?'Risposte da −2, 2, 5 o 10 punti. Due tentativi: conta il risultato migliore, senza sommarli.': ['quiz','mystery','audio'].includes(c.type)?'Risposta corretta: 10 punti; errata: −2. Due tentativi: conta il migliore.':'2 punti per elemento corretto e 2 punti extra se completi tutto. Massimo 10 punti, due tentativi: conta il migliore.'+(c.type==='find'?' Nell’elenco, una scelta errata annulla un elemento corretto.':'');
+    if(c.type==='puzzle')$('[data-points-rule]').textContent='Il punteggio è proporzionale alle 12 tessere al posto giusto, fino a 10 punti a puzzle completo. Hai due tentativi; conserviamo il migliore. Gli scambi sono liberi fino alla conferma.';
+    if(c.type==='wordsearch')$('[data-points-rule]').textContent='Fino a 8 punti per le parole trovate, più 2 se le trovi tutte e risolvi la parola nascosta. Due tentativi: conserviamo il migliore. Le selezioni non contano come tentativi finché non confermi.';
+    const riverSolution=$('[data-river-solution]');riverSolution.replaceChildren();
+    if(p?.closed&&c.visual==='river-path'&&entry.challenge.version===c.version)riverSolution.append(window.GiappRiverPath.create({asset,image:c.image,reveal:true}));
     mountGame();
     if(p){
       $('[data-result-title]').textContent=p.best_score===10?(p.attempts===1?'Prova superata!':'Hai recuperato!'):(p.closed?'La prova è conclusa.':'Puoi migliorare il risultato!');
       $('[data-result]').dataset.outcome=p.best_score===10?'correct':'wrong';
       $('[data-result-points]').textContent=`${p.best_score} punti per la giornata`;
       $('[data-score-summary]').textContent=`Ultimo tentativo: ${p.last_score} · Variazione totale: ${p.last_delta>0?'+':''}${p.last_delta} · ${practice?'Totale di prova':'Il tuo totale'}: ${state.profile.score||0}. Il totale non scende sotto zero.`;
-      $('[data-explanation]').textContent=state.explanation;
+      const sameContent=entry.challenge.version===c.version;
+      const explanation=p.closed&&sameContent?(entry.challenge.explanation??state.explanation):state.explanation;
+      const explanationBox=$('[data-explanation]');explanationBox.replaceChildren();
+      String(explanation||'').split(/\n\s*\n/).filter(text=>text.trim()).forEach(text=>{const paragraph=document.createElement('p');paragraph.textContent=text.trim();explanationBox.append(paragraph);});
       $('[data-retry]').hidden=p.closed;$('[data-finish]').hidden=p.closed;$('[data-discover]').hidden=!p.closed;
       $('[data-discover]').textContent=`Scopri l’area: ${state.name}`;
-      const reveal=$('[data-result-reveal]');reveal.hidden=!(p.closed&&c.type==='mystery');if(!reveal.hidden)reveal.src=asset(c.image);
-      const sources=$('[data-game-sources]');sources.replaceChildren();if(p.closed&&state.sources?.length){sources.append(document.createTextNode('Per approfondire:'));state.sources.forEach(source=>{if(!/^https:\/\//.test(source.url))return;const a=document.createElement('a');a.href=source.url;a.textContent=source.title;a.target='_blank';a.rel='noopener';sources.append(a);});}
+      const reveal=$('[data-result-reveal]');reveal.hidden=!(p.closed&&['mystery','puzzle'].includes(c.type));if(!reveal.hidden){reveal.src=asset(c.image);reveal.alt=c.image_alt||'Illustrazione completa dell’animale della prova';}
+      const sourceList=p.closed&&sameContent?(entry.challenge.sources??state.sources):state.sources;
+      const sources=$('[data-game-sources]');sources.replaceChildren();if(p.closed&&sourceList?.length){sources.append(document.createTextNode('Per approfondire:'));sourceList.forEach(source=>{if(!/^https:\/\//.test(source.url))return;const a=document.createElement('a');a.href=source.url;a.textContent=source.title;a.target='_blank';a.rel='noopener';sources.append(a);});}
     }
     if(!practice)window.dispatchEvent(new CustomEvent('giapp:profile',{detail:state.profile}));
   }
@@ -82,6 +90,8 @@
     const target=entry.area_url||a.url||'https://naturadipianura.it/luoghi/'; const link=$('[data-area-link]');link.href=/^https:\/\//.test(target)?target:'https://naturadipianura.it/luoghi/';link.textContent=link.href==='https://naturadipianura.it/luoghi/'?'Consulta l’elenco delle aree GIAPP ↗':'Visita la scheda di '+a.name+' ↗';$('[data-area]').hidden=false;$('[data-discover]').setAttribute('aria-expanded','true');$('[data-area]').focus();});
   (async()=>{try{
     const responses=await Promise.all([fetch(root.dataset.configUrl,{cache:'no-store'}),fetch(root.dataset.daysUrl,{cache:'no-store'})]);if(responses.some(r=>!r.ok))throw new Error('Giornata non disponibile.');[config,catalogue]=await Promise.all(responses.map(r=>r.json()));
-    entry=catalogue.days.find(d=>d.day===day);if(!entry||!['demo','supabase'].includes(config.mode))throw new Error('Giornata non disponibile.');state=config.mode==='demo'?localState():await cloud();render();
+    entry=catalogue.days.find(d=>d.day===day);if(!entry||!['demo','supabase'].includes(config.mode))throw new Error('Giornata non disponibile.');state=config.mode==='demo'?localState():await cloud();
+    if(!state.locked&&(['puzzle','wordsearch'].includes(entry.challenge.type)||entry.challenge.visual==='river-path')&&state.challenge?.version!==entry.challenge.version){$('[data-preview]').hidden=!state.preview;$('[data-practice-offer]').hidden=false;window.dispatchEvent(new CustomEvent('giapp:profile',{detail:state.profile}));message('Il nuovo gioco non è ancora attivo per il salvataggio. Puoi provarlo senza salvare punti.');return;}
+    render();
   }catch(error){message(error.message);if(entry)$('[data-practice-offer]').hidden=false;}})();
 })();
