@@ -1,0 +1,9 @@
+# Giorno 18 — Le Meleghine: a ciascuno il suo rifugio
+
+Le due illustrazioni approvate sono copiate senza modifiche in images/giochi: animali-giorno-18.png (RGBA trasparente) e cassette-giorno-18.png. Rimangono immagini intere; le zone cliccabili sono percentuali definite in _data/advent_days.json. Desktop: immagini affiancate. Telefono: animali sopra, cassette sotto. Le sovrapposizioni dei pulsanti sono trasparenti e non aggiungono sfondi bianchi agli animali.
+
+Si seleziona prima un animale, poi un rifugio. Le lettere A–D identificano le cassette. Il riepilogo sotto le immagini mostra le scelte e permette di rimuoverle. Assegnare una casetta già occupata libera l'animale precedente, con messaggio esplicito. Non si rivela la correttezza prima della conferma. Le scelte vengono conservate in sessionStorage, separatamente per profilo, anno, giorno e versione, anche al secondo tentativo.
+
+Abbinamenti illustrati: Pettirosso→D, Cinciallegra→B, Scricciolo→C, Pipistrello→A. Ogni abbinamento corretto vale 2 punti, con 2 punti aggiuntivi se sono tutti corretti: 10 punti massimi. Due tentativi, conta il risultato migliore. I risultati sono verificati dal database. La spiegazione chiarisce che i modelli non sono esclusivi di una specie e che la sospensione non basta a identificare un rifugio per scricciolo; anche lo scricciolo può usare cassette semiaperte.
+
+Eseguire 011_day18_shelters.sql nell'editor SQL di Supabase. Non richiede nuove tabelle né nuove funzioni. Versione contenuti: meleghine-shelters-v1. Se il database non è aggiornato, il sito permette Prova senza salvare. La scheda dell'area usa la fonte ufficiale del Comune di Finale Emilia; foto, didascalia e testo si impostano come nelle altre giornate nei campi area_image, area_image_alt, area_image_caption e area_description. Non si afferma che le quattro cassette siano installate alle Meleghine.

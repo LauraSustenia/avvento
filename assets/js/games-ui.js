@@ -59,6 +59,8 @@
       remix.addEventListener('click',()=>{order=mix();moves=0;active=null;persist();paint(0);});
       if(c.credit?.text)container.append(element('p','game-credit',c.credit.text));
       paint();persist();get=()=>({tiles:[...order]});
+    }else if(c.type==='matching'&&c.visual==='picture-matching'){
+      return window.GiappPictureMatch.render(container,c,{asset,storageKey});
     }else if(c.type==='matching'){
       const pairs=Array(4).fill(-1),leftOrder=shuffle([0,1,2,3]),rightOrder=shuffle([0,1,2,3]);let active=leftOrder[0];
       const board=element('div','match-board');const left=element('div','match-column'),right=element('div','match-column');board.append(left,right);container.append(board);

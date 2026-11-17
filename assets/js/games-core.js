@@ -36,7 +36,7 @@
     }
     if(type==='matching'||type==='sequence'){
       const selected=type==='matching'?submission.pairs:submission.order;
-      if(!array(selected,4,3))throw new Error(type==='matching'?'Abbina ogni uccello a un nido diverso.':'Ordina tutte e quattro le fasi.');
+      if(!array(selected,4,3))throw new Error(type==='matching'?'Abbina ogni animale a un rifugio diverso.':'Ordina tutte e quattro le fasi.');
       const correct=selected.filter((value,index)=>value===challenge.solution[index]).length;
       return correct*2+(correct===4?2:0);
     }

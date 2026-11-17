@@ -12,6 +12,8 @@ paper_class: day-page
 <script src="{{ '/assets/js/games-core.js' | relative_url }}" defer></script>
 <link rel="stylesheet" href="{{ '/assets/css/river-path.css' | relative_url }}">
 <script src="{{ '/assets/js/river-path.js' | relative_url }}" defer></script>
+<link rel="stylesheet" href="{{ '/assets/css/picture-match.css' | relative_url }}">
+<script src="{{ '/assets/js/picture-match.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/games-ui.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/day.js' | relative_url }}" defer></script>
 <article class="advent-day" data-day="{{ number }}" data-asset-base="{{ '/' | relative_url }}" data-config-url="{{ '/assets/registration-config.json' | relative_url }}" data-days-url="{{ '/assets/data/advent.json' | relative_url }}" data-profile-url="{{ '/registrazione.html' | relative_url }}">
@@ -36,6 +38,7 @@ paper_class: day-page
     <p class="game-result-summary" data-score-summary></p>
     <img class="game-reveal" data-result-reveal hidden alt="Illustrazione completa dell’animale della prova">
     <div data-river-solution></div>
+    <div data-picture-match-solution></div>
     <div class="game-sources" data-game-sources></div>
     <button type="button" class="day-button day-button--light" data-retry hidden>Tenta il recupero</button>
     <button type="button" class="day-button day-button--light" data-finish hidden>Concludi e leggi la spiegazione</button>
