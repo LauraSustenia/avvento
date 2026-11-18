@@ -4,7 +4,9 @@ title: Il tuo esploratore — Natura di Pianura
 description: Scegli un nome e un animale per il tuo calendario dell’Avvento.
 ---
 <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
+<script src="{{ '/assets/js/leagues-client.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/profile.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/leagues.js' | relative_url }}" defer></script>
 <section class="explorer" data-explorer data-animal-base="{{ '/images/animali/' | relative_url }}" data-config-url="{{ '/assets/registration-config.json' | relative_url }}">
   <p class="calendar-intro__eyebrow">Il tuo calendario dell’Avvento</p>
   <h1>Chi esplora la pianura?</h1>
@@ -33,7 +35,7 @@ description: Scegli un nome e un animale per il tuo calendario dell’Avvento.
       <label class="explorer__label" for="create-code">Il tuo codice personale</label>
       <div class="explorer__code-row"><input id="create-code" name="code" type="text" minlength="10" maxlength="10" autocomplete="off" autocapitalize="characters" spellcheck="false" required aria-describedby="code-help"><button type="button" data-generate>Genera un codice</button></div>
       <p id="code-help" class="explorer__help">Puoi scegliere o cambiare il codice: esattamente 10 caratteri, tra lettere, numeri e simboli ! @ # $ % &amp; * + ? _ -. Non usare spazi; maiuscole e minuscole sono equivalenti. Conservalo come una password: chi lo conosce può accedere al tuo profilo. Senza codice, da un altro dispositivo non potremo recuperarlo.</p>
-      <label class="explorer__save"><input type="checkbox" name="show_in_leaderboard"> Voglio comparire nella classifica generale con il mio nome di fantasia e il mio animale.</label><p class="explorer__help">La scelta è facoltativa e puoi cambiarla dal tuo account. Puoi giocare anche senza comparire in classifica.</p><label class="explorer__save"><input type="checkbox" required> Ho conservato il mio codice personale.</label>
+      <label class="explorer__save"><input type="checkbox" name="show_in_leaderboard"> Voglio comparire nella classifica generale con il mio nome di fantasia e il mio animale.</label><p class="explorer__help">La scelta è facoltativa e puoi cambiarla dal tuo account. Le leghe hanno una classifica separata: puoi partecipare a quelle senza comparire nella generale. Puoi anche tenere il punteggio solo per te e consultare tutte le classifiche.</p><label class="explorer__save"><input type="checkbox" required> Ho conservato il mio codice personale.</label>
       <p class="explorer__help">Il codice sarà conservato anche in questo browser, su questo dispositivo. Puoi cancellarlo scegliendo “Esci da questo dispositivo”.</p>
       <button class="explorer__primary" type="submit">Crea il mio esploratore</button>
     </form>
@@ -50,6 +52,44 @@ description: Scegli un nome e un animale per il tuo calendario dell’Avvento.
     <details class="explorer__edit" data-saved-code-panel hidden><summary>Il codice conservato su questo dispositivo</summary><label class="explorer__label" for="saved-code">Codice personale</label><input id="saved-code" type="password" readonly autocomplete="off"><button type="button" data-show-code aria-pressed="false">Mostra codice</button><p class="explorer__help">Non condividerlo. Il codice consente di accedere al tuo account anche da un altro dispositivo.</p></details>
     <details class="explorer__edit"><summary>Modifica nome, animale e classifica</summary><form data-edit><label class="explorer__label" for="edit-name">Nome</label><input id="edit-name" name="name" minlength="2" maxlength="40" required autocomplete="nickname"><label class="explorer__label" for="edit-animal">Animale</label><select id="edit-animal" name="animal">{% for animal in site.data.registration.animals %}<option value="{{ animal.id }}">{{ animal.name }}</option>{% endfor %}</select><label class="explorer__save"><input type="checkbox" name="show_in_leaderboard"> Voglio comparire nella classifica generale.</label><button type="submit">Salva le modifiche</button></form></details>
     <details class="explorer__edit"><summary>Cambia il codice personale</summary><form data-change-code><label class="explorer__label" for="new-code">Nuovo codice</label><input id="new-code" name="code" minlength="10" maxlength="10" required autocomplete="off" spellcheck="false"><button type="button" data-generate>Genera un codice</button><p class="explorer__help">Scegli o genera un codice di 10 caratteri. Il codice precedente smetterà di funzionare e gli altri dispositivi dovranno accedere di nuovo.</p><label class="explorer__save"><input type="checkbox" required> Ho conservato il nuovo codice.</label><button type="submit">Cambia codice</button></form></details>
+    <section class="leagues" data-my-leagues data-config-url="{{ '/assets/registration-config.json' | relative_url }}" data-ranking-url="{{ '/classifica.html' | relative_url }}" data-place-base="{{ '/images/leghe/' | relative_url }}" aria-labelledby="my-leagues-title">
+      <h2 id="my-leagues-title">Le tue leghe</h2>
+      <p>Crea una lega oppure cercala per nome, selezionala e inserisci il codice che ti è stato comunicato. Puoi partecipare a più leghe.</p>
+      <p class="explorer__help">Nelle leghe a cui aderisci saranno visibili il tuo nome di gioco, il personaggio e il punteggio, anche se non compari nella classifica generale. Le classifiche si possono consultare senza iscriversi. Il codice della lega si può condividere; il tuo codice personale deve restare privato.</p>
+      <p class="explorer__message" data-league-message role="status" aria-live="polite"></p>
+      <p data-league-empty>Non partecipi ancora a nessuna lega.</p>
+      <ul class="leagues__list" data-league-list></ul>
+      <div class="leagues__forms">
+        <form data-league-create>
+          <h3>Crea una lega</h3>
+          <label class="explorer__label" for="league-name">Nome della lega</label>
+          <input id="league-name" name="name" type="text" minlength="2" maxlength="50" required autocomplete="off" placeholder="Per esempio: Esploratori del canneto">
+          <fieldset class="leagues__places"><legend>Scegli il luogo della lega</legend>
+            {% for place in site.data.league_places %}<label><input type="radio" name="place" value="{{ place.id }}" required{% if place.id == 'bosco' %} checked{% endif %}><img src="{{ '/images/leghe/' | append: place.image | relative_url }}" alt="" width="110" height="110" loading="lazy" decoding="async"><span>{{ place.name }}</span></label>{% endfor %}
+          </fieldset>
+          <label class="explorer__label" for="create-league-code">Scegli il codice lega (4 cifre)</label>
+          <input id="create-league-code" aria-describedby="league-create-feedback" name="code" type="text" inputmode="numeric" pattern="[0-9]{4}" minlength="4" maxlength="4" required autocomplete="off" placeholder="0000">
+          <p class="explorer__help">Scegli quattro cifre da condividere con chi vuoi invitare. Se il codice è già usato, dovrai sceglierne un altro.</p>
+          <p id="league-create-feedback" class="explorer__message" data-league-create-message role="alert" tabindex="-1"></p>
+          <button type="submit">Crea la lega e partecipa</button>
+        </form>
+        <div>
+          <h3>Entra in una lega</h3>
+          <form data-league-search><label class="explorer__label" for="league-search">Cerca tra le leghe</label><input id="league-search" name="query" type="search" maxlength="50" placeholder="Nome della lega" autocomplete="off"><button type="submit">Cerca leghe</button></form>
+          <p class="explorer__help" data-league-search-status role="status"></p>
+          <form data-league-join>
+            <fieldset class="leagues__results" data-league-results><legend>Seleziona una lega</legend></fieldset>
+            <label class="explorer__label" for="league-code">Codice della lega selezionata</label>
+            <input id="league-code" aria-describedby="league-join-feedback" name="code" type="text" inputmode="numeric" pattern="[0-9]{4}" minlength="4" maxlength="4" required autocomplete="off" placeholder="4 cifre">
+            <p id="league-join-feedback" class="explorer__message" data-league-join-message role="alert" tabindex="-1"></p>
+            <button type="submit">Partecipa alla lega</button>
+          </form>
+        </div>
+      </div>
+      <p class="explorer__help">Puoi uscire da una lega quando vuoi. Per tenere il punteggio solo per te, disattiva la partecipazione alla classifica generale ed esci da tutte le leghe. Potrai continuare a consultare le classifiche.</p>
+    </section>
+
+
     <button class="explorer__logout" type="button" data-logout>Esci da questo dispositivo</button>
   </div>
   <noscript>Per creare il profilo devi attivare JavaScript nel browser.</noscript>

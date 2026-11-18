@@ -1,38 +1,12 @@
 (() => {
-  const root = document.querySelector('[data-leaderboard]');
-  if (!root) return;
-  const status = root.querySelector('[data-leaderboard-status]');
-  const list = root.querySelector('[data-leaderboard-list]');
-  async function load() {
-    try {
-      const response = await fetch(root.dataset.configUrl, {cache:'no-store'});
-      if (!response.ok) throw new Error();
-      const config = await response.json();
-      let rows;
-      if (config.mode === 'demo') {
-        root.querySelector('[data-leaderboard-demo]').hidden = false;
-        rows = JSON.parse(localStorage.getItem('giapp-demo-profiles-v1') || '[]').filter(row => row.show_in_leaderboard === true);
-      } else if (config.mode === 'supabase' && /^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(config.url)) {
-        const result = await fetch(`${config.url}/rest/v1/rpc/calendar_leaderboard`, {method:'POST', headers:{apikey:config.key,'Content-Type':'application/json'},body:'{}'});
-        if (!result.ok) throw new Error();
-        rows = await result.json();
-      } else throw new Error();
-      rows = rows.filter(row => !!window.GiappAnimals.get(row.animal)).map(row => ({name:String(row.name),animal:window.GiappAnimals.normalize(row.animal),score:Number.isSafeInteger(row.score) && row.score >= 0 ? row.score : 0})).sort((a,b) => b.score-a.score || a.name.localeCompare(b.name,'it')).slice(0,100);
-      list.replaceChildren();
-      let rank = 0, previousScore;
-      rows.forEach((row,index) => {
-        if (row.score !== previousScore) rank = index+1;
-        previousScore = row.score;
-        const item = document.createElement('li');
-        const position = document.createElement('span'); position.textContent = `${rank}.`; position.className = 'leaderboard__rank';
-        const image = document.createElement('img'); image.src = window.GiappAnimals.src(row.animal, root.dataset.animalBase); image.alt = ''; image.width = 60; image.height = 60;
-        const name = document.createElement('strong'); name.textContent = row.name;
-        const score = document.createElement('span'); score.textContent = `${row.score} ${row.score === 1 ? 'punto' : 'punti'}`; score.className = 'leaderboard__score';
-        item.append(position,image,name,score); list.append(item);
-      });
-      status.textContent = rows.length ? 'A parità di punti, la posizione è la stessa.' : 'Non ci sono ancora esploratori in classifica.';
-    } catch { status.textContent = 'La classifica non è disponibile al momento. Riprova tra poco.'; }
-  }
-  window.addEventListener('storage', event => {if (event.key === 'giapp-demo-profiles-v1') load();});
-  load();
+  'use strict';
+  const root=document.querySelector('[data-leaderboard]');if(!root)return;const $=s=>root.querySelector(s),status=$('[data-leaderboard-status]'),list=$('[data-leaderboard-list]');let config,client,request=0,searchRequest=0,selected='';
+  function render(rows){rows=rows.filter(row=>!!window.GiappAnimals.get(row.animal)).map(row=>({name:String(row.name),animal:window.GiappAnimals.normalize(row.animal),score:Number.isSafeInteger(row.score)&&row.score>=0?row.score:0})).sort((a,b)=>b.score-a.score||a.name.localeCompare(b.name,'it'));if(!selected)rows=rows.slice(0,100);list.replaceChildren();let rank=0,previousScore;rows.forEach((row,index)=>{if(row.score!==previousScore)rank=index+1;previousScore=row.score;const item=document.createElement('li'),position=document.createElement('span'),image=document.createElement('img'),name=document.createElement('strong'),score=document.createElement('span');position.textContent=`${rank}.`;position.className='leaderboard__rank';image.src=window.GiappAnimals.src(row.animal,root.dataset.animalBase);image.alt='';image.width=60;image.height=60;name.textContent=row.name;score.textContent=`${row.score} ${row.score===1?'punto':'punti'}`;score.className='leaderboard__score';item.append(position,image,name,score);list.append(item);});status.textContent=rows.length?'A parità di punti, la posizione è la stessa.':'Non ci sono ancora esploratori in questa classifica.';}
+  function image(place,size=60){const img=document.createElement('img');img.src=root.dataset.placeBase+window.GiappLeagues.getPlace(place).image;img.alt='';img.width=size;img.height=size;return img;}
+  function mark(){root.querySelectorAll('[data-ranking-id]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rankingId===selected)));$('[data-general-ranking]').setAttribute('aria-pressed',String(!selected));}
+  async function show(id='',updateUrl=true){const token=++request;selected=id;mark();list.replaceChildren();status.textContent='Caricamento della classifica…';$('[data-ranking-place]').hidden=true;$('[data-ranking-title]').textContent=id?'Classifica della lega':'Classifica generale';$('[data-ranking-description]').textContent='';if(updateUrl){const url=new URL(location.href);if(id)url.searchParams.set('lega',id);else url.searchParams.delete('lega');history.replaceState(null,'',url);}try{let rows;if(id){const data=await client.call('ranking','','',id);if(token!==request)return;$('[data-ranking-title]').textContent=data.league.name;const place=window.GiappLeagues.getPlace(data.league.place);$('[data-ranking-description]').textContent='Classifica della lega · '+place.name;$('[data-ranking-place]').src=root.dataset.placeBase+place.image;$('[data-ranking-place]').hidden=false;rows=data.rows;}else{if(config.mode==='demo')rows=JSON.parse(localStorage.getItem('giapp-demo-profiles-v1')||'[]').filter(row=>row.show_in_leaderboard===true);else{const result=await fetch(`${config.url}/rest/v1/rpc/calendar_leaderboard`,{method:'POST',headers:{apikey:config.key,'Content-Type':'application/json'},body:'{}'});if(!result.ok)throw new Error('La classifica non è disponibile al momento. Riprova tra poco.');rows=await result.json();}if(token!==request)return;$('[data-ranking-description]').textContent='Gli esploratori che hanno scelto di comparire nella classifica generale.';}render(rows);}catch(error){if(token===request){list.replaceChildren();status.textContent=error.message||'La classifica non è disponibile al momento. Riprova tra poco.';}}}
+  async function search(){const token=++searchRequest;try{const data=await client.call('search','',$('[data-league-lookup] [name=query]').value);if(token!==searchRequest)return;const container=$('[data-ranking-search-results]');container.replaceChildren();for(const league of data.leagues){const button=document.createElement('button'),text=document.createElement('span'),name=document.createElement('strong'),count=document.createElement('small');button.type='button';button.dataset.rankingId=league.id;name.textContent=league.name;count.textContent=`${league.members_count} ${league.members_count===1?'partecipante':'partecipanti'}`;text.append(name,count);button.append(image(league.place),text);button.addEventListener('click',()=>show(league.id));container.append(button);}$('[data-search-status]').textContent=data.leagues.length?(data.leagues.length===30?'Mostro fino a 30 leghe. Affina la ricerca per trovarne altre.':'Scegli una lega per vedere la sua classifica.'):'Nessuna lega trovata con questo nome.';mark();}catch(error){if(token===searchRequest)$('[data-search-status]').textContent=error.message;}}
+  async function shortcuts(){const container=$('[data-my-league-links]');container.replaceChildren();container.hidden=true;if(!client.hasSession())return;try{const data=await client.call('list');for(const league of data.leagues){const button=document.createElement('button');button.type='button';button.dataset.rankingId=league.id;button.textContent=league.name;button.addEventListener('click',()=>show(league.id));container.append(button);}container.hidden=!data.leagues.length;mark();}catch{/* Le classifiche pubbliche restano consultabili anche se la sessione personale è scaduta. */}}
+  $('[data-general-ranking]').addEventListener('click',()=>{if(client)show();});$('[data-league-lookup]').addEventListener('submit',event=>{event.preventDefault();if(client)search();});window.addEventListener('storage',event=>{if(client&&(event.key===null||['giapp-demo-profiles-v1','giapp-demo-current-v1','giapp-demo-leagues-v1'].includes(event.key))){show(selected,false);shortcuts();search();}});
+  (async()=>{try{client=await window.GiappLeagues.connect(root.dataset.configUrl);config=client.config;$('[data-leaderboard-demo]').hidden=client.mode!=='demo';await show(new URL(location.href).searchParams.get('lega')||'',false);shortcuts();search();}catch(error){status.textContent=error.message;}})();
 })();

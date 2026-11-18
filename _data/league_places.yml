@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cassa",
+    "name": "Cassa d’espansione",
+    "image": "cassa-lega.png"
+  },
+  {
+    "id": "bosco",
+    "name": "Bosco",
+    "image": "bosco-lega.png"
+  },
+  {
+    "id": "palude",
+    "name": "Palude",
+    "image": "palude-lega.png"
+  },
+  {
+    "id": "prato",
+    "name": "Prato fiorito",
+    "image": "prato-lega.png"
+  },
+  {
+    "id": "siepe",
+    "name": "Siepe campestre",
+    "image": "siepe-lega.png"
+  },
+  {
+    "id": "fiume",
+    "name": "Fiume",
+    "image": "fiume-lega.png"
+  }
+]
