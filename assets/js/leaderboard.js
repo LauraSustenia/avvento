@@ -17,7 +17,7 @@
         if (!result.ok) throw new Error();
         rows = await result.json();
       } else throw new Error();
-      rows = rows.filter(row => ['emys','uccellino','insettino'].includes(row.animal)).map(row => ({name:String(row.name),animal:row.animal,score:Number.isSafeInteger(row.score) && row.score >= 0 ? row.score : 0})).sort((a,b) => b.score-a.score || a.name.localeCompare(b.name,'it')).slice(0,100);
+      rows = rows.filter(row => !!window.GiappAnimals.get(row.animal)).map(row => ({name:String(row.name),animal:window.GiappAnimals.normalize(row.animal),score:Number.isSafeInteger(row.score) && row.score >= 0 ? row.score : 0})).sort((a,b) => b.score-a.score || a.name.localeCompare(b.name,'it')).slice(0,100);
       list.replaceChildren();
       let rank = 0, previousScore;
       rows.forEach((row,index) => {
@@ -25,7 +25,7 @@
         previousScore = row.score;
         const item = document.createElement('li');
         const position = document.createElement('span'); position.textContent = `${rank}.`; position.className = 'leaderboard__rank';
-        const image = document.createElement('img'); image.src = `${root.dataset.animalBase}${row.animal}-segnaposto.png`; image.alt = ''; image.width = 60; image.height = 60;
+        const image = document.createElement('img'); image.src = window.GiappAnimals.src(row.animal, root.dataset.animalBase); image.alt = ''; image.width = 60; image.height = 60;
         const name = document.createElement('strong'); name.textContent = row.name;
         const score = document.createElement('span'); score.textContent = `${row.score} ${row.score === 1 ? 'punto' : 'punti'}`; score.className = 'leaderboard__score';
         item.append(position,image,name,score); list.append(item);

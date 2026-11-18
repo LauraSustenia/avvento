@@ -3,7 +3,8 @@
   const root = document.querySelector('[data-explorer]');
   if (!root) return;
   const $ = selector => root.querySelector(selector);
-  const animals = {emys: 'Emys', uccellino: 'Uccellino', insettino: 'Insettino'};
+  const registry = window.GiappAnimals;
+  const animals = Object.fromEntries(registry.catalogue.map(animal => [animal.id, animal.name]));
   let config, profile, session, busy = false;
   const codeKey = () => config.mode === 'demo' ? 'giapp-demo-personal-code-v1' : `giapp-personal-code:${config.url}`;
   const storage = {
@@ -27,9 +28,12 @@
     $('[data-profile]').hidden = !profile;
     window.dispatchEvent(new CustomEvent('giapp:profile', {detail: profile}));
     if (!profile) return;
+    const animal = registry.get(profile.animal);
+    if (!animal) throw new Error('Animale non disponibile. Ricarica la pagina.');
+    profile = {...profile, animal: animal.id};
     $('[data-profile-name]').textContent = profile.name;
     $('[data-profile-animal]').textContent = animals[profile.animal];
-    $('[data-avatar]').src = root.querySelector(`input[value="${profile.animal}"]`).closest('label').querySelector('img').src;
+    $('[data-avatar]').src = registry.src(profile.animal, root.dataset.animalBase);
     $('[data-edit] [name=name]').value = profile.name;
     $('[data-edit] [name=animal]').value = profile.animal;
     $('[data-edit] [name=show_in_leaderboard]').checked = profile.show_in_leaderboard === true;
@@ -47,6 +51,9 @@
   }
   async function demo(action, values) {
     const records = storage.get('giapp-demo-profiles-v1', []);
+    let updatedAnimals = false;
+    records.forEach(row => {const animal = registry.normalize(row.animal);if (animal && row.animal !== animal) {row.animal = animal;updatedAnimals = true;}});
+    if (updatedAnimals) storage.set('giapp-demo-profiles-v1', records);
     const current = records.find(row => row.id === storage.get('giapp-demo-current-v1'));
     const codeHash = values.code ? await hash(values.code) : null;
     if (action === 'read') return current || null;

@@ -42,6 +42,30 @@
       const correct=submission.tiles.filter((value,index)=>value===index).length;
       return Math.floor(correct*10/12);
     }
+    if(type==='matching'&&challenge.visual==='turtle-details'){
+      const pairs=submission.pairs;
+      if(!Array.isArray(pairs)||pairs.length!==3||!pairs.every(v=>integer(v,0,1)))throw new Error('Scegli un particolare per tutti e tre i confronti.');
+      const correct=pairs.filter((v,i)=>v===challenge.solution[i]).length;
+      return correct*3+(correct===3?1:0);
+    }
+    if(type==='matching'&&challenge.visual==='birdwatch-story'){
+      const pairs=submission.pairs;
+      if(!Array.isArray(pairs)||pairs.length!==4||!pairs.every(v=>integer(v,0,1)))throw new Error('Scegli un comportamento per tutte e quattro le situazioni.');
+      const correct=pairs.filter((v,i)=>v===challenge.solution[i]).length;
+      return correct*2+(correct===4?2:0);
+    }
+    if(type==='matching'&&challenge.visual==='water-story'){
+      const pairs=submission.pairs;
+      if(!Array.isArray(pairs)||pairs.length!==3||!pairs.every(v=>integer(v,0,2)))throw new Error('Rispondi a tutti e tre i momenti della piena.');
+      const correct=pairs.filter((v,i)=>v===challenge.solution[i]).length;
+      return correct*3+(correct===3?1:0);
+    }
+    if(type==='matching'&&challenge.visual==='bird-sorting'){
+      const pairs=submission.pairs;
+      if(!Array.isArray(pairs)||pairs.length!==8||!pairs.every(v=>integer(v,0,1)))throw new Error('Assegna tutti gli otto uccelli a uno dei due gruppi.');
+      const correct=pairs.filter((v,i)=>v===challenge.solution[i]).length;
+      return correct+(correct===8?2:0);
+    }
     if(type==='matching'&&challenge.visual==='audio-matching'){
       if(!array(submission.pairs,3,2))throw new Error('Completa i tre abbinamenti, senza usare due volte lo stesso animale.');
       const correct=submission.pairs.filter((v,i)=>v===challenge.solution[i]).length;

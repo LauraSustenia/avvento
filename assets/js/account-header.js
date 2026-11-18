@@ -5,12 +5,12 @@
   const read = key => { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : null; };
   let config, request = 0;
   function render(profile) {
-    const valid = profile && ['emys','uccellino','insettino'].includes(profile.animal);
+    const valid = profile && !!window.GiappAnimals.get(profile.animal);
     root.querySelector('[data-header-guest]').hidden = !!valid;
     root.querySelector('[data-header-avatar]').hidden = !valid;
     root.querySelector('[data-header-identity]').hidden = !valid;
     if (!valid) { root.removeAttribute('title'); return; }
-    root.querySelector('[data-header-avatar]').src = `${root.dataset.animalBase}${profile.animal}-segnaposto.png`;
+    root.querySelector('[data-header-avatar]').src = window.GiappAnimals.src(profile.animal, root.dataset.animalBase);
     root.querySelector('[data-header-name]').textContent = profile.name;
     const score = Number.isSafeInteger(profile.score) && profile.score >= 0 ? profile.score : 0;
     root.querySelector('[data-header-score]').textContent = `${score} ${score === 1 ? 'punto' : 'punti'}`;

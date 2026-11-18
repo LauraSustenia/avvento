@@ -7,3 +7,5 @@
 @media(max-width:600px){.day-explanation-phases{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}}
 
 .day-explanation-species{max-width:360px;margin:24px auto;text-align:center}.day-explanation-species figcaption{font:14px/1.5 system-ui,sans-serif}.day-explanation-species img{margin-bottom:12px}
+
+.day-page [data-explanation] .day-explanation-note{font:14px/1.65 system-ui,sans-serif;color:#58674f;margin-top:18px}

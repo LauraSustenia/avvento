@@ -2,3 +2,24 @@
 mode: supabase
 supabase_url: "https://fyefksyqsmwnckrqlcbh.supabase.co"
 supabase_publishable_key: "sb_publishable_LlX4_cpzC2YN8dnHxNb84Q_L79hITzy"
+
+# I sei personaggi disponibili, condivisi da account, header e classifica.
+animals:
+  - id: emys
+    name: Emys
+    image: emys-segnaposto.png
+  - id: tritone
+    name: Tritone crestato italiano
+    image: tritone-giocatore.png
+  - id: cicogna
+    name: Cicogna bianca
+    image: cicogna-giocatore.png
+  - id: martin-pescatore
+    name: Martin pescatore
+    image: martin-pescatore-giocatore.png
+  - id: riccio
+    name: Riccio europeo
+    image: riccio-giocatore.png
+  - id: tasso
+    name: Tasso
+    image: tasso-giocatore.png

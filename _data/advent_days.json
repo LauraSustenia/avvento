@@ -10,6 +10,10 @@
         {
           "title": "Indicazioni di visita GIAPP",
           "url": "https://naturadipianura.it/luoghi/"
+        },
+        {
+          "title": "Osservare nelle zone umide · WWT (in inglese)",
+          "url": "https://www.wwt.org.uk/discover-wetlands/blog/a-birdwatching-code-of-conduct-how-to-respect-our-wetland-nature-while-still-getting-the-most-out-of-your-birdwatching-experience"
         }
       ],
       "type": "quiz",
@@ -33,7 +37,7 @@
         "Fare silenzio aiuta, ma anche la distanza conta.",
         "Hai dato spazio all’animale: osservare significa anche saper fare un passo indietro."
       ],
-      "explanation": "La scelta migliore è aumentare la distanza. Se un animale cambia comportamento al nostro arrivo, possiamo ridurre il disturbo allontanandoci e rispettando i percorsi e le indicazioni dell’area."
+      "explanation": "La scelta migliore è aumentare la distanza e lasciare all’uccello lo spazio per continuare le proprie attività. Se si allontana al nostro arrivo, la nostra presenza può averlo disturbato. Fermarsi o arretrare è più rispettoso che seguirlo per osservarlo meglio.\n\nUn animale può essere impegnato a cercare cibo, riposare o occuparsi dei piccoli. Osservarlo da lontano, restando sui percorsi consentiti, permette di cogliere questi comportamenti senza provocarne la fuga."
     },
     "area_description": "Il Bosco di Santa Lucia si estende per circa 30 ettari a Sant’Agata Bolognese, sui terreni della Partecipanza agraria. È nato nel 1998–1999 con la piantumazione di circa 25.000 alberi e arbusti, trasformando una parte del territorio agricolo in un bosco di pianura.\n\nTra gli alberi si incontrano farnie, frassini, ciliegi, pioppi bianchi e aceri campestri. Prati, piccoli ambienti umidi e filari rendono il paesaggio vario e offrono spazi anche alla fauna, compresi gli anfibi. Fossi e scoline aiutano a gestire l’acqua, allontanandola quando è in eccesso e trattenendola nei periodi asciutti.\n\nLe ampie cavedagne che attraversano il bosco permettono di osservare le diverse specie vegetali. Il loro disegno regolare richiama l’antica suddivisione dei campi di questo territorio.",
     "area_image": "images/aree/1.jpg",
@@ -99,7 +103,7 @@
         "images/giochi/nido-2.webp",
         "images/giochi/nido-3.webp"
       ],
-      "explanation": "Il picchio rosso maggiore scava una cavità nel tronco; la rondine costruisce una coppa di fango riparata negli edifici; il martin pescatore scava una galleria nella sponda; la folaga costruisce un nido di vegetazione sull’acqua. Sono esempi di nidi tipici, non gli unici ripari possibili."
+      "explanation": "I quattro abbinamenti mostrano modi diversi di costruire un nido: il picchio rosso maggiore scava una cavità nel tronco; la rondine modella una coppa di fango sotto un riparo; il martin pescatore scava una galleria nella sponda; la folaga intreccia vegetazione sull’acqua.\n\nCambiano i materiali, la forma e il luogo scelto. Un tronco, una trave, una sponda di terra o la vegetazione acquatica offrono possibilità diverse per collocare il nido.\n\nQuelli illustrati sono esempi tipici. Per riconoscere un nido, osserva insieme come è fatto e dove si trova: la sola forma può non bastare."
     },
     "area_description": "Lungo i margini nord ed est dell’Interporto di Bologna, nel comune di Bentivoglio, una fascia di alberi e arbusti separa il polo logistico dalla campagna. Questo rimboschimento, esteso per circa 46 ettari, è stato realizzato per attenuare gli effetti dell’infrastruttura sull’ambiente circostante ed è stato poi ceduto al Comune.\n\nCon la crescita della vegetazione si è formato un ambiente riconducibile al bosco di pianura. Alberi e sottobosco offrono risorse e ripari agli animali, rendendo più vario un paesaggio segnato da coltivazioni, strade e attività produttive. La fascia contribuisce anche alla connessione ecologica tra gli spazi verdi del territorio.\n\nDurante la visita segui i percorsi predisposti ed evita le zone non accessibili, per rispettare la vegetazione e non disturbare la fauna.",
     "area_image": "images/aree/2.jpg",
@@ -136,7 +140,8 @@
         -2,
         -2
       ],
-      "explanation": "È la testuggine palustre europea, Emys orbicularis. Nell’illustrazione si riconoscono il carapace e le macchie gialle della testa e delle zampe. L’immagine è un disegno, non una fotografia scattata nell’area."
+      "explanation": "Nel dettaglio si nasconde la testuggine palustre europea, Emys orbicularis. Il carapace scuro e i piccoli segni gialli sulla testa e sulle zampe aiutano a riconoscere l’esemplare illustrato.\n\nEmys è una specie autoctona legata alle zone umide. Vive in ambienti come stagni, canali e laghetti con vegetazione; utilizza anche punti emersi dove può scaldarsi al sole. Acqua, rive e vegetazione fanno quindi parte dello stesso ambiente di vita.\n\nPer riconoscere una testuggine conviene confrontare più caratteri: disegno della pelle, testa e carapace. Le colorazioni possono variare tra individui e con l’età.",
+      "explanation_note": "L’illustrazione del gioco non è una fotografia scattata nell’area."
     },
     "area_description": "La Cassa di espansione di Ponte Alto si trova nel comune di Cento, in provincia di Ferrara. È nata per raccogliere temporaneamente le acque in eccesso e contribuire a ridurre il rischio di allagamenti nel centro abitato. Il bacino a cielo aperto può accogliere circa 70.000 metri cubi d’acqua.\n\nAlla funzione idraulica si affianca il recupero ambientale: gli specchi d’acqua e la vegetazione cresciuta spontaneamente hanno creato una zona umida di pianura. L’area offre così ambienti frequentati dalla fauna e uno spazio in cui osservare come l’acqua e le piante trasformano il paesaggio.\n\nPer conoscere Ponte Alto resta sui percorsi predisposti ed evita di entrare nelle zone non accessibili, senza arrecare disturbo agli animali o danneggiare la vegetazione.",
     "area_image": null,
@@ -156,10 +161,10 @@
           "title": "Registrazione e attribuzione",
           "url": "https://commons.wikimedia.org/wiki/File:Turdus_merula_(06_02_16).ogg"
         },
-      {
-        "title": "Merlo: canto e caratteristiche",
-        "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/merlo"
-      }
+        {
+          "title": "Merlo: canto e caratteristiche",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/merlo"
+        }
       ],
       "type": "audio",
       "title": "Di chi è questa voce?",
@@ -178,7 +183,7 @@
         -2
       ],
       "alternative": "Indizio alternativo: il maschio adulto di questo uccello ha piumaggio nero e becco giallo-arancio.",
-      "explanation": "È il canto del merlo (Turdus merula): note sonore e melodiose, organizzate in brevi frasi separate da pause. Il canto serve anche a segnalare il territorio. Riascoltalo: riesci a distinguere le frasi e le pause?\n\nIl maschio adulto ha piumaggio nero e becco giallo-arancio; la femmina è bruna. Puoi incontrarlo anche nei parchi e nei giardini.\n\nLa registrazione proviene da Utrecht, non dall’area GIAPP.",
+      "explanation": "È il canto del merlo, Turdus merula. Si riconosce per le note sonore e melodiose, riunite in brevi frasi separate da pause. Il canto serve anche a segnalare il territorio.\n\nRiascoltando la registrazione, prova a seguire l’alternanza tra frasi e silenzi: il ritmo e il modo di organizzare i suoni aiutano a riconoscere una voce quanto il timbro.\n\nIl maschio adulto ha piumaggio nero e becco giallo-arancio, mentre la femmina è bruna. Il merlo frequenta anche parchi e giardini: puoi esercitare l’ascolto senza allontanarti molto da casa.",
       "explanation_image": "images/giochi/merlo-giorno-4.png",
       "explanation_image_alt": "Illustrazione di un merlo maschio adulto, nero con becco giallo-arancio",
       "credit": {
@@ -186,7 +191,8 @@
         "url": "https://commons.wikimedia.org/wiki/File:Turdus_merula_(06_02_16).ogg",
         "license": "CC BY 2.5",
         "license_url": "https://creativecommons.org/licenses/by/2.5/"
-      }
+      },
+      "explanation_note": "La registrazione è stata realizzata a Utrecht, non nell’area GIAPP."
     },
     "area_description": "A sud di Anzola dell’Emilia, tra il Rio Podice e la tenuta Orsi Mangelli, un’ex polveriera militare ha lasciato spazio alla natura. Da oltre quarant’anni alberi e arbusti crescono spontaneamente, formando un mosaico di boschetti, fossati e piccole zone umide. Alberi maturi, legno morto e sottobosco offrono rifugio a numerosi animali, tra cui caprioli, istrici e tassi.\n\nMadonna dei Prati fa parte della Rete Natura 2000. L’area non è visitabile perché sono ancora in corso interventi di bonifica dei residui militari.",
     "area_image": "images/aree/4.jpg",
@@ -206,10 +212,10 @@
           "title": "American Museum of Natural History: il ciclo della farfalla",
           "url": "https://www.amnh.org/explore/news-blogs/life-cycle-butterfly"
         },
-      {
-        "title": "Regione Emilia-Romagna: bacini di Argelato e golena del Reno",
-        "url": "https://ambiente.regione.emilia-romagna.it/it/parchi-natura2000/rete-natura-2000/siti/it4050026"
-      }
+        {
+          "title": "Regione Emilia-Romagna: bacini di Argelato e golena del Reno",
+          "url": "https://ambiente.regione.emilia-romagna.it/it/parchi-natura2000/rete-natura-2000/siti/it4050026"
+        }
       ],
       "type": "sequence",
       "title": "Da uovo a farfalla",
@@ -232,10 +238,11 @@
         2,
         3
       ],
-      "explanation": "L’ordine corretto è uovo → bruco → crisalide → farfalla adulta. Queste quattro fasi formano una metamorfosi completa.\n\nDall’uovo nasce il bruco, cioè la larva: si nutre e cresce, accumulando le risorse necessarie alla trasformazione. Diventa poi crisalide, chiamata anche pupa. Anche se dall’esterno sembra immobile, al suo interno avvengono profonde trasformazioni.\n\nDalla crisalide emerge la farfalla adulta, dotata di ali. Con la riproduzione e la deposizione di nuove uova, il ciclo ricomincia.\n\nNell’area dei bacini dell’ex zuccherificio è segnalata anche Lycaena dispar, una farfalla legata agli ambienti palustri. Le immagini del gioco illustrano il ciclo generale delle farfalle e non raffigurano necessariamente questa specie.",
+      "explanation": "L’ordine corretto è uovo → bruco → crisalide → farfalla adulta. È una metamorfosi completa: le fasi hanno aspetto e funzioni diversi.\n\nIl bruco è la larva: mangia e cresce, accumulando le risorse necessarie alla trasformazione. Nella crisalide, detta anche pupa, avvengono profondi cambiamenti, anche se dall’esterno sembra tutto immobile.\n\nLa farfalla adulta ha le ali e si riproduce. Con la deposizione di nuove uova il ciclo ricomincia. Nei bacini dell’ex zuccherificio è segnalata Lycaena dispar, una farfalla legata agli ambienti palustri.",
       "explanation_image": "images/giochi/lycaena-dispar-giorno-5.png",
       "explanation_image_alt": "Illustrazione di un maschio di Lycaena dispar con ali aperte color arancio rame e bordi scuri",
-      "explanation_image_caption": "Lycaena dispar — maschio adulto. Illustrazione della specie segnalata nell’area."
+      "explanation_image_caption": "Lycaena dispar — maschio adulto. Illustrazione della specie segnalata nell’area.",
+      "explanation_note": "Le quattro fasi illustrano il ciclo generale delle farfalle; non raffigurano necessariamente Lycaena dispar."
     },
     "area_description": "A ovest di Argelato, lungo la riva destra del Reno, i bacini di un ex zuccherificio sono diventati un’area per la fauna selvatica. Alla fine degli anni Novanta sono stati riqualificati con interventi sulle acque e sugli argini e con la piantumazione di alberi e arbusti autoctoni.\n\nOggi gli specchi d’acqua bordati di canneto si affiancano alle praterie arbustate e alle piccole zone umide della golena. Sono ambienti utilizzati dagli uccelli per nidificare, sostare e alimentarsi: tra le specie segnalate figurano il cavaliere d’Italia, il tarabusino e il martin pescatore.\n\nIl sito fa parte della Rete Natura 2000 e ospita anche anfibi e farfalle, tra cui Lycaena dispar, legata agli ambienti palustri.",
     "area_image": "images/aree/5.jpg",
@@ -425,13 +432,14 @@
         19
       ],
       "hint": "Osserva anche le fronde in alto, gli animali tra le canne e quelli sotto la superficie dell’acqua. I più mimetizzati possono essere visibili solo in parte.",
-      "explanation": "Nella scena ci sono 20 animali. I numeri sulla soluzione ti aiutano a ritrovarli e ad associarli ai loro nomi.\n\nLungo le rive puoi riconoscere il martin pescatore, la nitticora e l’airone cenerino; tra le canne si nascondono l’alzavola e la gallinella d’acqua. Le foglie e i rami offrono riparo ai piccoli uccelli.\n\nSulla riva e sui tronchi si trovano rettili e anfibi, mentre nell’acqua si distinguono la carpa, l’anguilla e il tritone crestato. Cercarli richiede attenzione: sagome, colori e vegetazione possono rendere un animale poco evidente.\n\nLa varietà degli ambienti della Cassa di espansione del Panaro comprende il lago con vegetazione sommersa e i boschi a galleria di salici e pioppi. La scena riunisce a scopo di gioco specie segnalate nell’area: non rappresenta un avvistamento simultaneo né le loro dimensioni in scala.",
+      "explanation": "Gli animali da trovare erano venti. Alcuni si distinguevano subito; altri si confondevano con foglie, rami, canne e acqua. La soluzione numerata permette di ritrovarli e associare ciascuna figura al suo nome.\n\nPer cercarli era utile esplorare ambienti diversi: le rive frequentate dagli aironi, il canneto che offre riparo alle anatre, i tronchi e l’acqua dove compaiono rettili, anfibi e pesci. Forma e posizione potevano rivelare una presenza poco evidente a prima vista.\n\nAlla Cassa di espansione del Panaro, il lago con vegetazione sommersa e i boschi di salici e pioppi offrono ambienti differenti. Osservare anche questi ambienti aiuta a capire dove cercare gli animali.",
       "sources": [
         {
           "title": "GIAPP — Cassa di espansione del Fiume Panaro",
           "url": "https://naturadipianura.it/luoghi/cassa-di-espansione-del-fiume-panaro/"
         }
-      ]
+      ],
+      "explanation_note": "La scena riunisce specie segnalate nell’area a scopo di gioco: non rappresenta un avvistamento simultaneo e gli animali non sono tutti nella stessa scala."
     },
     "area_description": "Acque turchesi, canneti e boschi di salici e pioppi: ai Laghi di Sant’Anna, nel comune di San Cesario sul Panaro, le aree un tempo interessate dall’estrazione di ghiaia sono state recuperate per la natura e la visita. Il paesaggio fa parte della Cassa di espansione del Fiume Panaro, tutelata dalla Rete Natura 2000.\n\nSotto la superficie del lago crescono alghe del genere Chara, mentre lungo le rive si sviluppa un bosco a galleria. Acqua e vegetazione offrono ambienti diversi agli animali: d’inverno sostano cormorani e anatre; in primavera e in autunno arrivano gli uccelli migratori. Tra le specie che nidificano nell’area ci sono il martin pescatore, la nitticora, il gruccione e il cavaliere d’Italia.\n\nLa vita continua anche lontano dai posatoi più visibili: tra sponde, sottobosco e acqua si trovano testuggini palustri, tritoni, raganelle e pesci. Un paesaggio da osservare con calma, seguendo i percorsi e rispettando gli animali e la vegetazione.",
     "area_image": "images/aree/6.jpg",
@@ -443,16 +451,172 @@
     "day": 7,
     "name": "Valli mirandolesi",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "bird-sorting",
+      "version": "mirandola-bird-sorting-v1",
+      "placeholder": false,
+      "title": "Chi resta e chi parte?",
+      "instructions": "Osserva gli otto uccelli. Tocca una carta, poi scegli Sedentari o Migratori. Per il gioco consideriamo il comportamento abituale delle popolazioni della nostra pianura. Puoi cambiare tutte le scelte prima di confermare.",
+      "groups": [
+        "Sedentari",
+        "Migratori"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "group_descriptions": [
+        "Restano nel territorio durante tutto l’anno",
+        "Compiono spostamenti stagionali"
+      ],
+      "sheets": [
+        {
+          "image": "images/giochi/uccelli-giorno-7-a.png",
+          "width": 1261,
+          "height": 1247,
+          "regions": [
+            [
+              0,
+              0,
+              630.5,
+              623.5
+            ],
+            [
+              630.5,
+              0,
+              630.5,
+              623.5
+            ],
+            [
+              0,
+              623.5,
+              630.5,
+              623.5
+            ],
+            [
+              630.5,
+              623.5,
+              630.5,
+              623.5
+            ]
+          ]
+        },
+        {
+          "image": "images/giochi/uccelli-giorno-7-b.png",
+          "width": 1261,
+          "height": 1247,
+          "regions": [
+            [
+              0,
+              0,
+              630.5,
+              623.5
+            ],
+            [
+              630.5,
+              0,
+              630.5,
+              623.5
+            ],
+            [
+              0,
+              623.5,
+              630.5,
+              623.5
+            ],
+            [
+              630.5,
+              623.5,
+              630.5,
+              623.5
+            ]
+          ]
+        }
+      ],
+      "birds": [
+        {
+          "name": "Cinciallegra",
+          "scientific_name": "Parus major",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/cinciallegra",
+          "sheet": 0,
+          "tile": 0,
+          "note": "Le popolazioni locali sono soprattutto sedentarie. Cercano cibo tra alberi e arbusti anche in inverno; in altre regioni alcuni individui migrano."
+        },
+        {
+          "name": "Picchio verde",
+          "scientific_name": "Picus viridis",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/picchio-verde",
+          "sheet": 0,
+          "tile": 1,
+          "note": "Rimane nel territorio in cui trova alberi per nidificare e formiche di cui nutrirsi."
+        },
+        {
+          "name": "Gazza",
+          "scientific_name": "Pica pica",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/gazza",
+          "sheet": 0,
+          "tile": 2,
+          "note": "Frequenta campagne alberate, parchi e zone abitate durante tutto l’anno, compiendo anche spostamenti locali."
+        },
+        {
+          "name": "Passera mattugia",
+          "scientific_name": "Passer montanus",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/passera-mattugia",
+          "sheet": 0,
+          "tile": 3,
+          "note": "Vive nelle campagne con siepi e casolari. Nidifica in cavità naturali e artificiali e rimane nel territorio durante l’anno."
+        },
+        {
+          "name": "Rondine",
+          "scientific_name": "Hirundo rustica",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/rondine",
+          "sheet": 1,
+          "tile": 0,
+          "note": "Arriva nella stagione riproduttiva e trascorre l’inverno soprattutto nell’Africa centrale e meridionale."
+        },
+        {
+          "name": "Gruccione",
+          "scientific_name": "Merops apiaster",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/gruccione",
+          "sheet": 1,
+          "tile": 1,
+          "note": "Sverna in Africa e torna nella stagione riproduttiva, quando può cacciare numerosi insetti in volo."
+        },
+        {
+          "name": "Tarabusino",
+          "scientific_name": "Ixobrychus minutus",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/tarabusino",
+          "sheet": 1,
+          "tile": 2,
+          "note": "Nidifica nei canneti durante la bella stagione. È segnalato tra le specie nidificanti delle Valli Mirandolesi."
+        },
+        {
+          "name": "Sgarza ciuffetto",
+          "scientific_name": "Ardeola ralloides",
+          "source": "https://www.lipu.it/uccelli/conoscerli-proteggerli/sgarza-ciuffetto",
+          "sheet": 1,
+          "tile": 3,
+          "note": "Frequenta le zone umide per riprodursi e sverna soprattutto nell’Africa subsahariana."
+        }
+      ],
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hint": "Pensa agli uccelli che puoi incontrare anche durante l’inverno e a quelli che arrivano nella bella stagione. Il colore del piumaggio, da solo, non rivela se una specie migra.",
+      "explanation": "Gli otto uccelli sono divisi nei due gruppi del riepilogo: sedentari e migratori. Per il gioco consideriamo il comportamento abituale delle popolazioni della nostra pianura.\n\nGli uccelli sedentari restano nel territorio durante l’anno, pur compiendo spostamenti per cercare cibo e riparo. I migratori si spostano stagionalmente tra luoghi di riproduzione e altri luoghi di permanenza. Popolazioni della stessa specie possono però avere abitudini diverse.\n\nLungo il viaggio servono soste per riposare e alimentarsi. Le zone umide delle Valli Mirandolesi possono offrire queste possibilità e, secondo la specie e la stagione, ospitare anche la nidificazione o lo svernamento.",
+      "sources": [
+        {
+          "title": "Valli Mirandolesi · Unione Comuni Modenesi Area Nord",
+          "url": "https://www.unioneareanord.mo.it/territori/mirandola/valli-mirandolesi"
+        },
+        {
+          "title": "Valli Mirandolesi · Regione Emilia-Romagna",
+          "url": "https://ambiente.regione.emilia-romagna.it/it/parchi-natura2000/rete-natura-2000/siti/it4040014"
+        }
+      ]
     },
     "area_description": "Le Valli mirandolesi occupano la bassa pianura modenese, verso i confini con le province di Mantova e Ferrara. In un territorio profondamente trasformato dalle bonifiche, la realizzazione di bacini e altri interventi ambientali ha ricreato zone umide, prati, boschetti, siepi e filari.\n\nCanneti, acque basse e superfici fangose offrono luoghi di sosta e alimentazione agli uccelli. Tra le specie segnalate ci sono il cavaliere d’Italia, il beccaccino e il falco di palude; sui dossi rimboschiti crescono farnie, carpini bianchi, frassini e aceri campestri. Il paesaggio cambia con le stagioni e con gli spostamenti degli uccelli migratori.\n\nLe Valli fanno parte della Rete Natura 2000. Percorsi pedonali e ciclabili, punti di osservazione e pannelli aiutano a conoscerle: segui gli itinerari e le indicazioni presenti nei diversi settori.",
     "area_image": null,
@@ -464,16 +628,75 @@
     "day": 8,
     "name": "Cassa di espansione Dosolo",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "water-story",
+      "version": "dosolo-water-story-v1",
+      "placeholder": false,
+      "title": "Fai spazio all’acqua",
+      "instructions": "Segui i tre momenti della piena. Osserva come cambia il paesaggio e scegli una risposta per ogni momento. Puoi tornare indietro e modificare le scelte prima di confermare.",
+      "image_width": 1672,
+      "image_height": 941,
+      "steps": [
+        {
+          "title": "Arriva la piena",
+          "short_label": "Piena",
+          "image_alt": "Il Dosolo e il Reno sono alti; la cassa centrale è ancora in gran parte asciutta.",
+          "situation": "Piove molto. Il Reno è alto e ostacola il deflusso delle acque del Dosolo.",
+          "question": "Dove può essere accolta temporaneamente l’acqua in eccesso?",
+          "options": [
+            "Nei campi e vicino alle case.",
+            "Nella cassa di espansione.",
+            "Direttamente nel Reno, anche se è già alto."
+          ],
+          "explanation": "Quando il Reno è alto, il Dosolo può incontrare difficoltà a scaricare. La cassa è lo spazio predisposto per accogliere l’acqua in eccesso.",
+          "image": "images/giochi/dosolo-momento-1.png"
+        },
+        {
+          "title": "La cassa si riempie",
+          "short_label": "Invaso",
+          "image_alt": "L’acqua occupa il bacino centrale, mentre i campi e le case esterni restano asciutti.",
+          "situation": "Il bacino accoglie parte dell’acqua. Il Reno è ancora alto.",
+          "question": "A cosa serve trattenere temporaneamente questa acqua?",
+          "options": [
+            "Per darle spazio mentre il deflusso è ostacolato.",
+            "A farla scomparire subito.",
+            "A trasformare tutto il bacino in un lago sempre pieno."
+          ],
+          "explanation": "L’invaso è temporaneo: l’acqua viene trattenuta mentre il deflusso è ostacolato.",
+          "image": "images/giochi/dosolo-momento-2.png"
+        },
+        {
+          "title": "Torna il deflusso",
+          "short_label": "Deflusso",
+          "image_alt": "I livelli si abbassano e riemerge il prato; restano lo stagno e alcune pozze.",
+          "situation": "Le piogge diminuiscono e i livelli dell’acqua si abbassano.",
+          "question": "Quando le condizioni lo consentono, cosa succede all’acqua raccolta?",
+          "options": [
+            "Resta per sempre tutta nella cassa.",
+            "Torna a scorrere verso le case.",
+            "Può defluire gradualmente attraverso la rete idraulica."
+          ],
+          "explanation": "Quando i livelli lo permettono, l’acqua raccolta può tornare gradualmente nella rete idraulica.",
+          "image": "images/giochi/dosolo-momento-3.png"
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "solution": [
+        1,
+        0,
+        2
+      ],
+      "hint": "La cassa dà spazio alla piena finché il deflusso può riprendere. Distingui l’acqua temporaneamente accumulata da quella che resta nelle zone umide.",
+      "explanation": "Le tre risposte raccontano la funzione della cassa di espansione: accogliere temporaneamente l’acqua del Dosolo quando la piena del Reno ne ostacola il deflusso. Il rilascio può riprendere quando i livelli lo consentono.\n\nL’allagamento durante una piena va distinto dalle zone umide presenti nel bacino. Queste ultime, insieme alla vegetazione boschiva, offrono ambienti utilizzati da piante e animali anche al di fuori dell’evento di piena.\n\nL’Ecomuseo dell’Acqua Dosolo racconta proprio questo rapporto: le opere che governano le acque e gli ambienti naturali si leggono nello stesso paesaggio.",
+      "sources": [
+        {
+          "title": "Cassa di espansione Dosolo · GIAPP",
+          "url": "https://naturadipianura.it/luoghi/cassa-di-espansione-dosolo-ecomuseo-dellacqua/"
+        },
+        {
+          "title": "Ecomuseo dell’Acqua · Città metropolitana di Bologna",
+          "url": "https://www.cittametropolitana.bo.it/cultura/Musei_home/Ecomuseo_dell_Acqua"
+        }
+      ]
     },
     "area_description": "Nel comune di Sala Bolognese, la Cassa di espansione Dosolo trattiene le acque dello scolo quando le piene del Reno ne ostacolano il deflusso. Il bacino si estende per circa 55 ettari e affianca alla gestione delle acque la conservazione degli ambienti naturali.\n\nNella sua parte centrale si trova l’Area di Riequilibrio Ecologico: circa 5,5 ettari suddivisi tra una zona umida e un bosco di ambienti umidi. La presenza di acqua e vegetazione diversifica il paesaggio e offre spazi alla fauna e alla flora della pianura. La cassa fa parte della Rete Natura 2000.\n\nL’area è anche parte dell’Ecomuseo dell’Acqua Dosolo, dedicato al rapporto tra il territorio e la sua rete idraulica. La visita permette di leggere insieme il paesaggio naturale e le opere con cui vengono governate le acque.",
     "area_image": "images/aree/8.jpg",
@@ -616,7 +839,7 @@
         3
       ],
       "hint": "Osserva la forma della punta: un becco è lungo e appuntito, uno si piega verso il basso, uno termina a cucchiaio e uno è corto e largo. Non affidarti soltanto al colore.",
-      "explanation": "I becchi non hanno tutti la stessa forma: ciascuno permette di raccogliere o catturare il cibo in un modo diverso. Nel confronto puoi osservare quattro esempi di uccelli legati alle zone umide.\n\nLa cicogna ha un becco lungo, diritto e appuntito, adatto ad afferrare prede diverse. Il fenicottero usa il becco ricurvo per filtrare piccoli organismi dall’acqua. La spatola cerca il cibo nell’acqua bassa muovendo lateralmente il becco, che si allarga all’estremità. Il germano reale ha un becco più corto, largo e appiattito: le lamelle interne contribuiscono a separare il cibo dall’acqua e dal fango.\n\nAll’Oasi La Rizza il mosaico di ambienti acquatici offre occasioni per osservare gli uccelli. La scheda GIAPP descrive anche il centro per la reintroduzione della cicogna bianca. Le quattro specie del gioco servono al confronto dei becchi.",
+      "explanation": "Gli abbinamenti mostrano quattro strumenti diversi per procurarsi il cibo. La forma del becco permette di afferrare prede, filtrare piccoli organismi o cercare alimento nell’acqua bassa e nel fango.\n\nOsserva nelle figure la punta, la curvatura, la larghezza e la lunghezza del becco. Questi dettagli aiutano a riconoscere un uccello e a comprendere il suo modo di alimentarsi. Il confronto funziona meglio considerando insieme la forma e il movimento con cui il becco viene usato.\n\nAll’Oasi La Rizza il mosaico di ambienti acquatici offre occasioni per osservare gli uccelli; la scheda GIAPP racconta anche il centro per la reintroduzione della cicogna bianca.",
       "bird_notes": [
         {
           "name": "Cicogna bianca",
@@ -644,7 +867,8 @@
           "title": "GIAPP — Ex Risaia di Bentivoglio, Oasi La Rizza",
           "url": "https://naturadipianura.it/luoghi/ex-risaia-di-bentivoglio-la-rizza/"
         }
-      ]
+      ],
+      "explanation_note": "Le quattro specie sono proposte come confronto dei becchi, senza indicare che siano tutte presenti nell’area."
     },
     "area_description": "L’Ex Risaia di Bentivoglio, conosciuta anche come Oasi La Rizza, è un’area naturale recuperata nel territorio di Bentivoglio, accanto al Canale Navile. Fa parte della rete Natura 2000.\n\nIl bacino comprende acque più profonde, un’isola centrale e zone poco profonde con superfici fangose. La variazione dei livelli dell’acqua crea condizioni diverse per gli uccelli che cercano cibo, sostano o si riproducono. Accanto agli ambienti acquatici si trovano un vecchio pioppeto evoluto in bosco e una siepe lungo l’argine del Navile.\n\nDue capanni permettono di osservare la fauna; vicino al centro visite si trova il centro per la reintroduzione della cicogna bianca. Per conoscere accessi e possibilità di visita, consulta le informazioni dell’area e le indicazioni sul posto.",
     "area_image": "images/aree/9.jpg",
@@ -832,7 +1056,7 @@
         5
       ],
       "hint": "Le dalmatine sono brune, hanno un muso appuntito e una macchia scura dietro l’occhio. Osserva anche gli esemplari tra le erbe e sotto le foglie: non basta cercare quelli più evidenti.",
-      "explanation": "La rana dalmatina, chiamata anche rana agile, ha corpo slanciato, muso appuntito e zampe posteriori lunghe. Nel disegno si riconosce per il colore bruno e per la macchia scura dietro l’occhio, accompagnata da una linea chiara lungo il labbro. Questi caratteri vanno osservati insieme: il colore, da solo, non basta.\n\nNella tavola di confronto la rana verde mostra il dorso verde e le pieghe lungo i lati del dorso; il rospo smeraldino ha pelle verrucosa con macchie verdi; la rana toro è più robusta e ha un timpano particolarmente evidente dietro l’occhio. Nello stagno illustrato ci sono anche raganelle.\n\nLa dalmatina vive per buona parte dell’anno a terra, anche nei boschi, e raggiunge l’acqua per riprodursi. Alla Golena San Vitale la scheda GIAPP ne descrive la presenza nelle pozze e negli stagni all’inizio della primavera.\n\nLa scena è stata composta per confrontare specie diverse: non è un censimento degli anfibi della Golena. In particolare la rana toro è una specie aliena invasiva, distinta dalla fauna autoctona.",
+      "explanation": "Le rane dalmatine da trovare erano sei. Il corpo slanciato, il muso appuntito e le lunghe zampe posteriori aiutano a riconoscerle. Nel disegno sono utili anche la macchia scura dietro l’occhio e la linea chiara lungo il labbro.\n\nIl colore bruno, da solo, non è sufficiente: va osservato insieme alla forma del corpo e agli altri particolari. La tavola di confronto mostra le differenze con rana verde, rospo smeraldino e rana toro.\n\nLa dalmatina, detta anche rana agile, trascorre buona parte dell’anno a terra e raggiunge l’acqua per riprodursi. Alla Golena San Vitale è segnalata nelle pozze e negli stagni all’inizio della primavera.",
       "sources": [
         {
           "title": "GIAPP — Golena San Vitale",
@@ -865,7 +1089,8 @@
         "name": "Raganelle",
         "description": "Nella scena sono presenti anche raganelle, oltre ai quattro tipi illustrati nella tavola.",
         "url": "https://it.wikipedia.org/wiki/Hyla"
-      }
+      },
+      "explanation_note": "La scena è un confronto illustrato, non un censimento degli anfibi della Golena. La rana toro è una specie aliena invasiva."
     },
     "area_description": "La Golena San Vitale si trova lungo il fiume Reno, tra il Lippo di Calderara di Reno e il Trebbo di Castel Maggiore. Conserva un bosco di pianura e laghetti formati in aree di cava abbandonate.\n\nSalici, pioppi e frassini, insieme ad arbusti e vegetazione del sottobosco, creano ambienti diversi lungo le rive. Nelle pozze e negli stagni la rana agile o dalmatina si reca all’inizio della primavera per riprodursi. Sono presenti anche il rospo comune e il tritone crestato italiano.\n\nL’area è tutelata come Area di Riequilibrio Ecologico e fa parte della rete Natura 2000. I percorsi di visita permettono di conoscere il bosco e gli ambienti acquatici: segui le indicazioni sul posto e osserva gli animali senza disturbarli.",
     "area_image": "images/aree/10.jpg",
@@ -894,7 +1119,7 @@
         "Damigella rossa"
       ],
       "hint": "Prova a ricordare la posizione delle carte viste. Il colore aiuta, ma osserva anche le ali e la forma del corpo.",
-      "explanation": "Libellule e damigelle appartengono allo stesso ordine di insetti, gli Odonati. Nelle carte puoi distinguerle osservando il corpo e soprattutto le ali a riposo.\n\nLe libellule hanno un corpo più robusto e tengono le quattro ali aperte lateralmente. Le damigelle sono più esili e generalmente richiudono le ali lungo il corpo: esistono però eccezioni, quindi questo indizio va considerato insieme agli altri caratteri. Il colore da solo non basta per distinguere i due gruppi.\n\nLe illustrazioni aiutano a confrontare questi caratteri generali; non costituiscono un elenco delle specie censite in Via dei Tigli. La scheda GIAPP segnala la presenza di libellule nell’area, insieme ad anfibi, rettili, farfalle e piccoli uccelli.",
+      "explanation": "Le coppie del memory mostrano libellule e damigelle, insetti appartenenti all’ordine degli Odonati. Per distinguere i due gruppi è utile guardare la forma del corpo e la posizione delle ali a riposo.\n\nLe libellule hanno generalmente un corpo più robusto e tengono le ali aperte lateralmente. Le damigelle sono più esili e di solito richiudono le ali lungo il corpo. Esistono eccezioni: questo indizio va quindi confrontato con gli altri caratteri.\n\nI colori aiutavano a ricordare le carte, ma non bastano per distinguere i due gruppi. Nella scheda GIAPP di Via dei Tigli è segnalata la presenza di libellule.",
       "sources": [
         {
           "title": "British Dragonfly Society — distinguere libellule e damigelle",
@@ -904,7 +1129,8 @@
           "title": "GIAPP — Nodo ecologico di Via dei Tigli",
           "url": "https://naturadipianura.it/luoghi/nodo-della-rete-ecologica-di-via-dei-tigli/"
         }
-      ]
+      ],
+      "explanation_note": "Le carte illustrano caratteri generali e non costituiscono un elenco delle specie censite nell’area."
     },
     "area_description": "In Via dei Tigli, ad Anzola dell’Emilia, bosco, prato e una piccola zona umida si incontrano in uno spazio di circa 2,6 ettari. L’area è stata realizzata nel 2004 dal Comune, in collaborazione con la Provincia di Bologna, per ricostruire ambienti naturali della pianura.\n\nLa zona umida si sviluppa presso la vasca di laminazione dello Scolo Garofalo, tra canneti e arbusti che crescono sui terreni umidi. Anfibi, rettili, farfalle e libellule frequentano questi ambienti, insieme a una piccola comunità di uccelli degli arbusti.\n\nIl nome «nodo ecologico» descrive la sua funzione: offrire uno spazio in cui le specie possano vivere e da cui possano spostarsi nel territorio attraverso i corridoi della rete ecologica. Un percorso di visita permette di osservare i diversi ambienti.",
     "area_image": "images/aree/11.jpg",
@@ -941,7 +1167,7 @@
       ],
       "cycle_label": "Ciclo del tritone crestato in ordine",
       "hint": "La larva vive in acqua e ha branchie esterne ai lati della testa. Il giovane ha già perso le branchie. La cresta del disegno appartiene a un maschio adulto nel periodo riproduttivo.",
-      "explanation": "L’ordine corretto è uovo → larva → giovane → adulto. Il tritone crestato italiano (Triturus carnifex) è un anfibio: il suo ciclo comprende una fase acquatica e una vita anche sulla terraferma.\n\nLa femmina depone le uova una alla volta, avvolgendole nelle foglie delle piante acquatiche. Dall’uovo esce una larva che vive nell’acqua e respira con branchie esterne, riconoscibili come piccoli ciuffi ai lati della testa. Durante la crescita sviluppa le zampe.\n\nCon la metamorfosi perde le branchie esterne e diventa un giovane tritone, che può lasciare l’acqua e trovare riparo in ambienti terrestri umidi. Gli adulti tornano negli stagni per riprodursi.\n\nLa cresta non compare in tutti gli adulti: è il maschio a svilupparla nel periodo riproduttivo. L’ultima illustrazione mostra proprio questo momento; le femmine non hanno la cresta dorsale. I disegni sono ingranditi per confrontare le fasi e non sono tutti nella stessa scala.",
+      "explanation": "L’ordine corretto è uovo → larva → giovane → adulto. Il tritone crestato italiano, Triturus carnifex, è un anfibio il cui ciclo comprende una fase acquatica e una vita anche sulla terraferma.\n\nLa femmina depone le uova una alla volta, avvolgendole nelle foglie delle piante acquatiche. La larva vive nell’acqua e respira con branchie esterne: i piccoli ciuffi ai lati della testa. Con la crescita sviluppa le zampe e, durante la metamorfosi, perde le branchie.\n\nIl giovane può lasciare l’acqua e trovare riparo in ambienti terrestri umidi. Gli adulti tornano negli stagni per riprodursi: è in questo periodo che il maschio sviluppa la cresta dorsale. Le femmine non hanno questa cresta.",
       "sources": [
         {
           "title": "LIFE AMPHICON — Tritone crestato italiano",
@@ -955,7 +1181,8 @@
           "title": "GIAPP — Bisana",
           "url": "https://naturadipianura.it/luoghi/bisana/"
         }
-      ]
+      ],
+      "explanation_note": "L’ultima figura mostra un maschio nel periodo riproduttivo. Le fasi sono ingrandite e non sono tutte nella stessa scala."
     },
     "area_description": "Sulla riva destra del Reno, di fronte al Bosco della Panfilia, la Bisana conserva un paesaggio di golena in cui il fiume e il bosco si incontrano. L’area si estende per circa 65 ettari tra i territori di Galliera e Pieve di Cento ed è tutelata come Area di Riequilibrio Ecologico e sito della Rete Natura 2000.\n\nVicino all’acqua crescono soprattutto salici bianchi. Sui terrazzi più alti, formati dai depositi del fiume, il bosco si arricchisce di pioppi, aceri campestri, olmi e farnie. Sotto le chiome, biancospini, noccioli, prugnoli e altri arbusti offrono rifugi alla fauna.\n\nIl percorso di visita attraversa i diversi ambienti e permette di osservare ciò che resta del paesaggio fluviale della pianura. Per conoscere la Bisana senza disturbare gli animali, resta sul tracciato e nelle piazzole dedicate alla visita.",
     "area_image": "images/aree/12.jpg",
@@ -979,7 +1206,7 @@
       "rows": 4,
       "image_alt": "Fotografia verticale di una cicogna, con becco rosso e piumaggio bianco e nero.",
       "hint": "Parti dalla testa e dal becco. Poi segui la continuità del collo, delle ali e della zampa. Puoi aprire la foto guida e riprovare: la disposizione delle tessere viene conservata in questa scheda del browser.",
-      "explanation": "La protagonista del puzzle è la cicogna bianca (Ciconia ciconia). La riconosci dal piumaggio bianco, dalle grandi penne nere delle ali e dal lungo becco rossastro. È un grande trampoliere: quando apre le ali può avvicinarsi ai due metri di apertura.\n\nCerca il cibo in ambienti aperti, come prati, campi e zone umide poco profonde. Il suo lungo becco le permette di catturare prede diverse: grandi insetti, anfibi, piccoli mammiferi e altri piccoli animali.\n\nUn indizio per distinguerla dagli aironi? In volo la cicogna tiene il collo disteso, mentre gli aironi lo ripiegano. Per il nido sceglie punti elevati, come alberi, edifici e piattaforme.\n\nAlle Vasche Ex Zuccherificio di Crevalcore è documentata la nidificazione spontanea delle cicogne. Il puzzle ci porta così dal ritratto di un animale a un luogo dove conoscere il suo ambiente.",
+      "explanation": "La protagonista del puzzle è la cicogna bianca, Ciconia ciconia. Il piumaggio bianco, le grandi penne nere delle ali e il lungo becco rossastro sono i suoi caratteri più evidenti. L’apertura alare può avvicinarsi ai due metri.\n\nCerca il cibo in prati, campi e acque poco profonde, catturando grandi insetti, anfibi, piccoli mammiferi e altre prede. Per costruire il nido sceglie punti elevati, come alberi, edifici e piattaforme.\n\nIn volo tiene il collo disteso, mentre gli aironi lo ripiegano: un particolare utile anche quando l’animale è lontano. Alle Vasche Ex Zuccherificio di Crevalcore è documentata la nidificazione spontanea delle cicogne.",
       "credit": {
         "text": "Fotografia fornita per il calendario GIAPP."
       },
@@ -1004,16 +1231,116 @@
     "day": 14,
     "name": "Manzolino Tivoli",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "birdwatch-story",
+      "version": "manzolino-birdwatch-v1",
+      "placeholder": false,
+      "title": "Dal capanno, senza farsi notare",
+      "instructions": "Quattro situazioni per osservare e fotografare senza disturbare. Per ognuna scegli uno dei due comportamenti: puoi toccare i numeri nell’immagine o i pulsanti sotto. Puoi rivedere tutte le scelte prima di confermare.",
+      "image": "images/giochi/manzolino-capanno-v1.png",
+      "image_alt": "Interno di un capanno in legno affacciato su uno stagno con airone, anatre e canneto. Sul ripiano ci sono un binocolo e una macchina fotografica; in basso una panchina e a destra l’uscita sul sentiero.",
+      "image_width": 1586,
+      "image_height": 992,
+      "steps": [
+        {
+          "title": "Guardare da lontano",
+          "short_label": "Distanza",
+          "situation": "Un airone è sulla riva. Vorresti osservarlo meglio.",
+          "question": "Come scegli di guardarlo?",
+          "options": [
+            {
+              "text": "Uso il binocolo restando dietro la schermatura.",
+              "x": 21,
+              "y": 64
+            },
+            {
+              "text": "Esco dal capanno per avvicinarmi all’airone.",
+              "x": 91,
+              "y": 56
+            }
+          ],
+          "explanation": "Il binocolo avvicina i dettagli mantenendo la distanza dall’animale. La schermatura rende meno evidente la presenza delle persone."
+        },
+        {
+          "title": "Dare tempo all’attesa",
+          "short_label": "Attesa",
+          "situation": "Tra le canne non noti movimenti.",
+          "question": "Come continui l’osservazione?",
+          "options": [
+            {
+              "text": "Esco subito e cerco di avvicinarmi al canneto.",
+              "x": 91,
+              "y": 56
+            },
+            {
+              "text": "Mi fermo in silenzio e osservo con pazienza.",
+              "x": 24,
+              "y": 86
+            }
+          ],
+          "explanation": "Fermarsi in silenzio dà il tempo di cogliere piccoli movimenti tra le canne."
+        },
+        {
+          "title": "Lasciare che si mostri",
+          "short_label": "Richiami",
+          "situation": "Hai intravisto un uccello nel canneto, ma ora è nascosto.",
+          "question": "Come provi a osservarlo di nuovo?",
+          "options": [
+            {
+              "text": "Riproduco un richiamo per farlo uscire.",
+              "x": 65,
+              "y": 34
+            },
+            {
+              "text": "Resto schermato e aspetto che si mostri spontaneamente.",
+              "x": 37,
+              "y": 49
+            }
+          ],
+          "explanation": "I richiami registrati possono interferire con il comportamento degli uccelli: è preferibile aspettare che si mostrino spontaneamente."
+        },
+        {
+          "title": "Prima della fotografia",
+          "short_label": "Fotografia",
+          "situation": "Dalla feritoia una canna copre parte dell’inquadratura.",
+          "question": "Cosa fai per cercare una fotografia?",
+          "options": [
+            {
+              "text": "Provo un’inquadratura dalla feritoia, senza avvicinarmi.",
+              "x": 67,
+              "y": 59
+            },
+            {
+              "text": "Esco dal percorso per cercare una foto più vicina.",
+              "x": 91,
+              "y": 56
+            }
+          ],
+          "explanation": "Cerca l’inquadratura dai punti consentiti. Se non riesce, aspetta un’altra occasione senza far spostare l’animale."
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "solution": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hint": "Pensa alla distanza, al silenzio e alla pazienza. La scelta migliore permette agli animali di continuare le proprie attività senza essere richiamati o inseguiti.",
+      "explanation": "Le scelte corrette permettono di osservare dal riparo del capanno, usando il binocolo e aspettando con pazienza. La distanza e la schermatura aiutano a limitare il disturbo senza rinunciare a guardare i particolari.\n\nUn animale nascosto può comparire dopo qualche minuto. Ascoltare e cercare piccoli movimenti nella vegetazione è più rispettoso che richiamarlo o seguirlo per farlo uscire.\n\nAnche la fotografia richiede attenzione alla reazione dell’animale: se si mette in allarme o si allontana per la nostra presenza, occorre aumentare la distanza.",
+      "sources": [
+        {
+          "title": "Manzolino–Tivoli · GIAPP",
+          "url": "https://naturadipianura.it/luoghi/manzolino-tivoli/"
+        },
+        {
+          "title": "Decalogo del birdwatcher · EBN Italia",
+          "url": "https://www.ebnitalia.it/it/news-82/decalogo-del-birdwatcher.html"
+        },
+        {
+          "title": "Osservare nelle zone umide · WWT (in inglese)",
+          "url": "https://www.wwt.org.uk/discover-wetlands/blog/a-birdwatching-code-of-conduct-how-to-respect-our-wetland-nature-while-still-getting-the-most-out-of-your-birdwatching-experience"
+        }
+      ]
     },
     "area_description": "Tra Manzolino, nel comune di Castelfranco Emilia, e Tivoli, nel territorio di San Giovanni in Persiceto, si estende un insieme di zone umide tutelato dalla Rete Natura 2000. Il sito comprende la cassa di espansione di Manzolino e le vasche degli ex allevamenti ittici di Tivoli e Boaria Rossa.\n\nGli interventi di recupero hanno creato ambienti diversi: acque profonde e basse, canneti, isole e rive fangose. Qui gli uccelli trovano luoghi per sostare, alimentarsi e riprodursi. Anatre, aironi e svassi frequentano i bacini; negli stagni e tra i canneti sono segnalati anfibi e testuggini palustri.\n\nCapanni, punti schermati e una torretta permettono di osservare parte delle zone umide. Le modalità di accesso cambiano nei diversi settori: per Boaria Rossa la visita va concordata con il Comune di San Giovanni in Persiceto.",
     "area_image": "images/aree/14.jpg",
@@ -1025,16 +1352,182 @@
     "day": 15,
     "name": "Torrazzuolo",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "turtle-details",
+      "version": "torrazzuolo-turtle-details-v1",
+      "placeholder": false,
+      "title": "Emys o Trachemys? Guarda i dettagli",
+      "instructions": "Tre confronti ravvicinati: testa, collo e carapace. In ogni coppia scegli il particolare di Emys, la testuggine palustre europea. Tocca un’immagine per rispondere; puoi ingrandire i dettagli e cambiare tutte le scelte prima della conferma.",
+      "sheet": {
+        "image": "images/giochi/torrazzuolo-particolari-v1.png",
+        "width": 1217,
+        "height": 1293,
+        "regions": [
+          [
+            0,
+            30,
+            605,
+            365
+          ],
+          [
+            615,
+            25,
+            602,
+            375
+          ],
+          [
+            0,
+            398,
+            605,
+            366
+          ],
+          [
+            615,
+            425,
+            602,
+            339
+          ],
+          [
+            0,
+            777,
+            605,
+            490
+          ],
+          [
+            608,
+            777,
+            609,
+            490
+          ]
+        ]
+      },
+      "whole_sheet": {
+        "image": "images/giochi/torrazzuolo-testuggini-intere-v1.png",
+        "width": 2172,
+        "height": 724,
+        "regions": [
+          [
+            0,
+            0,
+            724,
+            724
+          ],
+          [
+            724,
+            0,
+            724,
+            724
+          ],
+          [
+            1448,
+            0,
+            724,
+            724
+          ]
+        ]
+      },
+      "steps": [
+        {
+          "label": "Testa",
+          "title": "La macchia dietro l’occhio",
+          "question": "Quale delle due teste appartiene a Emys?",
+          "tiles": [
+            0,
+            1
+          ],
+          "descriptions": [
+            "Testa scura con piccoli puntini gialli.",
+            "Testa con striature gialle e una macchia rossa dietro l’occhio."
+          ],
+          "species": [
+            "Emys orbicularis",
+            "Trachemys scripta elegans"
+          ],
+          "explanation": "I piccoli puntini gialli sulla testa scura appartengono a Emys. La macchia rossa allungata dietro l’occhio caratterizza la Trachemys dalle guance rosse."
+        },
+        {
+          "label": "Collo",
+          "title": "Puntini o striature?",
+          "question": "Quale particolare del collo appartiene a Emys?",
+          "tiles": [
+            2,
+            3
+          ],
+          "descriptions": [
+            "Collo con lunghe striature gialle e una macchia gialla dietro l’occhio.",
+            "Collo scuro con tanti piccoli puntini gialli."
+          ],
+          "species": [
+            "Trachemys scripta scripta",
+            "Emys orbicularis"
+          ],
+          "explanation": "Il collo di Emys è punteggiato di giallo; quello di Trachemys presenta vistose striature. La macchia gialla dietro l’occhio identifica qui Trachemys scripta scripta: non tutte le Trachemys hanno la macchia rossa."
+        },
+        {
+          "label": "Carapace",
+          "title": "Il disegno del carapace",
+          "question": "Quale carapace appartiene all’esemplare di Emys illustrato nel gioco?",
+          "tiles": [
+            4,
+            5
+          ],
+          "descriptions": [
+            "Carapace scuro con piccoli segni e raggi gialli.",
+            "Carapace olivastro con disegni gialli curvi sulle placche."
+          ],
+          "species": [
+            "Emys orbicularis",
+            "Trachemys scripta"
+          ],
+          "explanation": "L’esemplare di Emys ha un carapace scuro con piccoli segni gialli; la Trachemys illustrata mostra linee gialle su fondo olivastro. Età e variabilità individuale modificano questi disegni: il carapace da solo non basta sempre per il riconoscimento."
+        }
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "whole_animals": [
+        {
+          "name": "Emys",
+          "scientific_name": "Emys orbicularis",
+          "note": "Testuggine palustre europea: specie autoctona."
+        },
+        {
+          "name": "Trachemys: macchia rossa",
+          "scientific_name": "Trachemys scripta elegans",
+          "note": "Testuggine palustre americana: specie aliena invasiva."
+        },
+        {
+          "name": "Trachemys: macchia gialla",
+          "scientific_name": "Trachemys scripta scripta",
+          "note": "Testuggine palustre americana: specie aliena invasiva."
+        }
+      ],
+      "solution": [
+        0,
+        1,
+        0
+      ],
+      "hint": "Confronta i particolari già osservati. Considera insieme la distribuzione dei segni gialli e le macchie dietro l’occhio: il solo colore del guscio può trarre in inganno.",
+      "explanation": "Le due testuggini appartengono a specie diverse: Emys orbicularis è autoctona; Trachemys scripta è originaria del Nord America ed è stata introdotta anche attraverso il rilascio di animali tenuti in cattività.\n\nUna specie è aliena quando viene portata dall’uomo fuori dalla sua distribuzione naturale. Non tutte le specie aliene diventano invasive: lo sono quelle la cui introduzione o diffusione minaccia la biodiversità. Ambienti adatti, risorse disponibili e condizioni favorevoli alla riproduzione possono facilitarne l’insediamento.\n\nTrachemys scripta è una specie aliena invasiva: può competere con Emys per il cibo e per i punti dove scaldarsi al sole. Liberare una testuggine in uno stagno può quindi danneggiare le specie che già vi abitano. Prevenire nuovi rilasci è una responsabilità delle persone.",
+      "sources": [
+        {
+          "title": "Torrazzuolo · GIAPP",
+          "url": "https://naturadipianura.it/luoghi/torrazzuolo/"
+        },
+        {
+          "title": "Progetto Emys · GIAPP",
+          "url": "https://naturadipianura.it/progetti-speciali-e-ricerca/progetto-emys/"
+        },
+        {
+          "title": "LIFE URCA PROEMYS · Regione Emilia-Romagna",
+          "url": "https://ambiente.regione.emilia-romagna.it/it/parchi-natura2000/consultazione/progetti-europei/life-urca-proemys"
+        },
+        {
+          "title": "Trachemys: riconoscimento e impatti · ISPRA",
+          "url": "https://www.specieinvasive.isprambiente.it/index.php/it/specie-aliene-invasive/2-le-specie-invasive/44-specie-21"
+        },
+        {
+          "title": "Specie aliene e invasive: definizioni · ISPRA",
+          "url": "https://indicatoriambientali.isprambiente.it/it/biodiversita-stato-e-minacce/diffusione-di-specie-alloctone-animali-e-vegetali"
+        }
+      ]
     },
     "area_description": "Il Torrazzuolo si trova a Nonantola, sui terreni della Partecipanza agraria, presso la confluenza del Canal Torbido con Fossa Bosca e Fossa Sorga. L’area, estesa per oltre 115 ettari, è tutelata come Area di Riequilibrio Ecologico e fa parte della Rete Natura 2000.\n\nIl paesaggio alterna bosco, palude, canali, prati, siepi e filari. Il rimboschimento ha ricreato un ampio frammento di bosco di pianura con farnie, carpini bianchi, frassini, salici e pioppi. Accanto agli alberi, le zone umide della Valle di Sopra e della Valle di Sotto offrono riparo ad anatre, aironi e altri uccelli acquatici.\n\nTra le presenze caratteristiche c’è la testuggine palustre europea. Sono segnalati anche tritoni e raganelle; nelle acque crescono piante come il giaggiolo acquatico e la lenticchia d’acqua.",
     "area_image": "images/aree/15.jpg",
@@ -1082,7 +1575,7 @@
       "solution": "FOTOTRAPPOLA",
       "word_note": "Le parole riprendono gli ambienti, le piante e gli animali descritti nella scheda dell’area.",
       "hint": "Controlla anche le parole scritte al contrario. Quando le hai trovate tutte, leggi in ordine le lettere gialle: il nome indica uno strumento usato per osservare gli animali.",
-      "explanation": "La parola nascosta è FOTOTRAPPOLA. È una macchina fotografica che può attivarsi automaticamente al passaggio di un animale e registrare foto o video. Consente di raccogliere informazioni anche quando nessuno è presente vicino al dispositivo.\n\nLe immagini aiutano i ricercatori a riconoscere le specie e a studiarne la presenza e gli orari di attività. Ma uno strumento non vede tutto: distanza, velocità di passaggio, vegetazione e condizioni di luce possono influenzare il rilevamento. Non trovare un animale nelle immagini non significa quindi, da solo, che sia assente.\n\nLe parole del gioco richiamano ambienti e presenze descritti nella scheda del Collegio di Spagna. Non indicano che in questa area sia in corso uno specifico progetto di fototrappolaggio.",
+      "explanation": "La parola nascosta è FOTOTRAPPOLA. È una macchina fotografica che può attivarsi al passaggio di un animale e registrare foto o video anche quando nessuno è presente vicino al dispositivo.\n\nLe immagini possono aiutare a riconoscere le specie e a studiarne gli orari di attività. Ogni ripresa è però legata a ciò che lo strumento riesce a rilevare: distanza, vegetazione, luce e velocità di passaggio possono influire sul risultato.\n\nPer questo, non trovare un animale nelle immagini non dimostra da solo che sia assente. Il crucipuzzle unisce questo strumento di osservazione agli ambienti e alle presenze raccontati nella scheda del Collegio di Spagna.",
       "sources": [
         {
           "title": "GIAPP — Area di Baricella, Collegio di Spagna",
@@ -1092,7 +1585,8 @@
           "title": "WIKIPEDIA — Fototrappolaggio",
           "url": "https://it.wikipedia.org/wiki/Fototrappolaggio"
         }
-      ]
+      ],
+      "explanation_note": "Il gioco non indica che nell’area sia in corso uno specifico progetto di fototrappolaggio."
     },
     "area_description": "L’Area di Riequilibrio Ambientale di Baricella è stata realizzata dal Comune su terreni del Reale Collegio di Spagna. Il recupero, iniziato nel 1998, ha ricreato zone umide, siepi, boschetti e radure su circa 38 ettari.\n\nDue bacini con acqua bassa costituiscono il cuore dell’area. Attorno si trovano salici, pioppi bianchi, prati e rimboschimenti: ambienti diversi che offrono spazi per alimentarsi, sostare e nidificare. Tra gli animali presenti ci sono folaghe, rospi, raganelle, testuggini palustri e orbettini.\n\nUn percorso ad anello consente di conoscere l’area e raggiungere due piccoli capanni di osservazione. Sono presenti anche esempi di rifugi per la fauna, come nidi artificiali, una legnaia e un muretto a secco.\n\nL’area fa parte della rete Natura 2000 ed è gestita da Sustenia per conto del Comune, in coordinamento con il Reale Collegio di Spagna. Durante la visita segui il percorso e le indicazioni sul posto.",
     "area_image": "images/aree/16.jpg",
@@ -1117,7 +1611,7 @@
       ],
       "correct_index": 0,
       "hint": "Riparti dal punto verde in basso a sinistra. Segui con calma tutte le anse: il percorso può anche tornare indietro. Agli incroci prosegui sulla stessa linea, senza svoltare sull’altra.",
-      "explanation": "Il percorso conduce al fiume Reno, dove confluiscono le acque del torrente Samoggia.\n\nMa quando arriva molta acqua, per esempio dopo piogge intense, cosa succede? Lungo il torrente si trova una cassa di espansione: un’area predisposta per accogliere temporaneamente parte dell’acqua durante le piene e ridurre la quantità che prosegue verso valle.\n\nQui lo spazio lasciato all’acqua è diventato anche spazio per la natura: zone umide, prati, arbusti e boschi offrono ambienti diversi agli animali della pianura.",
+      "explanation": "Il percorso corretto conduce al fiume Reno, nel quale confluiscono le acque del torrente Samoggia. Per seguirlo bisognava mantenere la stessa linea anche nei punti in cui i percorsi si incrociavano.\n\nDurante una piena, l’acqua che scende verso valle aumenta. La cassa di espansione è uno spazio predisposto per accoglierne temporaneamente una parte e ridurre la quantità che prosegue lungo il torrente.\n\nAccanto alla funzione idraulica, il recupero ambientale ha creato zone umide, prati, arbusti e boschi. Nello stesso luogo si possono quindi osservare le opere per la gestione delle acque e gli ambienti utilizzati dalla fauna.",
       "sources": [
         {
           "title": "GIAPP — Cassa di espansione del Torrente Samoggia",
@@ -1215,7 +1709,7 @@
         0
       ],
       "hint": "Osserva bene le aperture. Una è ampia e rettangolare, una è un piccolo foro e una è una fessura dal basso. L’ultima casetta è appesa: usa anche gli indizi della posizione per completare gli abbinamenti del disegno.",
-      "explanation": "Non tutte le cassette hanno la stessa funzione: forma e ingresso riprendono diversi modi di cercare riparo. Le figure del gioco mostrano quattro esempi; non sono case riservate a una sola specie.\n\nPettirosso — Cassetta semiaperta (D). L’ampia apertura rettangolare crea una nicchia riparata, diversa dalla classica cassetta chiusa con un piccolo foro. Il modello aperto o semiaperto è normalmente consigliato per il pettirosso.\n\nCinciallegra — Cassetta chiusa a foro circolare (B). È un rifugio che riproduce una cavità: l’animale passa dall’ingresso e costruisce il nido nella camera interna. Anche altre specie possono utilizzare cassette di questo tipo.\n\nScricciolo — Casetta in legno appesa (C), nell’abbinamento illustrato. La sospensione permette di riconoscere la figura del gioco, ma da sola non rende una casetta adatta soltanto allo scricciolo. Questa specie può utilizzare anche cassette semiaperte: forma, riparo e posizione vanno valutati insieme.\n\nPipistrello — Bat box a fessura (A). La stretta apertura inferiore e il legno ruvido consentono di entrare e aggrapparsi. È un rifugio per pipistrelli, che sono mammiferi e non costruiscono un nido come gli uccelli.",
+      "explanation": "Gli abbinamenti riguardano i quattro rifugi illustrati. Apertura, forma e posizione aiutano a capire come possono essere utilizzati; una cassetta, però, può ospitare specie diverse.\n\nIl pettirosso è associato alla cassetta semiaperta (D), con un’ampia apertura che forma una nicchia riparata. La cinciallegra è abbinata alla cassetta chiusa a foro circolare (B), che riproduce una cavità.\n\nLo scricciolo è abbinato alla casetta appesa (C) del disegno. La sospensione permette di ritrovare la figura, ma non è un criterio sufficiente per scegliere una cassetta adatta alla specie, che può usare anche modelli semiaperti.\n\nLa bat box (A) è un rifugio per pipistrelli: l’ingresso a fessura e il legno ruvido permettono di entrare e aggrapparsi. I pipistrelli sono mammiferi e non costruiscono un nido come gli uccelli.",
       "sources": [
         {
           "title": "WIKIPEDIA — Nidi artificiali",
@@ -1300,7 +1794,7 @@
         }
       ],
       "hint": "Riascolta il carattere di ogni suono: uno è profondo e ripetuto, un altro è uno stridio, il terzo comprende un rumore secco e vibrante. Non tutti i suoni degli animali sono prodotti dalla voce.",
-      "explanation": "Questi suoni sembrano strani perché si allontanano dai versi che associamo più facilmente a una rana, a un rapace notturno o a un roditore. Sono però segnali con funzioni precise.\n\nRana toro — Il richiamo profondo ricorda un muggito, da cui deriva il nome comune. Il maschio canta per attirare le femmine e segnalare il territorio agli altri maschi. La rana toro è una specie nordamericana introdotta in Italia: il gioco non la presenta come fauna autoctona.\n\nBarbagianni — Il suo richiamo è uno stridio aspro e prolungato. Non tutti i rapaci notturni fanno il tipico «uh-uh»: il barbagianni usa vocalizzazioni diverse per comunicare. Lo stridio del maschio si può sentire soprattutto nelle prime fasi della stagione riproduttiva. Un suono impressionante per noi non indica necessariamente paura o aggressività.\n\nIstrice — Il rumore simile a un sonaglio non è una voce: è prodotto da particolari aculei cavi della coda che, quando vengono agitati, urtano tra loro. Fa parte dei segnali di difesa che avvertono un possibile aggressore. Nell’audio si sentono anche altri rumori dell’animale.\n\nLe registrazioni sono esempi d’archivio e non provengono da Boscovivo. Nell’illustrazione compare l’istrice europeo (Hystrix cristata), mentre la scheda dell’audio non specifica la specie registrata.",
+      "explanation": "La rana toro produce un richiamo profondo che ricorda un muggito: il maschio lo usa per attirare le femmine e segnalare il territorio. Il nome comune deriva proprio da questa somiglianza sonora.\n\nIl barbagianni emette uno stridio aspro e prolungato. I rapaci notturni non hanno tutti il tipico richiamo «uh-uh»: il barbagianni usa vocalizzazioni diverse per comunicare, e lo stridio del maschio si sente soprattutto nelle prime fasi della stagione riproduttiva.\n\nIl sonaglio dell’istrice è invece un rumore prodotto dai particolari aculei cavi della coda, agitati come segnale di difesa. Ascoltare un animale significa quindi distinguere anche come viene prodotto il suono e quale funzione può avere.",
       "sources": [
         {
           "title": "BTO — I richiami del barbagianni",
@@ -1314,7 +1808,8 @@
           "title": "GIAPP — Boscovivo",
           "url": "https://naturadipianura.it/luoghi/boscovivo/"
         }
-      ]
+      ],
+      "explanation_note": "Le registrazioni sono esempi d’archivio, non realizzati a Boscovivo. La rana toro è una specie aliena. Il disegno mostra Hystrix cristata, mentre la scheda dell’audio dell’istrice non specifica la specie registrata."
     },
     "area_description": "A Funo, nel comune di Argelato, Boscovivo riunisce circa 38 ettari di bosco e ambienti legati all’acqua. L’area è nata da interventi di rimboschimento avviati nel 1995, attorno alla cassa di espansione del canale Riolo, realizzata per la sicurezza idraulica.\n\nCon il tempo gli alberi sono cresciuti e si è sviluppato un fitto sottobosco. La varietà degli ambienti offre spazio a numerose forme di vita e permette di conoscere un bosco di pianura in evoluzione.\n\nDurante la visita segui i percorsi predisposti ed evita le zone non accessibili. Sono vietati caccia, pesca, raccolta di fiori e prodotti naturali, accensione di fuochi e accesso con veicoli a motore non autorizzati. I cani devono essere tenuti al guinzaglio.",
     "area_image": "images/aree/19.jpg",
@@ -1326,16 +1821,99 @@
     "day": 20,
     "name": "Parco Lamborghini",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "leaf-matching",
+      "version": "lamborghini-leaves-v1",
+      "placeholder": false,
+      "title": "A ogni foglia il suo albero",
+      "instructions": "Osserva le quattro foglie a colori. Tocca una foglia, poi il nome dell’albero a cui pensi appartenga. Puoi cambiare gli abbinamenti prima di confermare.",
+      "trees": [
+        "Farnia",
+        "Acero campestre",
+        "Salice bianco",
+        "Ontano nero"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "scientific_names": [
+        "Quercus robur",
+        "Acer campestre",
+        "Salix alba",
+        "Alnus glutinosa"
+      ],
+      "shape_descriptions": [
+        "Lamina allungata con lobi arrotondati e picciolo corto.",
+        "Lamina palmata, divisa in cinque lobi, con un picciolo lungo.",
+        "Lamina stretta e allungata, verde chiaro.",
+        "Lamina larga e tondeggiante, con margine dentellato e apice poco pronunciato."
+      ],
+      "image": "images/giochi/foglie-giorno-20.png",
+      "sheet_width": 1234,
+      "sheet_height": 1275,
+      "tree_image": "images/giochi/alberi-giorno-20.png",
+      "tree_sheet_width": 1261,
+      "tree_sheet_height": 1247,
+      "solution": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "leaf_notes": [
+        "Lobi arrotondati e picciolo molto corto. La farnia predilige terreni freschi e tollera allagamenti temporanei.",
+        "Foglia palmata, generalmente a cinque lobi. L’acero campestre cresce in boschi, siepi e filari e non ama i ristagni prolungati.",
+        "Lamina stretta e allungata, più chiara nella pagina inferiore. Il salice bianco è legato a rive e terreni umidi.",
+        "Lamina larga e dentellata, spesso incavata all’apice. L’ontano nero cresce su rive e suoli molto umidi, anche saturi d’acqua."
+      ],
+      "hint": "Confronta la forma della lamina: lobi arrotondati, lobi disposti come le dita di una mano, foglia stretta oppure tondeggiante. I colori da soli non bastano per riconoscere un albero.",
+      "explanation": "Gli abbinamenti si riconoscono dalla forma delle foglie: lobi arrotondati nella farnia, lamina palmata nell’acero campestre, stretta nel salice bianco, larga e dentellata nell’ontano nero. Margine e picciolo offrono altri indizi utili.\n\nIl confronto tra foglie e alberi interi permette di osservare particolari diversi della stessa pianta. Anche l’ambiente aiuta: salice bianco e ontano nero sono particolarmente legati all’acqua, mentre l’acero campestre evita i ristagni prolungati.\n\nAl Parco Lamborghini, siepi, filari, piccoli boschi e zone umide offrono l’occasione per confrontare la vegetazione dei terreni meglio drenati con quella degli ambienti più bagnati.",
+      "sources": [
+        {
+          "title": "Parco Lamborghini · GIAPP",
+          "url": "https://naturadipianura.it/luoghi/parco-lamborghini/"
+        },
+        {
+          "title": "Farnia · Woodland Trust",
+          "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/english-oak/"
+        },
+        {
+          "title": "Acero campestre · Woodland Trust",
+          "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/field-maple/"
+        },
+        {
+          "title": "Salice bianco · Woodland Trust",
+          "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/white-willow/"
+        },
+        {
+          "title": "Ontano nero · Woodland Trust",
+          "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/alder/"
+        }
+      ],
+      "tree_regions": [
+        [
+          0,
+          0,
+          650,
+          575
+        ],
+        [
+          654,
+          0,
+          607,
+          575
+        ],
+        [
+          0,
+          577,
+          694,
+          670
+        ],
+        [
+          694,
+          577,
+          567,
+          670
+        ]
+      ],
+      "explanation_note": "Il gioco propone quattro esempi di alberi della pianura. La chioma illustrata è indicativa e cambia con l’età e le condizioni di crescita."
     },
     "area_description": "A Sant’Agata Bolognese, il Parco Lamborghini affianca un progetto di ricerca avviato nel 2011 per studiare la crescita delle querce e il loro assorbimento di anidride carbonica. Accanto alla piantagione sperimentale è stato realizzato un percorso dedicato alla conoscenza degli ambienti della pianura.\n\nAlberi e arbusti di specie diverse, siepi, filari, piccoli boschi e zone umide permettono di confrontare la vegetazione dei terreni asciutti con quella legata all’acqua. Il percorso comprende anche una raccolta di varietà da frutto antiche.\n\nNei piccoli bacini trovano spazio anfibi come il rospo smeraldino, la rana verde e i tritoni. Il parco offre occasioni per riconoscere le piante e osservare il rapporto tra vegetazione e fauna. Per organizzare la visita verifica il calendario delle aperture e le indicazioni aggiornate dei gestori.",
     "area_image": "images/aree/20.jpg",
@@ -1347,16 +1925,118 @@
     "day": 21,
     "name": "Casone del Partigiano",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "food-matching",
+      "version": "casone-food-v1",
+      "placeholder": false,
+      "title": "A ogni uccello il suo cibo",
+      "instructions": "Tocca un uccello, poi scegli il cibo da abbinare. Completa le quattro coppie e controlla il riepilogo prima di confermare.",
+      "left": [
+        "Assiolo",
+        "Gheppio",
+        "Airone cenerino",
+        "Germano reale"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "right": [
+        "Cicala",
+        "Topo",
+        "Pesce",
+        "Germogli e semi"
+      ],
+      "solution": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bird_sheet": {
+        "image": "images/giochi/uccelli-giorno-21.png",
+        "width": 1261,
+        "height": 1247,
+        "regions": [
+          [
+            0,
+            0,
+            617.89,
+            579.855
+          ],
+          [
+            643.11,
+            0,
+            617.89,
+            586.0899999999999
+          ],
+          [
+            0,
+            586.0899999999999,
+            617.89,
+            660.9100000000001
+          ],
+          [
+            630.5,
+            623.5,
+            630.5,
+            623.5
+          ]
+        ]
+      },
+      "food_sheet": {
+        "image": "images/giochi/cibi-giorno-21.png",
+        "width": 1536,
+        "height": 1024,
+        "regions": [
+          [
+            0,
+            0,
+            768,
+            512
+          ],
+          [
+            768,
+            0,
+            768,
+            512
+          ],
+          [
+            0,
+            512,
+            768,
+            512
+          ],
+          [
+            768,
+            512,
+            768,
+            512
+          ]
+        ]
+      },
+      "diet_notes": [
+        "Caccia soprattutto insetti, tra cui cicale, cavallette e coleotteri. La cicala è una delle sue possibili prede.",
+        "Cerca piccole prede nei prati e nei campi. Il volo quasi fermo, detto “spirito santo”, lo aiuta a sorvegliare il terreno; cattura spesso piccoli roditori.",
+        "Attende o cammina nell’acqua bassa, poi afferra la preda con uno scatto del collo. Mangia pesci, anfibi e altri piccoli animali; il pesce illustrato è generico.",
+        "Raccoglie semi, parti tenere delle piante e piccoli animali. Può immergere la parte anteriore del corpo lasciando la coda in alto per raggiungere il cibo."
+      ],
+      "hint": "Pensa a dove ciascun uccello cerca il cibo: tra gli insetti, nei prati e nei campi, nell’acqua bassa oppure tra la vegetazione.",
+      "explanation": "Gli abbinamenti sono assiolo–cicala, gheppio–topo, airone cenerino–pesce e germano reale–germogli e semi. Sono esempi di alimenti, non diete esclusive: ciascuna specie può consumare anche altro, secondo la stagione e ciò che trova.\n\nLa forma del corpo e il modo di muoversi aiutano a cercare il cibo in ambienti diversi. Osservare dove un uccello si ferma, come guarda e come cattura una preda permette di capire il suo comportamento alimentare.\n\nNelle figure puoi confrontare queste strategie: la caccia agli insetti, la ricerca dall’alto, l’attesa nell’acqua bassa e la raccolta tra acqua e vegetazione.",
+      "sources": [
+        {
+          "title": "Assiolo · LIPU",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/assiolo"
+        },
+        {
+          "title": "Gheppio · BTO",
+          "url": "https://www.bto.org/learn/about-birds/birdfacts/kestrel"
+        },
+        {
+          "title": "Airone cenerino · LIPU",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/airone-cenerino"
+        },
+        {
+          "title": "Germano reale · Cornell Lab",
+          "url": "https://www.allaboutbirds.org/guide/mallard/lifehistory"
+        }
+      ]
     },
     "area_description": "Nel territorio di San Pietro in Casale, il Casone del Partigiano unisce la memoria della Resistenza a un ambiente di boschetti, siepi e acqua. L’edificio, sorto in un paesaggio un tempo paludoso, fu utilizzato come rifugio dai partigiani e venne ricostruito dopo il crollo seguito alle bonifiche.\n\nNegli anni Novanta, la piantumazione di alberi e arbusti autoctoni ha arricchito l’area circostante. Oggi il complesso comprende circa 10 ettari, con una piccola zona umida e spazi per la sosta. Fa parte di un sito della Rete Natura 2000 inserito nel paesaggio agricolo della pianura.\n\nSiepi e boschetti ospitano una fauna varia: le ricerche svolte nell’area hanno rilevato oltre 180 specie di farfalle e falene, tra cui la sfinge dell’epilobio. La visita permette di conoscere insieme la storia del luogo e gli ambienti ricostituiti attorno al Casone.",
     "area_image": "images/aree/21.jpg",
@@ -1368,16 +2048,87 @@
     "day": 22,
     "name": "Torrente Idice",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
-      "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+      "type": "matching",
+      "visual": "bird-halves",
+      "version": "idice-bird-halves-v1",
+      "placeholder": false,
+      "title": "Ricomponi gli uccelli della pianura",
+      "instructions": "Ogni uccello è diviso in due. Scegli una metà superiore, poi una metà inferiore dal gruppo sotto: le vedrai unite nella stessa figura. Ricomponi tutti e quattro gli uccelli, osservando piume, forma del corpo e coda. Puoi cambiare gli incastri prima di confermare.",
+      "sheet": {
+        "image": "images/giochi/uccelli-giorno-22-v2.png",
+        "width": 1261,
+        "height": 1247,
+        "regions": [
+          [
+            0,
+            0,
+            630.5,
+            623.5
+          ],
+          [
+            630.5,
+            0,
+            630.5,
+            623.5
+          ],
+          [
+            0,
+            623.5,
+            630.5,
+            623.5
+          ],
+          [
+            630.5,
+            623.5,
+            630.5,
+            623.5
+          ]
+        ]
+      },
+      "names": [
+        "Fringuello",
+        "Cardellino",
+        "Picchio muratore",
+        "Ballerina bianca"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "scientific_names": [
+        "Fringilla coelebs",
+        "Carduelis carduelis",
+        "Sitta europaea",
+        "Motacilla alba"
+      ],
+      "solution": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bird_notes": [
+        "Il maschio illustrato ha capo grigio-azzurro, petto rosato e barre bianche sulle ali. Frequenta boschi, campagne alberate e giardini.",
+        "La mascherina rossa e la banda gialla sulle ali nere sono caratteri dell’adulto. Cerca spesso semi nelle erbe spontanee.",
+        "Corpo compatto, coda corta e striscia nera attraverso l’occhio. Si muove sui tronchi e può scendere anche a testa in giù.",
+        "Ha corpo slanciato, piumaggio bianco, grigio e nero e una lunga coda che muove spesso su e giù. Frequenta anche rive e corsi d’acqua."
+      ],
+      "hint": "Non guardare soltanto il colore: segui il bordo dell’ala, la posizione delle penne, la forma del ventre e il proseguimento della coda.",
+      "explanation": "Le quattro figure ricomposte sono fringuello, cardellino, picchio muratore e ballerina bianca. Per trovare gli incastri giusti era utile seguire il disegno delle ali, le proporzioni del corpo e il proseguimento della coda.\n\nUn colore simile può suggerire un primo abbinamento, ma la continuità delle penne e il profilo del ventre aiutano a controllarlo. Lo stesso metodo è utile osservando un uccello in natura: più caratteri concordano, più il riconoscimento è affidabile.\n\nLe figure intere permettono di confrontare i particolari delle quattro specie e di capire quali indizi erano visibili anche nelle metà separate.",
+      "sources": [
+        {
+          "title": "Fringuello · LIPU",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/fringuello"
+        },
+        {
+          "title": "Cardellino · LIPU",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/cardellino"
+        },
+        {
+          "title": "Picchio muratore · LIPU",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/picchio-muratore"
+        },
+        {
+          "title": "Ballerina bianca · LIPU",
+          "url": "https://www.lipu.it/uccelli/conoscerli-proteggerli/ballerina-bianca"
+        }
+      ]
     },
     "area_description": "L’Area di Riequilibrio Ecologico Torrente Idice segue le sponde del corso d’acqua nel comune di San Lazzaro di Savena, tra la via Emilia e la strada provinciale Colunga, verso il confine con Castenaso. In questo tratto il torrente lascia il territorio collinare e attraversa la pianura.\n\nL’acqua ha modellato rive, scarpate e ambienti di golena, dove si alternano vegetazione fluviale, superfici boscate, prati e piccoli bacini. La gestione naturalistica interviene per conservare questi ambienti e creare rifugi utili alla fauna, come raccolte d’acqua, cataste di legna, muretti e nidi artificiali.\n\nIl percorso pianeggiante lungo il torrente permette di osservare il paesaggio e la vegetazione delle rive. Per la visita resta sul tracciato e segui la segnaletica, rispettando gli ambienti in cui gli animali trovano riparo.",
     "area_image": "images/aree/22.jpg",
@@ -1389,16 +2140,94 @@
     "day": 23,
     "name": "Canale Collettore delle Acque Alte",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "type": "mystery",
+      "visual": "paw-detail",
+      "version": "collettore-paw-v1",
+      "placeholder": false,
+      "title": "A chi appartiene questa zampetta?",
+      "instructions": "Osserva da vicino la zampa: guarda la forma delle dita, gli artigli e il pelo. A quale dei quattro animali pensi appartenga?",
+      "image": "images/giochi/particolare-giorno-23-v2.png",
+      "image_credit": "Ricostruzione fotografica generata per il gioco.",
       "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+        "Scoiattolo",
+        "Volpe",
+        "Nutria",
+        "Riccio"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "correct_index": 3,
+      "sheet": {
+        "image": "images/giochi/mammiferi-giorno-23.png",
+        "width": 1536,
+        "height": 1024,
+        "regions": [
+          [
+            0,
+            0,
+            768,
+            512
+          ],
+          [
+            768,
+            0,
+            768,
+            512
+          ],
+          [
+            0,
+            512,
+            768,
+            512
+          ],
+          [
+            768,
+            512,
+            768,
+            512
+          ]
+        ]
+      },
+      "animals": [
+        "Scoiattolo comune",
+        "Volpe",
+        "Nutria",
+        "Riccio europeo"
+      ],
+      "scientific_names": [
+        "Sciurus vulgaris",
+        "Vulpes vulpes",
+        "Myocastor coypus",
+        "Erinaceus europaeus"
+      ],
+      "paw_notes": [
+        "Dita mobili e artigli ricurvi permettono di aggrapparsi alla corteccia. Con le zampe anteriori tiene e manipola il cibo.",
+        "Appoggia il peso sulle dita. Le impronte mostrano normalmente quattro dita, i segni degli artigli e un cuscinetto centrale.",
+        "Le grandi zampe posteriori sono parzialmente palmate e aiutano nel nuoto. Le anteriori sono più piccole e servono anche ad afferrare il cibo.",
+        "Ha cinque dita per zampa: le anteriori sono più larghe e compatte, le posteriori più allungate. Nelle impronte a volte si vedono soltanto quattro dita."
+      ],
+      "hint": "La zampa mostrata è piccola, con dita separate e artigli. Prova a immaginare l’animale mentre cammina tra le foglie e fruga a terra in cerca di cibo.",
+      "explanation": "È la zampa di un riccio europeo. Le dita e i piccoli artigli gli servono per camminare, frugare nella lettiera e scavare. Il riccio ha cinque dita sia nelle zampe anteriori sia nelle posteriori.\n\nIl numero delle dita è un indizio, ma va osservato insieme alla forma della zampa, agli artigli, al pelo e all’eventuale presenza di membrane. Anche animali diversi possono avere lo stesso numero di dita.\n\nIl confronto con scoiattolo, volpe e nutria mostra zampe adatte a movimenti differenti. Guardando l’animale intero si può collegare quel piccolo particolare al modo in cui si muove nel suo ambiente.",
+      "sources": [
+        {
+          "title": "Riccio europeo · Natural History Museum",
+          "url": "https://www.nhm.ac.uk/discover/hedgehog-erinaceus-europaeus.html"
+        },
+        {
+          "title": "Tracce del riccio · Hedgehog Street",
+          "url": "https://www.hedgehogstreet.org/about-hedgehogs/tracks-and-signs/"
+        },
+        {
+          "title": "Scoiattolo comune · The Wildlife Trusts",
+          "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/red-squirrel"
+        },
+        {
+          "title": "Volpe · Mammal Society",
+          "url": "https://mammal.org.uk/british-mammals/red-fox"
+        },
+        {
+          "title": "Nutria · USGS",
+          "url": "https://nas.er.usgs.gov/queries/factsheet.aspx?speciesid=1089"
+        }
+      ]
     },
     "area_description": "Il Canale Collettore delle Acque Alte nasce a Lorenzatico, nel comune di San Giovanni in Persiceto, e raggiunge il Panaro a Foscaglia, nel territorio di Finale Emilia, dopo circa 27 chilometri. Il suo corso racconta la storia della bonifica e della gestione delle acque della pianura.\n\nIl tratto persicetano è tutelato come Area di Riequilibrio Ecologico. Alle funzioni idrauliche e irrigue si affianca quella di corridoio ecologico: argini erbosi, canneti e vegetazione delle rive offrono ambienti utilizzati dalla fauna anche tra campi e infrastrutture. Tra le specie segnalate figurano il martin pescatore, la testuggine palustre europea e il tritone crestato italiano.\n\nPer conoscere le possibilità di accesso e le visite guidate, consulta le informazioni aggiornate dei gestori e rispetta le indicazioni presenti lungo il canale.",
     "area_image": "images/aree/23.jpg",
@@ -1410,16 +2239,125 @@
     "day": 24,
     "name": "La Bora",
     "challenge": {
-      "type": "quiz",
-      "placeholder": true,
-      "title": "Durante una visita in un’area naturale, quale comportamento scegli?",
+      "type": "mystery",
+      "visual": "emys-count",
+      "version": "bora-emys-count-v1",
+      "placeholder": false,
+      "title": "Quante Emys si nascondono nello stagno?",
+      "instructions": "Esplora il laghetto e conta soltanto le testuggini palustri europee, Emys orbicularis. Attenzione: non tutte le testuggini raffigurate sono Emys! Osserva i dettagli del capo e del collo, scrivi il tuo conteggio e conferma.",
+      "image": "images/giochi/laghetto-giorno-24-v2.png",
       "options": [
-        "Raccogliere fiori per portarli a casa.",
-        "Restare sui percorsi consentiti e osservare gli animali senza disturbarli.",
-        "Avvicinarsi agli animali per dar loro da mangiare."
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
       ],
-      "correct_index": 1,
-      "explanation": "Restare sui percorsi consentiti e osservare a distanza aiuta a limitare il disturbo agli animali e a proteggere la vegetazione. Segui sempre le indicazioni specifiche dell’area."
+      "correct_index": 6,
+      "locations": [
+        {
+          "x": 23.5,
+          "y": 18.8,
+          "w": 14,
+          "h": 12,
+          "label": "Tra le radici, in alto a sinistra."
+        },
+        {
+          "x": 79,
+          "y": 24.5,
+          "w": 13,
+          "h": 13,
+          "label": "Tra le piante sullo sfondo, in alto a destra."
+        },
+        {
+          "x": 46,
+          "y": 44,
+          "w": 17,
+          "h": 15,
+          "label": "Sotto il tronco sommerso, al centro."
+        },
+        {
+          "x": 85,
+          "y": 46,
+          "w": 20,
+          "h": 17,
+          "label": "A destra, vicino al tronco e alle piante."
+        },
+        {
+          "x": 14.8,
+          "y": 65,
+          "w": 22,
+          "h": 20,
+          "label": "Sulle foglie del fondo, in basso a sinistra."
+        },
+        {
+          "x": 44.5,
+          "y": 70.5,
+          "w": 19,
+          "h": 16,
+          "label": "Fra le piante basse, nella parte centrale."
+        }
+      ],
+      "hint": "Le Emys hanno piccole macchie gialle sulla pelle. Le altre testuggini del disegno hanno striature gialle e una macchia rossa dietro l’occhio: non contarle come Emys. Cerca anche tra le radici e sotto il tronco.",
+      "explanation": "Le Emys da contare erano sei; le altre due testuggini sono Trachemys scripta elegans. I puntini gialli sulla pelle delle Emys e le striature con macchia rossa delle Trachemys aiutavano a distinguerle anche tra radici e vegetazione.\n\nAlla Bora il Progetto Emys è nato dalle attività di recupero della testuggine palustre europea. Comprende la riproduzione in condizioni controllate, l’allevamento dei giovani e la scelta di siti adatti al loro rilascio, con verifiche e monitoraggi.\n\nLa tutela riguarda anche gli ambienti in cui vivono: qualità dell’acqua, vegetazione delle rive e collegamenti tra zone umide.",
+      "sources": [
+        {
+          "title": "Testuggine palustre europea · Regione Emilia-Romagna",
+          "url": "https://ambiente.regione.emilia-romagna.it/it/parchi-natura2000/sistema-regionale/fauna/rettili-e-anfibi/schede/testuggine-palustre-europea"
+        },
+        {
+          "title": "La Bora – Casa della Natura · GIAPP",
+          "url": "https://naturadipianura.it/luoghi/la-bora-casa-della-natura/"
+        },
+        {
+          "title": "Trachemys scripta · ISPRA",
+          "url": "https://www.specieinvasive.isprambiente.it/index.php/it/specie-aliene-invasive/2-le-specie-invasive/44-specie-21"
+        },
+        {
+          "title": "Progetto Emys · GIAPP",
+          "url": "https://naturadipianura.it/progetti-speciali-e-ricerca/progetto-emys/"
+        }
+      ],
+      "trachemys_locations": [
+        {
+          "x": 36.3,
+          "y": 16.5,
+          "w": 12,
+          "h": 11
+        },
+        {
+          "x": 83.7,
+          "y": 63.5,
+          "w": 13,
+          "h": 11
+        }
+      ]
     },
     "area_description": "A San Giovanni in Persiceto, La Bora è nata dal recupero di una cava di argilla dismessa. Il bacino, alimentato dalle piogge e dalla falda, conserva tratti con acque profonde e rive ripide, accanto a zone più basse e palustri. L’area è tutelata come Area di Riequilibrio Ecologico e fa parte della Rete Natura 2000.\n\nAttorno all’acqua si trovano un bosco di pianura ricostituito con il rimboschimento, arbusti e radure. Anatre, aironi e piccoli uccelli del bosco frequentano questi ambienti nelle diverse stagioni; le testuggini palustri si possono osservare mentre si scaldano sui tronchi galleggianti.\n\nLa Casa della Natura e il Centro Anfibi ospitano attività di educazione e conservazione. Il percorso segnalato conduce ai punti di osservazione e al bosco: durante la visita resta sul tracciato e rispetta le indicazioni dell’area.",
     "area_image": "images/aree/24.jpg",

@@ -6,6 +6,15 @@
     if(c.instructions)container.append(element('p','game-instructions',c.instructions));
     const image=(source,alt,cls='game-card-image')=>{const img=element('img',cls);img.src=asset(source);img.alt=alt;img.loading='lazy';return img;};
     const radioOptions=()=>{const box=element('div','day-answers');c.options.forEach((text,index)=>{const label=element('label'),input=element('input');input.type='radio';input.name='choice';input.value=index;input.required=true;label.append(input,element('span','',text));box.append(label);});container.append(box);return()=>({choice:Number(box.querySelector('input:checked')?.value??NaN)});};
+    if(c.type==='matching'&&c.visual==='turtle-details')return window.GiappTurtleDetails.render(container,c,{asset,storageKey});
+    if(c.type==='matching'&&c.visual==='birdwatch-story')return window.GiappBirdwatchStory.render(container,c,{asset,storageKey});
+    if(c.type==='matching'&&c.visual==='water-story')return window.GiappWaterStory.render(container,c,{asset,storageKey});
+    if(c.type==='matching'&&c.visual==='bird-sorting')return window.GiappBirdSorting.render(container,c,{asset,storageKey,onMessage});
+    if(c.type==='mystery'&&c.visual==='emys-count')return window.GiappEmysCount.render(container,c,{asset,storageKey});
+    if(c.type==='mystery'&&c.visual==='paw-detail')return window.GiappPawDetail.render(container,c,{asset});
+    if(c.type==='matching'&&c.visual==='bird-halves')return window.GiappBirdHalves.render(container,c,{asset,storageKey,onMessage});
+    if(c.type==='matching'&&c.visual==='food-matching')return window.GiappFoodMatch.render(container,c,{asset,storageKey,onMessage});
+    if(c.type==='matching'&&c.visual==='leaf-matching')return window.GiappLeafMatch.render(container,c,{asset,storageKey,onMessage});
     if(c.type==='matching'&&c.visual==='audio-matching')return window.GiappAudioMatch.render(container,c,{asset,storageKey,onMessage});
     if(c.type==='memory')return window.GiappMemory.render(container,c,{asset,storageKey,attempt,onMessage});
     if(['quiz','mystery','audio'].includes(c.type)){
